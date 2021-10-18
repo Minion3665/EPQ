@@ -1,0 +1,6 @@
+#+Title: Project specification
+#+Date: February 23rd, 2021
+
+#+begin_quote
+
+#+end_quote
