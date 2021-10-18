@@ -1,0 +1,17 @@
+* What is the project idea?
+The project is a process management daemon to run on my Linux server, it will help to manage projects, auto-restarting them if they exit as well as providing an API (and possibly web interface) to manage variables, code through git, and the status of the project itself.
+
+** Ok but what does that actually mean?
+My artifact will be able to
+- Run a process
+- Restart it if it fails
+- Control the environment varibles the project runs with
+- Give an API that lets us
+  - Start, stop & restart the project
+  - Give information about the project (memory usage, is it started, logs etc.)
+  - Pull code from git, either when updated or on command
+* Why have I chosen this project?
+* What are the benefits and drawbacks?
+** Benefits
+** Drawbacks
+* What could I have done instead?
