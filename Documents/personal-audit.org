@@ -1,3 +1,6 @@
+#+TITLE: EPQ personal audit
+#+DATE: 17th August 2021
+
 * What do you do in your spare time?
 Do programming, Play videogames, Call friends w/ discord
 * What do you watch on youtube
