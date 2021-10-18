@@ -9,8 +9,11 @@ My artifact will be able to
 - Give an API that lets us
   - Start, stop & restart the project
   - Give information about the project (memory usage, is it started, logs etc.)
-  - Pull code from git, either when updated or on command
+- Pull code from git, either when updated or on command
 * Why have I chosen this project?
+- I've had this project idea for a while (since mid-year-11)
+- I need to run something like this on my server (see 'what could I have done instead' section)
+- It's something I'm interested in, don't know how to do yet, but am confident I will be able to do within the EPQ time
 * What are the benefits and drawbacks?
 ** Benefits
 ** Drawbacks
