@@ -14,7 +14,11 @@ My artifact will be able to
 - I've had this project idea for a while (since mid-year-11)
 - I need to run something like this on my server (see 'what could I have done instead' section)
 - It's something I'm interested in, don't know how to do yet, but am confident I will be able to do within the EPQ time
-* What are the benefits and drawbacks?
+* What are the benefits and drawbacks of this project?
 ** Benefits
+- It's an interesting project
+- I need something like this, the EPQ is a perfect excuse to set aside time to complete it better than I would otherwise
 ** Drawbacks
+- May be more difficult to show personal growth, as I do computer programming already, although never quite like this
+- Other solutions may already exist
 * What could I have done instead?
