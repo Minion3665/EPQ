@@ -30,7 +30,7 @@ There is no chosen project title. If you would like to choose a title you may do
 
 The project is a program which will monitor a single[fn:1] process. The command can either be a hardcoded variable at the top of your program or accessible through a file, most likely using the `json` module. You may wish to use the `subprocess` module or the older `os.system` or `os.spawn` commands. [You can find the documentation for the subprocess builtin module here](https://docs.python.org/3/library/subprocess.html).
 
-Upon the process' exit, the program will attempt to restart it. If the process exited with an error (this is commonly denoted by a non-zero exit code) the module will only attempt to restart it 3 consecutive times before giving up[fn:2]. When a program has exited with these errors and will no longer be restarted it will, from now on in this document, be referred to as `crashed`. In the actual code you may choose any word to describe this so long as you remain consistent throughout. In javascript there is a module named `pm2` which you may use instead of implementing this functionality yourself. [You can find PM2 here](https://github.com/Unitech/pm2), however please note that this may be significantly more complex than you want and you may find it easier simply to implement the basic functionality yourself.
+Upon the process' exit, the program will attempt to restart it. If the process exited with an error (this is commonly denoted by a non-zero exit code) the module will only attempt to restart it 3 consecutive times before giving up[fn:2]. When a program has exited with these errors and will no longer be restarted it will, from now on in this document, be referred to as `crashed`. In the actual code you may choose any word to describe this so long as you remain consistent throughout. In javascript there is a module named `pm2` which you may use instead of implementing this functionality yourself. [You can find PM2 here](https://github.com/Unitech/pm2), however please note that this may be significantly more complex than you want and you may find it easier simply to implement the basic functionality yourself.[fn:4]
 
 The project will have a webserver. You may choose to use the builtin module `http.server` or a module of your choosing. I would recommend `flask`, `aiohttp`, `quart`, or `django` depending largely on what you have used before. I would request that you **do not use** any modules that rely on `uvicorn`.
 
@@ -41,10 +41,6 @@ You should have another endpoint (get or post) that restarts the application, cl
 You should have another endpoint that updates the running process' working directory from a github remote. This endpoint should not restart the application. You may require any required credentials, including but not limited to a PAT (personal access token) or bot secret to be passed along with the request, or you may instead wish to have them stored in a file on the server. The endpoint should only be accessible if the user provides a valid secret, and all other requests should be met with a 403 Forbidden http response. Neither the web server nor the program should go down while the request is being processed. (NB: if you do not wish to install git and set up repositories to test this you may choose a similarly long subprocess command, for example `sleep 15` to test this. Please make sure not to confuse this with the python builtin `time.sleep` or `asyncio.sleep` functions).
 
 You should have another endpoint that updates the program itself's working directory from github. This has identical requirements and concessions to the previous requirement.
-
-
-2. If you do choose to make a server that monitors multiple processes you may combine the outputs or you may choose to have them on different paths. The decision is entirely up to you
-4. If you use do use PM2 in javascript it is permissible to follow the PM2 defaults for counting a program as crashed rather than the specification set out here
 
 # Tests
 
@@ -71,7 +67,9 @@ The fastest response will likely be over discord. You may also leave comments he
 
 * Footnotes
 
-[fn:3] 
+[fn:4] If you use do use PM2 in javascript it is permissible to follow the PM2 defaults for counting a program as crashed rather than the specification set out here 
+
+[fn:3] If you do choose to make a server that monitors multiple processes you may combine the outputs or you may choose to have them on different paths. The decision is entirely up to you
 
 [fn:2] Note that if the program exits with error but then there is a successful exit there will need to be 3 more errors, not 2, for the module to assume the program has crashed. Only 3 consecutive errors will allow the program to exit without being restarted
 
