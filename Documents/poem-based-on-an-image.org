@@ -1,0 +1,7 @@
+#+Title: Just existing
+#+Date: October 4th, 2021
+
+#+begin_quote
+This poem was written as a prompt from the image provided, and is unedited. As such it is not a typical poem. At one point it refers to another poem; the referred to poem is linked (I tried to link it during the writing, although failed. I have linked it in post. Please note that you may not have access to read this poem)
+[[./poem-image.jpeg]]
+#+end_quote
