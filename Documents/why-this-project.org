@@ -26,7 +26,7 @@ My artifact will be able to
 - Continued to use PM2 (which is what we're currently using)
 - Used the proxmox API (we're currently using proxmox, although not using the API to manage containers)
 
-All of these have disadvanrages though
+All of these have disadvantages though
 - None of these can pull from git
 - Docker does not expose an API for container management
 - PM2 does not expose an API for process management, and does not contain processes
