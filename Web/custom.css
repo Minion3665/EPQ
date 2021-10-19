@@ -1,14 +1,4 @@
-h2::before {
+h2::before, h3::before, h4::before, h5::before, h6::before {
     content: "# ";
-    font-size: calc(var(--base-fontsize) * var(--header-scale) * var(--header-scale) * var(--header-scale) * 0.7);
-}
-
-h3::before {
-    content: "## ";
-    font-size: calc(var(--base-fontsize) * var(--header-scale) * var(--header-scale) * 0.7);
-}
-
-h4::before {
-    content: "### ";
-    font-size: calc(var(--base-fontsize) * var(--header-scale) * 0.7);
+    font-size: 70%;
 }
