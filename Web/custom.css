@@ -4,6 +4,7 @@ html {
 }
 body {
     --bg: #2d2b55 !important;
+    max-width: max(60%, 45rem);
 }
 a {
     --accent: #82aaff !important;
