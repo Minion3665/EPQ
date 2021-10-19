@@ -77,7 +77,7 @@ targets and targets."
 	     )
        (list "org-static"
 	     :base-directory "./Web"
-	     :base-extension "((?!org).)*"
+	     :base-extension ".*"
 	     :publishing-directory "./Web-out"
 	     :recursive t
 	     :publishing-function 'org-publish-attachment
