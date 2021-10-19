@@ -3,7 +3,9 @@
 (setq org-html-validation-link nil
       org-html-head-include-scripts nil       ;; Use our own scripts
       org-html-head-include-default-style nil ;; Use our own styles
-      org-html-head "<link rel=\"stylesheet\" href=\"https://cdn.simplecss.org/simple.min.css\" />")
+      org-html-head
+      "<link rel=\"stylesheet\" href=\"https://cdn.simplecss.org/simple.min.css\" />
+       <title>Skyler Turner's EPQ</title>")
 
 (setq org-publish-project-alist
       (list
