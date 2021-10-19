@@ -5,7 +5,8 @@ html {
 body {
     --bg: #2d2b55 !important;
     max-width: max(60%, 45rem) !important;
-    padding: 10rem;
+    padding-left: 10rem;
+    padding-right: 10rem;
 }
 a {
     --accent: #82aaff !important;
