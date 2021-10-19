@@ -1,12 +1,12 @@
 html {
     background-color: #28264c;
-    --text: #e3e9fa;
+    --text: #e3e9fa !important;
 }
 body {
-    background-color: #2d2b55;
+    --bg: #2d2b55 !important;
 }
 a {
-    color: #82aaff;
+    --accent: #82aaff !important;
 }
 
 h2::before, h3::before, h4::before, h5::before, h6::before {
