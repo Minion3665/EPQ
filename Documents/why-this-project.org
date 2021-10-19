@@ -1,3 +1,5 @@
+#+Title: Why have I chosen this project?
+
 * What is the project idea?
 The project is a process management daemon to run on my Linux server, it will help to manage projects, auto-restarting them if they exit as well as providing an API (and possibly web interface) to manage variables, code through git, and the status of the project itself.
 
