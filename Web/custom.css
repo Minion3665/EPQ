@@ -6,33 +6,33 @@ h2::before {
     content: "# ";
 }
 h2 {
-    color: "#50c4fa";
+    color: #50c4fa;
 }
 
 h3::before {
     content: "## ";
 }
 h3 {
-    color: "#9effff";
+    color: #9effff;
 }
 
 h4::before {
     content: "### ";
 }
 h4 {
-    color: "#ff98a4";
+    color: #ff98a4;
 }
 
 h5::before {
     content: "#### ";
 }
 h5 {
-    color: "#82aaff";
+    color: #82aaff;
 }
 
 h6::before {
     content: "##### ";
 }
 h6 {
-    color: "#ff9d00";
+    color: #ff9d00;
 }
