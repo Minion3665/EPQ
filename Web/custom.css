@@ -1,6 +1,6 @@
 html {
     background-color: #28264c;
-    color: #e3e9fa;
+    --text: #e3e9fa;
 }
 body {
     background-color: #2d2b55;
