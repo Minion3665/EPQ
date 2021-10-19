@@ -87,6 +87,3 @@ targets and targets."
 (org-publish-all t)
 
 (message "Built website")
-org
-pdf
-img
