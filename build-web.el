@@ -6,7 +6,8 @@
 	     :recursive t
 	     :base-directory "./Web"
 	     :publishing-directory "./Web-out"
-	     :publishing-function 'org-html-publish-to-html)))
+	     :publishing-function 'org-html-publish-to-html
+	     :auto-sitemap t)))
 
 (org-publish-all t)
 
