@@ -21,7 +21,8 @@ My artifact will be able to
 ** Drawbacks
 - May be more difficult to show personal growth, as I do computer programming already, although never quite like this
 - Other solutions may already exist
-* What could I have done instead?
+  
+** What could I have done instead?
 - Used 'docker swarm' or 'docker compose'
 - Continued to use PM2 (which is what we're currently using)
 - Used the proxmox API (we're currently using proxmox, although not using the API to manage containers)
@@ -30,3 +31,5 @@ All of these have disadvantages though
 - None of these can pull from git
 - Docker does not expose an API for container management
 - PM2 does not expose an API for process management, and does not contain processes
+
+  And plus, it's always nice to know how your own systems work...
