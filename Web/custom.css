@@ -1,0 +1,14 @@
+h2::before {
+    content: "# ";
+    font-size: 70%;
+}
+
+h3::before {
+    content: "## ";
+    font-size: 60%;
+}
+
+h4::before {
+    content: "### ";
+    font-size: 50%;
+}
