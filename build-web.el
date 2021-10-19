@@ -32,6 +32,7 @@
 	     :title "Skyler Turner's EPQ"
 	     )))
 
+(setq org-export-with-broken-links 'mark)
 (org-publish-all t)
 
 (message "Built website")
