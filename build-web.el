@@ -11,6 +11,8 @@
 
 ;; Install dependencies
 (package-install 'htmlize)
+(package-install 'org)
+(package-install 'org-roam)
 
 (setq org-html-validation-link nil
       org-html-head-include-scripts nil       ;; Use our own scripts
