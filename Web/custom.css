@@ -3,26 +3,36 @@ h2::before, h3::before, h4::before, h5::before, h6::before {
 }
 
 h2::before {
-    content: "#";
+    content: "# ";
+}
+h2 {
     color: "#50c4fa";
 }
 
 h3::before {
-    content: "##";
+    content: "## ";
+}
+h3 {
     color: "#9effff";
 }
 
 h4::before {
-    content: "###";
+    content: "### ";
+}
+h4 {
     color: "#ff98a4";
 }
 
 h5::before {
-    content: "####";
+    content: "#### ";
+}
+h5 {
     color: "#82aaff";
 }
 
 h6::before {
-    content: "#####";
+    content: "##### ";
+}
+h6 {
     color: "#ff9d00";
 }
