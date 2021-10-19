@@ -66,6 +66,7 @@ targets and targets."
 	     :recursive t
 	     :base-directory "./Web"
 	     :publishing-directory "./Web-out"
+	     :base-extension "org"
 	     :publishing-function 'org-html-publish-to-html
 	     :auto-sitemap t
 	     :with-author nil
@@ -73,6 +74,13 @@ targets and targets."
 	     :section-numbers nil
 	     :title "Skyler Turner's EPQ"
 	     :with-title nil
+	     )
+       (list "org-static"
+	     :base-directory "./Web"
+	     :base-extension "css\\|js\\|png\\|jpg\\|gif\\|pdf\\|mp3\\|ogg\\|swf"
+	     :publishing-directory "./Web-out"
+	     :recursive t
+	     :publishing-function org-publish-attachment
 	     )))
 
 (setq org-export-with-broken-links 'mark)
