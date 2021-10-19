@@ -4,8 +4,7 @@
       org-html-head-include-scripts nil       ;; Use our own scripts
       org-html-head-include-default-style nil ;; Use our own styles
       org-html-head
-      "<link rel=\"stylesheet\" href=\"https://cdn.simplecss.org/simple.min.css\" />
-       <title>Skyler Turner's EPQ</title>")
+      "<link rel=\"stylesheet\" href=\"https://cdn.simplecss.org/simple.min.css\" />")
 
 (setq org-publish-project-alist
       (list
@@ -18,6 +17,7 @@
 	     :with-author nil
 	     :with-creator nil
 	     :section-numbers nil
+	     :title "Skyler Turner's EPQ"
 	     )))
 
 (org-publish-all t)
