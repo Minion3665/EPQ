@@ -16,7 +16,7 @@
 
 (require 'org-roam)
 
-(setq org-roam-directory (file-truename "./content"))
+(setq org-roam-directory (file-truename "./Notes"))
 (setq org-id-link-to-org-use-id t)
 ;; (org-roam-db-autosync-mode)
 
