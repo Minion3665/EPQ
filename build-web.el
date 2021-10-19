@@ -30,6 +30,7 @@
 	     :with-creator nil
 	     :section-numbers nil
 	     :title "Skyler Turner's EPQ"
+	     :with-title nil
 	     )))
 
 (setq org-export-with-broken-links 'mark)
