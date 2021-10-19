@@ -77,7 +77,7 @@ targets and targets."
 	     )
        (list "org-static"
 	     :base-directory "./Web"
-	     :base-extension "^([^o]..\\|.[^r].\\|..[^g]\\|[^d].\\|.[^b]\\|.\\|....)$"
+	     :base-extension "^([^o]..\\|.[^r].\\|..[^g]\\|[^d].\\|.[^b]\\|.\\|.....*)$"
 	     :publishing-directory "./Web-out"
 	     :recursive t
 	     :publishing-function 'org-publish-attachment
