@@ -80,7 +80,7 @@ targets and targets."
 	     :base-extension "css\\|js\\|png\\|jpg\\|gif\\|pdf\\|mp3\\|ogg\\|swf\\|flac"
 	     :publishing-directory "./Web-out"
 	     :recursive t
-	     :publishing-function org-publish-attachment
+	     :publishing-function 'org-publish-attachment
 	     )))
 
 (setq org-export-with-broken-links 'mark)
