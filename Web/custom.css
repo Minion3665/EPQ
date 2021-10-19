@@ -1,4 +1,28 @@
 h2::before, h3::before, h4::before, h5::before, h6::before {
-    content: "# ";
     font-size: 70%;
+}
+
+h2::before {
+    content: "#";
+    color: "#50c4fa";
+}
+
+h3::before {
+    content: "##";
+    color: "#9effff";
+}
+
+h4::before {
+    content: "###";
+    color: "#ff98a4";
+}
+
+h5::before {
+    content: "####";
+    color: "#82aaff";
+}
+
+h6::before {
+    content: "#####";
+    color: "#ff9d00";
 }
