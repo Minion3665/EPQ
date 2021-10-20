@@ -78,7 +78,7 @@ targets and targets."
              :auto-sitemap t
              :sitemap-filename "index.org"
              :sitemap-title "Home"
-             :sitemap-sort-files anti-chronologically
+             :sitemap-sort-files 'anti-chronologically
              :sitemap-file-entry-format "%d - %t"
              :sitemap-function org-publish-org-sitemap
 	     )
