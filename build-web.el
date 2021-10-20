@@ -60,6 +60,11 @@ targets and targets."
       org-html-head
       "<link rel=\"stylesheet\" href=\"/simple.min.css\" /><link rel=\"stylesheet\" href=\"/custom.css\" />")
 
+(defun org-publish-org-sitemap (title list)
+  "Sitemap generation function."
+  (concat "#+TITLE: Sitemap\n\n"
+          (org-list-to-subtree list)))
+
 (setq org-publish-project-alist
       (list
        (list "epq-project-docs"
@@ -80,6 +85,7 @@ targets and targets."
              :sitemap-title "Home"
              :sitemap-sort-files 'anti-chronologically
              :sitemap-file-entry-format "%d - %t"
+	     :sitemap-function 'org-publish-org-sitemap
 	     )
        (list "org-static"
 	     :base-directory "./Web"
