@@ -12,8 +12,8 @@
 ;; Install dependencies
 (package-install 'htmlize)
 (package-install 'org)
-(package-install 'org-roam)
 (setq org-roam-v2-ack t)
+(package-install 'org-roam)
 (require 'org-roam)
 
 (setq org-roam-directory (file-truename "./Notes"))
@@ -68,7 +68,7 @@ targets and targets."
 	     :publishing-directory "./Web-out"
 	     :base-extension "org"
 	     :publishing-function 'org-html-publish-to-html
-;	     :auto-sitemap t
+					;	     :auto-sitemap t
 	     :with-author nil
 	     :with-creator nil
 	     :section-numbers nil
