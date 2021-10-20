@@ -74,6 +74,13 @@ targets and targets."
 	     :section-numbers nil
 	     :title "Skyler Turner's EPQ"
 	     :with-title nil
+	     
+             :auto-sitemap t
+             :sitemap-filename "index.org"
+             :sitemap-title "Home"
+             :sitemap-sort-files anti-chronologically
+             :sitemap-file-entry-format "%d - %t"
+             :sitemap-function org-publish-org-sitemap
 	     )
        (list "org-static"
 	     :base-directory "./Web"
