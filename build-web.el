@@ -11,7 +11,6 @@
 
 ;; Install dependencies
 (package-install 'htmlize)
-(package-install 'org)
 (setq org-roam-v2-ack t)
 (package-install 'org-roam)
 (require 'org-roam)
