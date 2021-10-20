@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2021-10-20 Wed 08:05 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Project specification</title>
+<meta name="generator" content="Org mode" />
+<link rel="stylesheet" href="/simple.min.css" /><link rel="stylesheet" href="/custom.css" />
+</head>
+<body>
+<div id="content">
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org53fce9e">Introduction &amp; key</a></li>
+<li><a href="#org938c65c">About the project</a></li>
+</ul>
+</div>
+</div>
+<blockquote>
+<p>
+This requirements file was originally created for a shared computer science project in secondary school which, unfortunately due to covid, was never started. Looking back, I am uncertain that it would really have been a good computer science project, it was much too broadly-scoped, however I do think that it will make a good EPQ project
+</p>
+</blockquote>
+
+<div id="outline-container-org53fce9e" class="outline-2">
+<h2 id="org53fce9e">Introduction &amp; key</h2>
+<div class="outline-text-2" id="text-org53fce9e">
+<p>
+This project is going to be difficult. I would like you to know that from the outset. It gives you stuff that you definitely didn't learn in school and while the parameters are fairly well defined it gives you some room for interpretation. 
+</p>
+
+<p>
+Given this:
+</p>
+
+<ul class="org-ul">
+<li>To the teacher: I am more than happy to be assigned the person who has the second-hardest project (or the hardest if this is not in-fact the hardest project) in the class.</li>
+<li>To the pupil who gets assigned this project: do your best, try to implement the core structure first so that if you do not have time to implement extra frills you don't have something that is completely unusable. I would also highly suggest testing a lot during this project. Do not wait until the end to find all the bugs.</li>
+</ul>
+
+<p>
+Throughout this project, you will find it much easier to use modules from `pip` than the builtin python modules, although I have made sure that everything here is possible with only builtin python modules. If I have particular suggestions for modules that you may wish to use, then I will give you them in `green colored codeblocks`, you are, of course, entirely permitted to ignore my advice on non-builtin modules and I will not hold it against you if you do so. For easier reading I will also put a builtin module that you are allowed to use in `a blue codeblock` where it is not instantly obvious/we have not learned about it in class.
+</p>
+
+<p>
+You may decide to follow a style guide such as pep8 (tip: use `pycodestyle` as a linter and turn off the line-length-limit warnings or change them to 120 characters as the default of 80 is extremely restrictive), if you do not choose to do so that is your decision entirely, however it may make your code easier to read. You may also use a reformatter such as `black` if you would like your code to conform but do not know how or consider conforming to be too complex.
+</p>
+
+<p>
+Some parts of this project rely on web servers to work properly. Javascript has better web server support in its `express` package, which I would suggest checking out if you know javascript and feel more comfortable writing in it than in python for this project. I will be highlighting applicable javascript modules in `yellow codeblocks`.
+</p>
+
+<p>
+The project will be running on a debian-based server when it goes into production, however you are permitted to use any operating system to develop it. You may also want to consider use of an IDE, I suggest `pycharm community`, or if you want to put an extra few seconds into signing up to the [github student developer pack](<a href="https://education.github.com/">https://education.github.com/</a>), pycharm professional, although we will not be doing anything that requires it or will significantly benefit from the pro version as opposed to the community version in this project.
+</p>
+
+<p>
+I strongly recommend the use of a version control system such as `git`, which your chosen IDE will likely already have an integration for. This will allow you to rollback to previous versions when you make a mistake. I would also suggest using [gitlab](<a href="https://gitlab.com">https://gitlab.com</a>) or [github](<a href="https://github.com">https://github.com</a>) as a remote, although that is again not required.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org938c65c" class="outline-2">
+<h2 id="org938c65c">About the project</h2>
+<div class="outline-text-2" id="text-org938c65c">
+<p>
+There is no chosen project title. If you would like to choose a title you may do so, although it is possible that I will rename it later if I do not like the title you have chosen. If you do not want to name it you may call it `Clicks Minute Ping Backend`. Personally I think that whatever you come up with will probably be snazzier than that though.
+</p>
+
+<p>
+The project is a program which will monitor a single<sup><a id="fnr.1" class="footref" href="#fn.1">1</a></sup> process. The command can either be a hardcoded variable at the top of your program or accessible through a file, most likely using the `json` module. You may wish to use the `subprocess` module or the older `os.system` or `os.spawn` commands. [You can find the documentation for the subprocess builtin module here](<a href="https://docs.python.org/3/library/subprocess.html">https://docs.python.org/3/library/subprocess.html</a>).
+</p>
+
+<p>
+Upon the process' exit, the program will attempt to restart it. If the process exited with an error (this is commonly denoted by a non-zero exit code) the module will only attempt to restart it 3 consecutive times before giving up<sup><a id="fnr.2" class="footref" href="#fn.2">2</a></sup>. When a program has exited with these errors and will no longer be restarted it will, from now on in this document, be referred to as `crashed`. In the actual code you may choose any word to describe this so long as you remain consistent throughout. In javascript there is a module named `pm2` which you may use instead of implementing this functionality yourself. [You can find PM2 here](<a href="https://github.com/Unitech/pm2">https://github.com/Unitech/pm2</a>), however please note that this may be significantly more complex than you want and you may find it easier simply to implement the basic functionality yourself.<sup><a id="fnr.3" class="footref" href="#fn.3">3</a></sup>
+</p>
+
+<p>
+The project will have a webserver. You may choose to use the builtin module `http.server` or a module of your choosing. I would recommend `flask`, `aiohttp`, `quart`, or `django` depending largely on what you have used before. I would request that you <b><b>do not use</b></b> any modules that rely on `uvicorn`.
+</p>
+
+<p>
+When a `get` request is made to the webserver root (`/`)<sup><a id="fnr.4" class="footref" href="#fn.4">4</a></sup>, the webserver will respond with if the program is currently online or crashed, the program's `uptime`, the program's `restart count`, and how many of those restarts were `errors` (all time), and how many consecutive restarts there have been. This API should be fairly efficient as it will be receiving a fairly high volume of requests and you may wish to make it cache responses for a short amount of time (around 15 seconds).
+</p>
+
+<p>
+You should have another endpoint (get or post) that restarts the application, clearing its restart count and error count. The endpoint should only be accessible if the user provides a valid secret, and all other requests should be met with a `403 Forbidden` http response.
+</p>
+
+<p>
+You should have another endpoint that updates the running process' working directory from a github remote. This endpoint should not restart the application. You may require any required credentials, including but not limited to a PAT (personal access token) or bot secret to be passed along with the request, or you may instead wish to have them stored in a file on the server. The endpoint should only be accessible if the user provides a valid secret, and all other requests should be met with a 403 Forbidden http response. Neither the web server nor the program should go down while the request is being processed. (NB: if you do not wish to install git and set up repositories to test this you may choose a similarly long subprocess command, for example `sleep 15` to test this. Please make sure not to confuse this with the python builtin `time.sleep` or `asyncio.sleep` functions).
+</p>
+
+<p>
+You should have another endpoint that updates the program itself's working directory from github. This has identical requirements and concessions to the previous requirement.
+</p>
+
+<ul class="org-ul">
+<li>When you run a program that exits with a success does it restart</li>
+<li>When you run a program that crashes 3 times, does it stop properly and report as crashed on the website</li>
+<li>When you run a program that errors twice with this, succeeds once, and errors a third time does it report the errors as 3 but <b>continue running it</b> and continue to restart if it exits with successes or errors</li>
+<li>When you go to the website is the correct uptime, restart count, error count and status of the process shown</li>
+<li>When you go to both of the git endpoints, is the correct directory pulled? (Not required if you chose to omit git in favor of sleeping instead)</li>
+<li>When you go to the git endpoints, if the git operation is long running, is the server down or otherwise inaccessible (slow loading etc.) for the time when you are pulling?</li>
+</ul>
+
+<p>
+I would highly recommend `asyncio` or the `multiprocessing` or `multithreading` python builtin modules.
+</p>
+
+<p>
+If you need any more details (such as exact system specs of the production machine or python versions) I am available on Microsoft teams, email or discord.
+</p>
+
+<p>
+My teams is: `Skyler Turner`
+</p>
+
+<p>
+My emails are: `st137303@hrsfc.ac.uk` or `skyler@clicksminuteper.net`
+</p>
+
+<p>
+My discord is: `Minion3665#6456`
+</p>
+
+<p>
+The fastest response will likely be over discord. You may also leave comments here although you will need a notion account to do so.
+</p>
+</div>
+</div>
+<div id="footnotes">
+<h2 class="footnotes">Footnotes: </h2>
+<div id="text-footnotes">
+
+<div class="footdef"><sup><a id="fn.1" class="footnum" href="#fnr.1">1</a></sup> <div class="footpara"><p class="footpara">
+Or multiple if you feel like going crazy, you do you. In general, if you don't choose multiple we'll have to run multiple instances of the program, but that isn't a huge issue and it may be simpler to focus on a single instance at least to start with
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.2" class="footnum" href="#fnr.2">2</a></sup> <div class="footpara"><p class="footpara">
+Note that if the program exits with error but then there is a successful exit there will need to be 3 more errors, not 2, for the module to assume the program has crashed. Only 3 consecutive errors will allow the program to exit without being restarted
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.3" class="footnum" href="#fnr.3">3</a></sup> <div class="footpara"><p class="footpara">
+If you use do use PM2 in javascript it is permissible to follow the PM2 defaults for counting a program as crashed rather than the specification set out here 
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.4" class="footnum" href="#fnr.4">4</a></sup> <div class="footpara"><p class="footpara">
+If you do choose to make a server that monitors multiple processes you may combine the outputs or you may choose to have them on different paths. The decision is entirely up to you
+</p></div></div>
+
+
+</div>
+</div></div>
+<div id="postamble" class="status">
+<p class="date">Date: February 23rd, 2021</p>
+<p class="date">Created: 2021-10-20 Wed 08:05</p>
+<p class="validation"></p>
+</div>
+</body>
+</html>

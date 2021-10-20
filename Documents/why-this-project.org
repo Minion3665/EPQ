@@ -1,0 +1,37 @@
+#+Title: Why have I chosen this project?
+
+* What is the project idea?
+The project is a process management daemon to run on my Linux server, it will help to manage projects, auto-restarting them if they exit as well as providing an API (and possibly web interface) to manage variables, code through git, and the status of the project itself.
+
+** Ok but what does that actually mean?
+My artifact will be able to
+- Run a process
+- Restart it if it fails
+- Control the environment varibles the project runs with
+- Give an API that lets us
+  - Start, stop & restart the project
+  - Give information about the project (memory usage, is it started, logs etc.)
+- Pull code from git, either when updated or on command
+* Why have I chosen this project?
+- I've had this project idea for a while (since mid-year-11)
+- I need to run something like this on my server (see 'what could I have done instead' section)
+- It's something I'm interested in, don't know how to do yet, but am confident I will be able to do within the EPQ time
+* What are the benefits and drawbacks of this project?
+** Benefits
+- It's an interesting project
+- I need something like this, the EPQ is a perfect excuse to set aside time to complete it better than I would otherwise
+** Drawbacks
+- May be more difficult to show personal growth, as I do computer programming already, although never quite like this
+- Other solutions may already exist
+  
+** What could I have done instead?
+- Used 'docker swarm' or 'docker compose'
+- Continued to use PM2 (which is what we're currently using)
+- Used the proxmox API (we're currently using proxmox, although not using the API to manage containers)
+
+All of these have disadvantages though
+- None of these can pull from git
+- Docker does not expose an API for container management
+- PM2 does not expose an API for process management, and does not contain processes
+
+  And plus, it's always nice to know how your own systems work...
