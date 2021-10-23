@@ -73,19 +73,24 @@ targets and targets."
 	     :publishing-directory "./Web-out"
 	     :base-extension "org"
 	     :publishing-function 'org-html-publish-to-html
-	     :auto-sitemap t
 	     :with-author nil
 	     :with-creator nil
 	     :section-numbers nil
 	     :title "Skyler Turner's EPQ"
 	     :with-title nil
 	     
-             :auto-sitemap t
-             :sitemap-filename "sitemap.org"
-             :sitemap-title "Home"
-             :sitemap-sort-files 'anti-chronologically
-             :sitemap-file-entry-format "%d - %t"
+	     :auto-sitemap t
+	     :sitemap-filename "sitemap.org"
+	     :sitemap-title "Home"
+	     :sitemap-sort-files 'anti-chronologically
+	     :sitemap-file-entry-format "%d - %t"
 	     :sitemap-function 'org-publish-org-sitemap
+	     :sitemap-format-entry (lambda (entry style project)
+				     (cond ((not (directory-name-p entry))
+					    (format "%s"
+						    (org-publish-find-title entry "description" project)))
+					   ((eq style 'tree) (file-name-nondirectory (directory-file-name entry)))
+					   (t entry)))
 	     )
        (list "org-static"
 	     :base-directory "./Web"
