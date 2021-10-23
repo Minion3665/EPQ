@@ -63,7 +63,7 @@ targets and targets."
 (defun org-publish-org-sitemap (title list)
   "Sitemap generation function."
   (concat "#+TITLE: Sitemap\n\n"
-          (org-list-to-generic list (list "params" :ustart "-" :nobr t))))
+          (org-list-to-generic list (list "params" :istart "-" :nobr t))))
 
 (setq org-publish-project-alist
       (list
