@@ -1,2 +1,5 @@
+#+title: Homepage
+#+PROPERTY: description A test description
+
 * Hello world
 This is an org-mode website

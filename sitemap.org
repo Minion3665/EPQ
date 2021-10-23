@@ -1,10 +1,13 @@
 #+TITLE: Sitemap
 
-* [[file:index.org][index]]
-* Documents
-** [[file:Documents/poem-based-on-an-image.org][Just existing]]
-** [[file:Documents/process-manager-project-requirements.org][Project specification]]
-** [[file:Documents/why-this-project.org][Why have I chosen this project?]]
-** [[file:Documents/personal-audit.org][EPQ personal audit]]
-* Notes
-** [[file:Notes/20211018105127-homepage.org][Homepage]]
+* All pages
+- [[file:index.org][Homepage]]
+- Documents
+  - [[file:Documents/process-manager-project-requirements.org][Project specification]]
+  - [[file:Documents/why-this-project.org][Why have I chosen this project?]]
+  - [[file:Documents/poem-based-on-an-image.org][Just existing]]
+  - [[file:Documents/personal-audit.org][EPQ personal audit]]
+- Notes
+  - [[file:Notes/20211018105127-homepage.org][Homepage]]
+  - daily
+    - [[file:Notes/daily/2021-10-23.org][2021-10-23]]
