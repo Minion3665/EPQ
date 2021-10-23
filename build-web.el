@@ -83,18 +83,7 @@ targets and targets."
 	     :sitemap-filename "sitemap.org"
 	     :sitemap-title "Home"
 	     :sitemap-sort-files 'anti-chronologically
-	     :sitemap-file-entry-format "%d - %t"
 	     :sitemap-function 'org-publish-org-sitemap
-	     :sitemap-format-entry (lambda (entry style project)
-				     (cond (
-					    (not (directory-name-p entry))
-					    (or (org-publish-find-property entry :description project) "")
-					    ) (
-					    (eq style 'tree)
-					    (file-name-nondirectory (directory-file-name entry))
-					    ) (t entry)
-					      )
-				     )
 	     )
        (list "org-static"
 	     :base-directory "./Web"
