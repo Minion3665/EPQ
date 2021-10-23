@@ -65,8 +65,7 @@ targets and targets."
   (concat "#+TITLE: Sitemap\n\n"
           (org-list-to-subtree list)))
 
-(org-export-define-backend 'latex
-  ...
+(org-export-define-backend 'epq
   :options-alist '((:description "DESCRIPTION" nil nil t)))
 
 (setq org-publish-project-alist
@@ -92,7 +91,7 @@ targets and targets."
 	     :sitemap-format-entry (lambda (entry style project)
 				     (cond (
 					    (not (directory-name-p entry))
-					    (format "%s" (org-publish-find-property entry :subtitle project))
+					    (format "%s" (org-publish-find-property entry :description project 'epq))
 					    ) (
 					    (eq style 'tree)
 					    (file-name-nondirectory (directory-file-name entry))
