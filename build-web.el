@@ -88,7 +88,7 @@ targets and targets."
 	     :sitemap-format-entry (lambda (entry style project)
 				     (cond (
 					    (not (directory-name-p entry))
-					    (format "%s" (org-publish-find-title entry project))
+					    (format "%s" (org-publish-find-property entry :title project))
 					    ) (
 					    (eq style 'tree)
 					    (file-name-nondirectory (directory-file-name entry))
