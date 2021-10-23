@@ -65,6 +65,10 @@ targets and targets."
   (concat "#+TITLE: Sitemap\n\n"
           (org-list-to-subtree list)))
 
+(org-export-define-backend 'latex
+  ...
+  :options-alist '((:description "DESCRIPTION" nil nil t)))
+
 (setq org-publish-project-alist
       (list
        (list "epq-project-docs"
