@@ -13,7 +13,7 @@ jobs:
         uses: actions/checkout@v1
 
       - name: Install Emacs
-        run: sudo apt install flatpak -y && flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo && flatpak install flathub org.gnu.emacs
+        run: sudo apt install flatpak -y && sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo && flatpak install flathub org.gnu.emacs
 
       - name: Build the site
         run: sudo chmod +x ./build-web.sh && ./build-web.sh
