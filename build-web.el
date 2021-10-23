@@ -62,7 +62,7 @@ targets and targets."
 
 (defun org-publish-org-sitemap (title list)
   "Sitemap generation function."
-  (concat "#+TITLE: Sitemap\n\n* All pages"
+  (concat "#+TITLE: Sitemap\n\n* All pages\n"
           (org-list-to-org list)))
 
 (setq org-publish-project-alist
