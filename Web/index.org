@@ -1,4 +1,4 @@
-#+title: Homepage
+#+title-test: Homepage
 #+description: The main page of the website, where I put notices & links to important stuff
 
 * Hello world
