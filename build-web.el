@@ -86,11 +86,15 @@ targets and targets."
 	     :sitemap-file-entry-format "%d - %t"
 	     :sitemap-function 'org-publish-org-sitemap
 	     :sitemap-format-entry (lambda (entry style project)
-				     (cond ((not (directory-name-p entry))
-					    (format "%s"
-						    (org-publish-find-property entry "title" project)))
-					   ((eq style 'tree) (file-name-nondirectory (directory-file-name entry)))
-					   (t entry)))
+				     (cond (
+					    (not (directory-name-p entry))
+					    (format "%s" (org-publish-find-property entry :description project))
+					    ) (
+					    (eq style 'tree)
+					    (file-name-nondirectory (directory-file-name entry))
+					    ) (t entry)
+					      )
+				     )
 	     )
        (list "org-static"
 	     :base-directory "./Web"
