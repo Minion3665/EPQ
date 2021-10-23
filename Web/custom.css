@@ -25,7 +25,7 @@ h2 {
 
 h3::before {
     content: "## ";
-    padding-left: "1em";
+    padding-left: 1em;
 }
 h3 {
     color: #9effff;
@@ -33,7 +33,7 @@ h3 {
 
 h4::before {
     content: "### ";
-    padding-left: "2em";
+    padding-left: 2em;
 }
 h4 {
     color: #ff98a4;
@@ -41,7 +41,7 @@ h4 {
 
 h5::before {
     content: "#### ";
-    padding-left: "3em";
+    padding-left: 3em;
 }
 h5 {
     color: #82aaff;
@@ -49,7 +49,7 @@ h5 {
 
 h6::before {
     content: "##### ";
-    padding-left: "4em";
+    padding-left: 4em;
 }
 h6 {
     color: #ff9d00;
