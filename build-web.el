@@ -85,7 +85,7 @@ For my EPQ, I'm making a process management daemon. I [[file:Documents/process-m
   (let ((filename (org-publish-find-title entry project)))
     (if (= (length filename) 0)
         (format "*%s*" entry)
-      (format "[[file:%s][%s]] (Last edit %s)"
+      (format "[[file:%s][%s]] (Created at %s)"
               entry
               filename
 	      (format-time-string "%Y-%m-%d"
@@ -101,6 +101,7 @@ For my EPQ, I'm making a process management daemon. I [[file:Documents/process-m
 	     :publishing-function 'org-html-publish-to-html
 	     :with-author nil
 	     :with-creator nil
+	     :with-timestamps nil
 	     :section-numbers nil
 	     :title "Skyler Turner's EPQ"
 	     :with-title nil
