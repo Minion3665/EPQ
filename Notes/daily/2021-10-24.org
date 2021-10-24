@@ -1,0 +1,19 @@
+:PROPERTIES:
+:ID:       9f1bcefb-95cc-496e-a009-943118836f66
+:END:
+#+title: 2021-10-24
+
+* Today's task list
+- [ ] Dates (perhaps modification dates?) on the pages would be nice, currently they just show the titles
+- [ ] The rest of the work from notion needs to be transferred over
+- [ ] Links to the website need to be added to the class notebook & onedrive folder
+- [ ] Links to the sitemap & other useful pages, as well as a short description need to be added to the main homepage
+- [ ] The notes homepage should no longer be called homepage
+- [ ] Templates should be created for daily diary notes
+
+To start off today I've copied over the task-list of tasks I didn't complete yesterday, and I'm going to have a go at finishing as many as possible in 2 hours. It's still mostly setup/busywork, so there's not a whole lot to document, but I'll write down useful stuff here as well as make commits to the repository.
+
+
+As a first task, I'm going to sort out the homepage of the website; I've decided to have the sitemap on the homepage (at the bottom so that it's easy to find links to everywhere. Other things I'll include on the homepage are as follows:
+- A short description of who I am, likely stolen from a private self-describing notion note
+- A short description of what the EPQ is)
