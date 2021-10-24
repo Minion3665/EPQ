@@ -14,12 +14,12 @@ For my EPQ, I'm making a process management daemon. I [[file:Documents/process-m
 
 * All pages
 - *Notes/*
-  - [[file:Notes/20211018105127-homepage.org][Notes]] (Last edit 2021-10-24)
+  - [[file:Notes/20211018105127-homepage.org][Notes]] (Created at 2021-10-24)
   - *Notes/daily/*
-    - [[file:Notes/daily/2021-10-24.org][2021-10-24]] (Last edit 2021-10-24)
-    - [[file:Notes/daily/2021-10-23.org][2021-10-23]] (Last edit 2021-10-24)
+    - [[file:Notes/daily/2021-10-24.org][2021-10-24]] (Created at 2021-10-24)
+    - [[file:Notes/daily/2021-10-23.org][2021-10-23]] (Created at 2021-10-24)
 - *Documents/*
-  - [[file:Documents/process-manager-project-requirements.org][Project specification]] (Last edit 2021-10-24)
-  - [[file:Documents/poem-based-on-an-image.org][Just existing]] (Last edit 2021-10-24)
-  - [[file:Documents/why-this-project.org][Why have I chosen this project?]] (Last edit 2021-10-19)
-  - [[file:Documents/personal-audit.org][EPQ personal audit]] (Last edit 2021-10-18)
+  - [[file:Documents/process-manager-project-requirements.org][Project specification]] (Created at 2021-10-24)
+  - [[file:Documents/poem-based-on-an-image.org][Just existing]] (Created at 2021-10-24)
+  - [[file:Documents/why-this-project.org][Why have I chosen this project?]] (Created at 2021-10-19)
+  - [[file:Documents/personal-audit.org][EPQ personal audit]] (Created at 2021-10-18)
