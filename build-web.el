@@ -80,6 +80,17 @@ For my EPQ, I'm making a process management daemon. I [[file:Documents/process-m
 "
           (org-list-to-org list)))
 
+(defun sitemap-format-entry-function (entry style project)
+  "Format ENTRY in org-publish PROJECT Sitemap format ENTRY ENTRY STYLE format that includes date."
+  (let ((filename (org-publish-find-title entry project)))
+    (if (= (length filename) 0)
+        (format "*%s*" entry)
+      (format "{{{timestamp(%s)}}} [[file:%s][%s]]"
+              (format-time-string "%Y-%m-%d"
+                                  (org-publish-find-date entry project))
+              entry
+              filename))))
+
 (setq org-publish-project-alist
       (list
        (list "epq-project-docs"
@@ -99,6 +110,7 @@ For my EPQ, I'm making a process management daemon. I [[file:Documents/process-m
 	     :sitemap-title "Home"
 	     :sitemap-sort-files 'anti-chronologically
 	     :sitemap-function 'org-publish-org-sitemap
+	     :sitemap-format-entry 'sitemap-format-entry-function
 	     )
        (list "org-static"
 	     :base-directory "./Web"
