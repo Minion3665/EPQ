@@ -11,7 +11,9 @@ body {
 a {
     --accent: #82aaff !important;
 }
-
+img {
+    max-width: 100%;
+}
 h2::before, h3::before, h4::before, h5::before, h6::before {
     font-size: 70%;
 }
