@@ -88,7 +88,7 @@ For my EPQ, I'm making a process management daemon. I [[file:Documents/process-m
       (format "[[file:%s][%s]] (Created at %s)"
               entry
               filename
-	      (format-time-string "%Y-%m-%d"
+	      (format-time-string "%H:%M:%S on %Y-%m-%d"
                                   (org-publish-find-date entry project))))))
 
 (setq org-publish-project-alist
