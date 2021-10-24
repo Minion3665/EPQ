@@ -1,0 +1,18 @@
+:PROPERTIES:
+:ID:       daef1622-dd3a-4388-9441-b48d64e67f87
+:END:
+#+title: Upper 6th Meeting
+#+date: 4th October 2021
+
+I had the pleasure of talking to some Upper 6ths about their project & what they'd suggest making for mine.
+
+Unfortunately this conversation was spontaneous so I can't put a recording or transcript here, however I did compile a list of their tips.
+Here are the tips they gave me.
+- The EP is /much/ more forgiving to dissertations than artifacts
+  - Despite this advice I'm still going to do an artifact. Unfortunately the idea simply appeals to me far more
+- Pick something scalable, you need to have the possibility to finish it quickly and get more complex, rather than make something and be unable to finish it later
+  - [[file:~/School/EPQ/Documents/process-manager-project-requirements.org][The initial specification]] I wrote was designed to be scalable, so my project fits this /perfectly/
+- Pick something you're very interested in, you do not want to be working on something that bores you for this long
+  - Luckily my project is something that directly impacts me, in a subject I deeply care about & something I have wanted to do for a while
+- Pick something that *you can do research for*
+  - Initially [[id:9941e505-65be-4fa0-9d2d-6dddc5c3fda1][Can my project be researched?]]
