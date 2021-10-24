@@ -4,16 +4,30 @@
 #+title: 2021-10-24
 
 * Today's task list
-- [ ] Dates (perhaps modification dates?) on the pages would be nice, currently they just show the titles
-- [ ] The rest of the work from notion needs to be transferred over
-- [ ] Links to the website need to be added to the class notebook & onedrive folder
+- [X] Dates (perhaps modification dates?) on the pages would be nice, currently they just show the titles
 - [X] Links to the sitemap & other useful pages, as well as a short description need to be added to the main homepage
 - [X] The notes homepage should no longer be called homepage
+- [ ] The rest of the work from notion needs to be transferred over
+- [ ] Links to the website need to be added to the class notebook & onedrive folder
 - [ ] Templates should be created for daily diary notes
-
+(Copied further down)
+  
 To start off today I've copied over the task-list of tasks I didn't complete yesterday, and I'm going to have a go at finishing as many as possible in 2 hours. It's still mostly setup/busywork, so there's not a whole lot to document, but I'll write down useful stuff here as well as make commits to the repository.
 
 
 As a first task, I'm going to sort out the homepage of the website; I've decided to have the sitemap on the homepage (at the bottom so that it's easy to find links to everywhere. Other things I'll include on the homepage are as follows:
 - A short description of who I am, likely stolen from a private self-describing notion note
 - A short description of what the EPQ is)
+* EPQ summer homework
+The EPQ summer homework is a good tasklist to append to this tasklist, especially as it contains the same elements.
+
+By this point in the day I've completed $\frac{1}{2}$ of the initial tasks, so I'm going to copy the rest down here and add the summer homework on
+- [ ] The rest of the work from notion needs to be transferred over
+- [ ] Links to the website need to be added to the class notebook & onedrive folder (Specifically the mind maps, self audit summer work and diaries (can be added in the planning section.) need to be in the notebook)
+- [ ] Templates should be created for daily diary notes
+- [ ] Complete the page of the PPR (in your 'Planning' folder) up to the Mid Project Review.
+- [ ] Go to Moodle and look at the 'Examples of projects from Hills students'.
+    - [ ] Make notes on these examples
+        - What are the strengths and weaknesses?
+        - What can you learn from these?
+        - How will this influence the way you work?
