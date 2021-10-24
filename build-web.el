@@ -74,7 +74,7 @@ EPQ stands for /Extended Project Qualification/; it's an independent project wor
 I'm taking the EPQ because my 6th form requires me to take it, however it also offers benefits in other areas and it can't be said that me taking the EPQ was entirely down to my 6th-form, I did choose to go here after all. The EPQ (as previously mentioned) helps develop various skills, people who've taken an EPQ tend to have higher grades overall and the EPQ also looks great on a personal statement or university application, with some universities even offering lower grade requirements if you get high EPQ grades. All-in-all it's a great opportunity for me.
 
 * What am I doing for EPQ?
-For my EPQ, I'm making a process management daemon. I [[file:Web/Documents/process-manager-project-requirements.org][wrote a specification in year 11 for what this could look like]], which is what I'll be following as a rough guide. When the project is finished, I'll be taking it on to our production server and using it to run all of our bots, websites & other projects.
+For my EPQ, I'm making a process management daemon. I [[file:Documents/process-manager-project-requirements.org][wrote a specification in year 11 for what this could look like]], which is what I'll be following as a rough guide. When the project is finished, I'll be taking it on to our production server and using it to run all of our bots, websites & other projects.
 
 * All pages
 "
