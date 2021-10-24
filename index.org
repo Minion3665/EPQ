@@ -13,13 +13,13 @@ I'm taking the EPQ because my 6th form requires me to take it, however it also o
 For my EPQ, I'm making a process management daemon. I [[file:Documents/process-manager-project-requirements.org][wrote a specification in year 11 for what this could look like]], which is what I'll be following as a rough guide. When the project is finished, I'll be taking it on to our production server and using it to run all of our bots, websites & other projects.
 
 * All pages
-- Documents
-  - [[file:Documents/poem-based-on-an-image.org][Just existing]]
-  - [[file:Documents/process-manager-project-requirements.org][Project specification]]
-  - [[file:Documents/why-this-project.org][Why have I chosen this project?]]
-  - [[file:Documents/personal-audit.org][EPQ personal audit]]
-- Notes
-  - [[file:Notes/20211018105127-homepage.org][Homepage]]
-  - daily
-    - [[file:Notes/daily/2021-10-23.org][2021-10-23]]
-    - [[file:Notes/daily/2021-10-24.org][2021-10-24]]
+- *Documents/*
+  - [[file:Documents/process-manager-project-requirements.org][Project specification]] (Last edit 2021-10-24)
+  - [[file:Documents/why-this-project.org][Why have I chosen this project?]] (Last edit 2021-10-24)
+  - [[file:Documents/poem-based-on-an-image.org][Just existing]] (Last edit 2021-10-24)
+  - [[file:Documents/personal-audit.org][EPQ personal audit]] (Last edit 2021-10-24)
+- *Notes/*
+  - [[file:Notes/20211018105127-homepage.org][Notes]] (Last edit 2021-10-24)
+  - *Notes/daily/*
+    - [[file:Notes/daily/2021-10-23.org][2021-10-23]] (Last edit 2021-10-24)
+    - [[file:Notes/daily/2021-10-24.org][2021-10-24]] (Last edit 2021-10-24)
