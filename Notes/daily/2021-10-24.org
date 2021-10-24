@@ -22,12 +22,12 @@ As a first task, I'm going to sort out the homepage of the website; I've decided
 The EPQ summer homework is a good tasklist to append to this tasklist, especially as it contains the same elements.
 
 By this point in the day I've completed $\frac{1}{2}$ of the initial tasks, so I'm going to copy the rest down here and add the summer homework on
-- [ ] The rest of the work from notion needs to be transferred over
+- [X] The rest of the work from notion needs to be transferred over
 - [ ] Links to the website need to be added to the class notebook & onedrive folder (Specifically the mind maps, self audit summer work and diaries (can be added in the planning section.) need to be in the notebook)
 - [ ] Templates should be created for daily diary notes
 - [ ] Complete the page of the PPR (in your 'Planning' folder) up to the Mid Project Review.
 - [ ] Go to Moodle and look at the 'Examples of projects from Hills students'.
-    - [ ] Make notes on these examples
-        - What are the strengths and weaknesses?
-        - What can you learn from these?
-        - How will this influence the way you work?
+  - [ ] Make notes on these examples
+    - What are the strengths and weaknesses?
+    - What can you learn from these?
+    - How will this influence the way you work?
