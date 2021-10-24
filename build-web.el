@@ -85,11 +85,11 @@ For my EPQ, I'm making a process management daemon. I [[file:Documents/process-m
   (let ((filename (org-publish-find-title entry project)))
     (if (= (length filename) 0)
         (format "*%s*" entry)
-      (format "%s - [[file:%s][%s]]"
-              (format-time-string "%Y-%m-%d"
-                                  (org-publish-find-date entry project))
+      (format "[[file:%s][%s]] (Last edit %s)"
               entry
-              filename))))
+              filename
+	      (format-time-string "%Y-%m-%d"
+                                  (org-publish-find-date entry project))))))
 
 (setq org-publish-project-alist
       (list
