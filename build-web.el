@@ -101,7 +101,7 @@ For my EPQ, I'm making a process management daemon. I [[file:Documents/process-m
 	     :publishing-function 'org-html-publish-to-html
 	     :with-author nil
 	     :with-creator nil
-	     :with-timestamps nil
+	     :time-stamp-file nil
 	     :section-numbers nil
 	     :title "Skyler Turner's EPQ"
 	     :with-title nil
