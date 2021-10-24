@@ -12,11 +12,11 @@ jobs:
       - name: Check out
         uses: actions/checkout@v1
 
-      - name: Install Emacs
-        run: sudo snap install emacs --classic
+      - name: Install Packages
+        run: sudo snap install emacs --classic && sudo apt install git-restore-mtime
 
       - name: Build the site
-        run: sudo chmod +x ./build-web.sh && ./build-web.sh
+        run: git restore-mtime && sudo chmod +x ./build-web.sh && ./build-web.sh
 
       - name: Publish generated content to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@4.1.4
