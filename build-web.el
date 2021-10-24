@@ -62,7 +62,7 @@ targets and targets."
 
 (defun org-publish-org-sitemap (title list)
   "Sitemap generation function."
-  (concat "#+TITLE: Sitemap\n\n* All pages\n"
+  (concat "#+TITLE: Home\n\n* All pages\n"
           (org-list-to-org list)))
 
 (setq org-publish-project-alist
@@ -80,7 +80,7 @@ targets and targets."
 	     :with-title nil
 	     
 	     :auto-sitemap t
-	     :sitemap-filename "sitemap.org"
+	     :sitemap-filename "index.org"
 	     :sitemap-title "Home"
 	     :sitemap-sort-files 'anti-chronologically
 	     :sitemap-function 'org-publish-org-sitemap
