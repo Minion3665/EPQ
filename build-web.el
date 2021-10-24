@@ -85,7 +85,7 @@ For my EPQ, I'm making a process management daemon. I [[file:Documents/process-m
   (let ((filename (org-publish-find-title entry project)))
     (if (= (length filename) 0)
         (format "*%s*" entry)
-      (format "[[file:%s][%s]] (Created at %s)"
+      (format "[[file:%s][%s]] (Created %s)"
               entry
               filename
 	      (format-time-string "on %Y-%m-%d at %H:%M:%S"
