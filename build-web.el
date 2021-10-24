@@ -62,7 +62,15 @@ targets and targets."
 
 (defun org-publish-org-sitemap (title list)
   "Sitemap generation function."
-  (concat "#+TITLE: Home\n\n* All pages\n"
+  (concat "
+#+TITLE: Home
+
+* Who am I?
+
+* What is the EPQ?
+
+* All pages
+"
           (org-list-to-org list)))
 
 (setq org-publish-project-alist
