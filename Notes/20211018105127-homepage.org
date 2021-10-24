@@ -4,4 +4,4 @@
 #+title: Notes
 This notes folder should be used as a scratchpad for ideas, as well as a place to record short bits of information that have not yet been compiled into Documents.
 
-The daily folder of notes will be used for diary-style notes, organized by date. It's possible these will be organized by date, although they do not have to be.
+The daily folder of notes will be used for diary-style notes as well as short-lived notes, organized by date. It's possible these will be later compiled into documents, although they do not have to be.
