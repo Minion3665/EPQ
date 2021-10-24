@@ -15,4 +15,4 @@ Here are the tips they gave me.
 - Pick something you're very interested in, you do not want to be working on something that bores you for this long
   - Luckily my project is something that directly impacts me, in a subject I deeply care about & something I have wanted to do for a while
 - Pick something that *you can do research for*
-  - Initially [[id:9941e505-65be-4fa0-9d2d-6dddc5c3fda1][Can my project be researched?]]
+  - Initially [[id:9941e505-65be-4fa0-9d2d-6dddc5c3fda1][I was worried that my project was not researchable]], however I've later concluded that there's a lot of research to do, I just need to make sure to document it
