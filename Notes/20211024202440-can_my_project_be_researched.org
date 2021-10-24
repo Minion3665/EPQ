@@ -2,12 +2,12 @@
 :ID:       9941e505-65be-4fa0-9d2d-6dddc5c3fda1
 :END:
 #+title: Can my project be researched?
-Initially I worried if my project could be researched. It's a development project, and I don't usually think of those as having a lot of research. They have design stages, a lot of development, a lot of debugging and testing, and then later maintainance, but I couldn't think of what the research could be.
+Initially I worried if my project could be researched. It's a development project, and I don't usually think of those as having a lot of research. They have design stages, a lot of development, a lot of debugging and testing, and then later maintenance, but I couldn't think of what the research could be.
 
 I then realized that of course development projects /do/ have research, it's just been hiding in all the other steps. Here's a few things that need research in a development project:
 - What language would be best to use (Exploring what libraries a language has, along with speed, extendability, update frequency, community size & other factors)
 - What frameworks, libraries etc. would be best to use (Looking at the documentation for various options)
-- How to implement solutions in a given language (Stackoverflow or similar)
+- How to implement solutions in a given language (Stack overflow or similar)
 
 And that's only /after/ deciding to do the project. Before doing the project you may also need to research
 - What existing solutions there are
