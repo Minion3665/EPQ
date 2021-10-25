@@ -2,4 +2,13 @@
 :ID:       4a250c3b-83f5-4dc9-bd09-4def6b3853d0
 :END:
 #+title: 2021-10-25
-* 
+* Today's task list
+- [ ] Complete the page of the PPR (in your 'Planning' folder) up to the Mid Project Review.
+- [ ] Templates should be created for daily diary notes
+- [ ] Go to Moodle and look at the 'Examples of projects from Hills students'.
+  - [ ] Make notes on these examples
+    - What are the strengths and weaknesses?
+    - What can you learn from these?
+    - How will this influence the way you work?
+
+Yesterday I completed a few of the tasks I wanted to, I got up to completing part of the PPR, so that's the first thing I'm going to be focusing on today.
