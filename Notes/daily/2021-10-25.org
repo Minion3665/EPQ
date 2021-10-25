@@ -3,7 +3,11 @@
 :END:
 #+title: 2021-10-25
 * Today's task list
-- [ ] Complete the page of the PPR (in your 'Planning' folder) up to the Mid Project Review.
+- [X] Complete the page of the PPR (in your 'Planning' folder) up to the Mid Project Review.
+- [X] License or get permission for all assets on the website
+- [ ] Copy the PPR to documents
+  - [ ] Get permission from OCR to publish PPR
+  - [ ] Copy it over
 - [ ] Templates should be created for daily diary notes
 - [ ] Go to Moodle and look at the 'Examples of projects from Hills students'.
   - [ ] Make notes on these examples
@@ -12,3 +16,6 @@
     - How will this influence the way you work?
 
 Yesterday I completed a few of the tasks I wanted to, I got up to completing part of the PPR, so that's the first thing I'm going to be focusing on today.
+---
+I've now completed the PPR up until the stage where I have to (and emailed OCR for permission to publish it, as they hold the copyright to that document), and noticed that I haven't yet licensed the image in [[file:~/School/EPQ/Documents/poem-based-on-an-image.org][the poem I wrote based on the image]]... oops! My next task will be to get a license for that.
+
