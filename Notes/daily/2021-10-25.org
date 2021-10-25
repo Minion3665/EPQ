@@ -19,3 +19,10 @@ Yesterday I completed a few of the tasks I wanted to, I got up to completing par
 ---
 I've now completed the PPR up until the stage where I have to (and emailed OCR for permission to publish it, as they hold the copyright to that document), and noticed that I haven't yet licensed the image in [[file:~/School/EPQ/Documents/poem-based-on-an-image.org][the poem I wrote based on the image]]... oops! My next task will be to get a license for that.
 
+To do this, I reverse-image-searched the image using [[https://tineye.com/][tineye]], looking specifically for stock images. I then headed over to [[https://www.123rf.com][123rf]] and used their free trial (10 free stock images) in order to download the image under their standard license. I'm hoping that any more stock-image usage happens within the next month, as then I likely won't have to pay for licenses to any other stock images (credits don't roll over if you cancel your plan).
+
+Finally, I downloaded a higher-resolution version of the image and put it onto the poem page.
+
+All other assets on my website were created by me (excluding the voice recording, which also contains Pinea, I've already asked them for permission to publush this), so I don't need to get licenses to anything else right now. I will create a new task that I would like to
+- [ ] Make a credits.org page displaying links to everything and everyone that's helped me in getting this project
+I feel like this is an important addition, as I will rely on a lot of stuff in this project, and I want people to be adequately credited, cited & soforth.
