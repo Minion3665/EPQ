@@ -55,6 +55,10 @@ If you're inside the walled-garden that is our host, you have far too much power
 - Use far too many system resources, meaning they can't be used for everything else and grinding everything to a halt
 - Find a VM where someone hasn't logged out properly, login & cause havoc (note: this one can't actually happen normally, because people are only given permissions to view VMs they need to access, however it does rather negate the usefulness of a password option so I've left it in)
 - Find a VM where a vulnerable service is exposed to the inside (but not the outside world). Exploit it and cause havoc. (Note: email was like this for a while due to a misconfiguration where it trusted its network, databases will trust the network more than outside access etc.)
+** Personal access tokens make me sad
+- They require you to create a token, can be dangerous if you type them out in the open as they give access to every repo you own, including personal ones. They are long, and hard to type, and copy and paste is buggy at best, and they're just like a longer, more annoying, more insecure password.
+  And they make me sad.
+  Very sad.
 * Footnotes
 
 [fn:9] version control is a way of storing code and allowing us to view & move to past code (hence 'version' control) 
