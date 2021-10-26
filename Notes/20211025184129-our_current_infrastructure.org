@@ -49,6 +49,12 @@ noVNC is, if possible, worse than xterm.js. It doesn't have copy/paste functiona
 You must type multiple passwords to change anything. Suppose I want to change something on a VM, I'll need to remember not only my own password but also the password to the VM. You may foolishly assume this increases security, but due to their lighter nature we generally run everything in containers which have a slightly more convoluted way to access them that requires different passwords. For accessing a given container without remembering the container password, I need to enter my password, the same password, 3 times.
 ** Dependency issues are easy to cause
 Let's assume you need python3.10. You'll have to install that manually. If you want to update python, you'll need to do that manually too. If you've got multiple bots running on the same host they'll all need to use versions that can be installed alongside each other. If you want to use the same version of python but different version of libraries then you're out of luck. If you want to install a library and that later gets an update that breaks your code, you're absolutely screwed: =pip install -Ur requirements.txt= will update everything indiscriminately. If you forget to add something to that requirements file, by the way, you won't install it and stuff will break.
+** It's fairly insecure
+If you're inside the walled-garden that is our host, you have far too much power. Let's assume you are a malicious staff member who wants to take us down, here are your options:
+- Fake your server's IP address, moving to the IP of one of our website's VMs, if you manage to get that IP when the system restarts you'll now control (with https) one of our websites
+- Use far too many system resources, meaning they can't be used for everything else and grinding everything to a halt
+- Find a VM where someone hasn't logged out properly, login & cause havoc (note: this one can't actually happen normally, because people are only given permissions to view VMs they need to access, however it does rather negate the usefulness of a password option so I've left it in)
+- Find a VM where a vulnerable service is exposed to the inside (but not the outside world). Exploit it and cause havoc. (Note: email was like this for a while due to a misconfiguration where it trusted its network, databases will trust the network more than outside access etc.)
 * Footnotes
 
 [fn:9] version control is a way of storing code and allowing us to view & move to past code (hence 'version' control) 
