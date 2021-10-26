@@ -2,10 +2,27 @@
 :ID:       a907489b-22b8-46e5-89fb-95319c995df3
 :END:
 #+title: Our current infrastructure
-We use several tools to do the work that will be accomplished by our process manager; here's how we currently run a single process on our server. For this example, we'll assume that the process is a discord bot containing a web server for checking the latency, such as is active on our bot RSM ([[https://rsm.bots.clicksminuteper.net/][the latency for RSM is displayed on this webpage, for easy access from CMPing, our status checker running in a separate location]]). We'll then run over a few problems with this method.
+We use several tools to do the work that will be accomplished by our process manager; here's how we currently run a single process on our server. For this example, we'll assume that the process is a python discord bot containing a web server for checking the latency, such as is active on our bot RSM ([[https://rsm.bots.clicksminuteper.net/][the latency for RSM is displayed on this webpage, for easy access from CMPing, our status checker running in a separate location]]). We'll then run over a few problems with this method.
 
 
 Firstly, we own our own server. This is a mid to high range machine, and is fully capable of running a lot of bots, services & soforth.
 
-Ontop of that server, we have different bots which in some cases are owned by different users, need different environments, and should be kept separate for security reasons. To do this, we run an LXC for each project or group of projects. As an example, we run one LXC for all of our websites, as they generally need the same permissions to access. In contrast (by a quirk of fate) we run both our own forms bot and a direct competitor on this host, we obviously manage our own forms bot but don't want our competitor to be able to manage our forms bot. We therefore run these on separate containers.
+On that server, we have different bots which in some cases are owned by different users, need different environments, and should be kept separate for security reasons. To do this, we run an LXC for each project or group of projects. As an example, we run one LXC for all of our websites, as they generally need the same permissions to access. In contrast (by a quirk of fate) we run both our own forms bot and a direct competitor on this host, we obviously manage our own forms bot but don't want our competitor to be able to manage our forms bot. We therefore run these on separate containers.
 
+Inside each container, we manually install all the things we need to run our bot, this can cause problems if developers have a different environment, or if the environment gets updated. With node.js this is less of a problem, because while the node version can vary if installed differently packages have versions specified. In python, installing a package does not store which version has been installed meaning that it's not possible to recover that later, this can very easily cause the wrong version of something to be installed in production.
+
+We then use a program called PM2 to start, collect logs for & manage processes. If a process needs to be restarted, we can run =pm2 restart pid= to restart it, we can use =pm2 logs pid= to view the logs, and =pm2 ls= to see what processes are running on a given machine.
+
+If the process is a discord bot with a web server for checking latency, then we'll have a port out: we don't run a strong firewall on each of the internal containers (the services exposed are normally SSH & any services which are running as part of the bots), so we run a firewall blocking outbound traffic from the router to our services. We run a locked-down container that hosts and controls this firewall, known as a 'DMZ', for demilitarized-zone. In practice, this machine holds a firewall using UFW[fn:1] and a reverse proxy[fn:2] using NGINX for punching holes through that firewall. If we have a website, we tell that machine that 'port x of machine y should end up at z.clicksminuteper.net', and any traffic for z.clicksminuteper.net will end up at machine y port x.
+
+It's worth noting that SSL[fn:3] certificates are managed on the DMZ. This means that the following is true:
+=Host container <---- Insecure ----> DMZ <---- Secure ----> Your machine=
+The path from the DMZ to your machine is secured, but the path from the DMZ to our host container is not. In reality, that's fairly low-risk, but problems could be caused by a developer going rogue.
+
+* Footnotes
+
+[fn:3] SSL is encryption for websites; when you go to a website with 'https', it's secure and uses SSL, when you go to a website with 'http', someone may be able to read the traffic. 
+
+[fn:2] A reverse proxy looks for incoming traffic and sends it on to the right destination
+
+[fn:1] A small easy-to-use firewall program 
