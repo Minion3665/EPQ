@@ -4,7 +4,7 @@
 #+title: Our current infrastructure
 We use several tools to do the work that will be accomplished by our process manager; here's how we currently run a single process on our server. For this example, we'll assume that the process is a python discord bot containing a web server for checking the latency, such as is active on our bot RSM ([[https://rsm.bots.clicksminuteper.net/][the latency for RSM is displayed on this webpage, for easy access from CMPing, our status checker running in a separate location]]). We'll then run over a few problems with this method.
 
-
+* How is it run?
 Firstly, we own our own server. This is a mid to high range machine, and is fully capable of running a lot of bots, services & soforth.
 
 On that server, we have different bots which in some cases are owned by different users, need different environments, and should be kept separate for security reasons. To do this, we run an LXC for each project or group of projects. As an example, we run one LXC for all of our websites, as they generally need the same permissions to access. In contrast (by a quirk of fate) we run both our own forms bot and a direct competitor on this host, we obviously manage our own forms bot but don't want our competitor to be able to manage our forms bot. We therefore run these on separate containers.
@@ -18,6 +18,8 @@ If the process is a discord bot with a web server for checking latency, then we'
 It's worth noting that SSL[fn:3] certificates are managed on the DMZ. This means that the following is true:
 =Host container <---- Insecure ----> DMZ <---- Secure ----> Your machine=
 The path from the DMZ to your machine is secured, but the path from the DMZ to our host container is not. In reality, that's fairly low-risk, but problems could be caused by a developer going rogue.
+
+* Scenarios
 
 * Footnotes
 
