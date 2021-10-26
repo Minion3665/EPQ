@@ -5,3 +5,5 @@
 This notes folder should be used as a scratchpad for ideas, as well as a place to record short bits of information that have not yet been compiled into Documents.
 
 The daily folder of notes will be used for diary-style notes as well as short-lived notes, organized by date. It's possible these will be later compiled into documents, although they do not have to be.
+
+- [[id:2eb80361-b6cf-47dd-8426-e5d9c217aea6][An investigation into containerization]]
