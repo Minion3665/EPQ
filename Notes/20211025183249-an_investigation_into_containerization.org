@@ -3,3 +3,4 @@
 :END:
 #+title: An investigation into containerization
 
+- [[id:8ee72434-d01f-46c9-a903-09ee8a03439c][Docker vs LXC]]
