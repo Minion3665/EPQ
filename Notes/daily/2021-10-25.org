@@ -14,7 +14,7 @@
     - What are the strengths and weaknesses?
     - What can you learn from these?
     - How will this influence the way you work?
-
+      
 Yesterday I completed a few of the tasks I wanted to, I got up to completing part of the PPR, so that's the first thing I'm going to be focusing on today.
 ---
 I've now completed the PPR up until the stage where I have to (and emailed OCR for permission to publish it, as they hold the copyright to that document), and noticed that I haven't yet licensed the image in [[file:~/School/EPQ/Documents/poem-based-on-an-image.org][the poem I wrote based on the image]]... oops! My next task will be to get a license for that.
@@ -26,3 +26,6 @@ Finally, I downloaded a higher-resolution version of the image and put it onto t
 All other assets on my website were created by me (excluding the voice recording, which also contains Pinea, I've already asked them for permission to publush this), so I don't need to get licenses to anything else right now. I will create a new task that I would like to
 - [ ] Make a credits.org page displaying links to everything and everyone that's helped me in getting this project
 I feel like this is an important addition, as I will rely on a lot of stuff in this project, and I want people to be adequately credited, cited & soforth.
+
+I'm also going to add a further quality-of-life task:
+- [ ] Add a link back to the main page from each page on the site, as well as a link to the source on github
