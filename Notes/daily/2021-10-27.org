@@ -2,3 +2,17 @@
 :ID:       e9ae1c77-975b-42ce-a188-e05f125b9f73
 :END:
 #+title: 2021-10-27
+* Today's task list
+- [ ] Copy the PPR to documents
+  - [ ] Get permission from OCR to publish PPR
+  - [ ] Copy it over
+- [ ] Templates should be created for daily diary notes
+- [ ] Go to Moodle and look at the 'Examples of projects from Hills students'.
+  - [ ] Make notes on these examples
+    - What are the strengths and weaknesses?
+    - What can you learn from these?
+    - How will this influence the way you work?
+- [ ] Make a credits.org page displaying links to everything and everyone that's helped me in getting this project
+- [ ] Add a link back to the main page from each page on the site, as well as a link to the source on github
+
+As predicted, no tasks were done yesterday. Today I plan to start off by making a template for diary notes, as this is something I will need to do sooner or later (and sooner rather than later).
