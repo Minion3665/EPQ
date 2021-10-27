@@ -6,7 +6,7 @@
 - [ ] Copy the PPR to documents
   - [ ] Get permission from OCR to publish PPR
   - [ ] Copy it over
-- [ ] Templates should be created for daily diary notes
+- [X] Templates should be created for daily diary notes
 - [ ] Go to Moodle and look at the 'Examples of projects from Hills students'.
   - [ ] Make notes on these examples
     - What are the strengths and weaknesses?
