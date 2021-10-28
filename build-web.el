@@ -97,7 +97,7 @@ For my EPQ, I'm making a process management daemon. I [[file:Documents/process-m
 ;; https://stackoverflow.com/questions/30886282/emacs-lisp-how-can-i-get-the-newest-file-in-a-directory
 
 (setq org-html-preamble-format
-      ("en" (concat "<div class=\"header\"><span class=\"title\">%t</span><a href=\"/\">Home</a><a href=\"" (latest-file "./Notes/daily") "\">Latest daily note</a></div>")))
+      '("en" (concat "<div class=\"header\"><span class=\"title\">%t</span><a href=\"/\">Home</a><a href=\"" (latest-file "./Notes/daily") "\">Latest daily note</a></div>")))
 
 (setq org-publish-project-alist
       (list
