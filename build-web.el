@@ -118,7 +118,7 @@ For my EPQ, I'm making a process management daemon. I [[file:Documents/process-m
 	     :sitemap-function 'org-publish-org-sitemap
 	     :sitemap-format-entry 'sitemap-format-entry-function
 
-	     :html-preamble (concat "<div class=\"header\"><span class=\"title\">%t</span><a href=\"/\">Home</a><a href=\"" (latest-file "./Notes/daily") "\">Latest daily note</a></div>")
+	     :html-preamble (concat "<div class=\"header\"><span class=\"title\">%t</span><div class=\"links\"><a href=\"/\">Home</a><a href=\"" (latest-file "./Notes/daily") "\">Latest daily note</a></div></div>")
 	     )
        (list "org-static"
 	     :base-directory "./Web"
