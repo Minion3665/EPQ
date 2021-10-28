@@ -56,3 +56,13 @@ h6::before {
 h6 {
     color: #ff9d00;
 }
+
+.title {
+    font-size: 2em;
+}
+.header > a {
+    float: right;
+    font-size: 1.5em;
+    padding-left: 10px;
+    padding-right: 10px;
+}
