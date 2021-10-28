@@ -60,12 +60,12 @@ h6 {
 .title {
     font-size: 2em;
 }
-.header > a {
+.links {
     float: right;
     font-size: 1.5em;
-    padding-left: 10px;
-    padding-right: 10px;
+    display: flex;
 }
 #preamble {
     border-bottom: 2px solid var(--text);
 }
+
