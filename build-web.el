@@ -92,8 +92,12 @@ For my EPQ, I'm making a process management daemon. I [[file:Documents/process-m
                                   (org-publish-find-date entry project))))))
 
 (defun latest-org-file (path)
-  "Get latest file (including directory) in PATH."
-  (car (directory-files path nil ".*\.org$" #'file-newer-than-file-p)))
+  (car
+ (seq-find
+  '(lambda (x) (not (nth 1 x))) ; non-directory
+  (sort
+   (directory-files-and-attributes path nil ".*\.org$" t)
+   '(lambda (x y) (time-less-p (nth 5 y) (nth 5 x)))))) ; last modified first: y < x
 ;; https://stackoverflow.com/questions/30886282/emacs-lisp-how-can-i-get-the-newest-file-in-a-directory
 
 (setq org-publish-project-alist
