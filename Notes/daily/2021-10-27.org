@@ -12,7 +12,7 @@
     - What are the strengths and weaknesses?
     - What can you learn from these?
     - How will this influence the way you work?
-- [ ] Make a credits.org page displaying links to everything and everyone that's helped me in getting this project
+- [X] Make a credits.org page displaying links to everything and everyone that's helped me in getting this project
 - [ ] Add a link back to the main page from each page on the site, as well as a link to the source on github
 
 As predicted, no tasks were done yesterday. Today I plan to start off by making a template for diary notes, as this is something I will need to do sooner or later (and sooner rather than later).
