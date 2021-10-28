@@ -1,0 +1,5 @@
+:PROPERTIES:
+:ID:       1bb811a3-54ac-43e5-a2d6-6463efa56211
+:END:
+#+title: Former project example analysis
+
