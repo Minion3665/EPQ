@@ -66,3 +66,6 @@ h6 {
     padding-left: 10px;
     padding-right: 10px;
 }
+#preamble {
+    border-bottom: 2px solid var(--text);
+}
