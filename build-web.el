@@ -96,9 +96,6 @@ For my EPQ, I'm making a process management daemon. I [[file:Documents/process-m
   (car (directory-files path 'full nil #'file-newer-than-file-p)))
 ;; https://stackoverflow.com/questions/30886282/emacs-lisp-how-can-i-get-the-newest-file-in-a-directory
 
-(setq org-html-preamble-format
-      '(("en" (concat "<div class=\"header\"><span class=\"title\">%t</span><a href=\"/\">Home</a><a href=\"" (format "%s" (latest-file "./Notes/daily")) "\">Latest daily note</a></div>"))))
-
 (setq org-publish-project-alist
       (list
        (list "epq-project-docs"
@@ -120,6 +117,8 @@ For my EPQ, I'm making a process management daemon. I [[file:Documents/process-m
 	     :sitemap-sort-files 'anti-chronologically
 	     :sitemap-function 'org-publish-org-sitemap
 	     :sitemap-format-entry 'sitemap-format-entry-function
+
+	     :html-preamble (concat "<div class=\"header\"><span class=\"title\">%t</span><a href=\"/\">Home</a><a href=\"" (latest-file "./Notes/daily") "\">Latest daily note</a></div>")
 	     )
        (list "org-static"
 	     :base-directory "./Web"
