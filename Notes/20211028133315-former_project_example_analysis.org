@@ -3,3 +3,32 @@
 :END:
 #+title: Former project example analysis
 
+For each project:
+- What are the strengths and weaknesses?
+- What can you learn from these?
+- How will this influence the way you work?
+
+* AR Ant poster
+
+* Embroidered family tree
+
+* Hydroponics
+
+* Computer game
+** What went well
+- Demonstration video worked well as a presentation format, as it allowed explanation alongside an example of the project working
+** What could be better
+- Didn't have a lot of time to iron out bugs (not very much time to tweak combat, walking animation glitches, general jankiness of pathfinding)
+** What can I learn?
+- Doing a large project can lead you to not have enough time to polish stuff well enough, scalability is important in project choice, as is polishing as you go along rather than implementing a lot and ultimately getting a worse result
+** How will this influence my project?
+- I'll incrementally add features in order of importance, polishing acceptably at each level rather than leaving that until the end
+- My project would also work well with the format of a demonstration video, which I'll do at the end of the project
+* Science animations
+** What went well
+- Their 'evaluation of sources' page is really well-made, showing relevance and quality alongside sources is a great idea
+- In general, the documentation that they've produced seels to be very high-quality
+** What could be better?
+** What can I learn?
+** How will this influence my project?
+- I'll spend a lot more time on creating intuitive and useful documentation than I otherwise would have, and I'll look at what other students have done in their documentation for inspiration
