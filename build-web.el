@@ -91,9 +91,9 @@ For my EPQ, I'm making a process management daemon. I [[file:Documents/process-m
 	      (format-time-string "on %Y-%m-%d at %H:%M:%S"
                                   (org-publish-find-date entry project))))))
 
-(defun latest-file (path)
+(defun latest-org-file (path)
   "Get latest file (including directory) in PATH."
-  (car (directory-files path 'full nil #'file-newer-than-file-p)))
+  (car (directory-files path nil ".*\.org" #'file-newer-than-file-p)))
 ;; https://stackoverflow.com/questions/30886282/emacs-lisp-how-can-i-get-the-newest-file-in-a-directory
 
 (setq org-publish-project-alist
@@ -118,7 +118,7 @@ For my EPQ, I'm making a process management daemon. I [[file:Documents/process-m
 	     :sitemap-function 'org-publish-org-sitemap
 	     :sitemap-format-entry 'sitemap-format-entry-function
 
-	     :html-preamble (concat "<div class=\"header\"><span class=\"title\">%t</span><div class=\"links\"><a href=\"/\">Home</a><a href=\"" (latest-file "./Notes/daily") "\">Latest daily note</a></div></div>")
+	     :html-preamble (concat "<div class=\"header\"><span class=\"title\">%t</span><div class=\"links\"><a href=\"/\">Home</a><a href=\"/Notes/daily/" (latest-org-file "./Notes/daily") "\">Latest daily note</a></div></div>")
 	     )
        (list "org-static"
 	     :base-directory "./Web"
