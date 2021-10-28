@@ -2,3 +2,17 @@
 :ID:       8d39261e-e994-45ef-a06e-8a72dea32fff
 :END:
 #+title: 2021-10-28 
+* Today's task list
+- [ ] Copy the PPR to documents
+  - [ ] Get permission from OCR to publish PPR
+  - [ ] Copy it over
+- [ ] Go to Moodle and look at the 'Examples of projects from Hills students'.
+  - [ ] Make notes on these examples
+    - What are the strengths and weaknesses?
+    - What can you learn from these?
+    - How will this influence the way you work?
+- [ ] Add a link back to the main page from each page on the site, as well as a link to the source on github
+
+I still haven't recieved a reply from OCR, so I can't complete task 1, so I'm starting with the second task.
+
+[[id:1bb811a3-54ac-43e5-a2d6-6463efa56211][Former project example analysis]] is stored in a separate note for easier access, please go there to see it.
