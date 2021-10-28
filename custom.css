@@ -56,3 +56,22 @@ h6::before {
 h6 {
     color: #ff9d00;
 }
+
+.title {
+    font-size: 2em;
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+.links {
+    float: right;
+    font-size: 1.5em;
+    display: flex;
+    gap: 20px;
+}
+#preamble {
+    border-bottom: 2px solid var(--text);
+}
+

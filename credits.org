@@ -1,0 +1,10 @@
+#+Title: Credits, Licenses & Sources
+Thank you to my tutor for her help and guidance on the EPQ.
+
+Thank you to [[https://systemcrafters.cc/][System Crafters]] for the tutorials in setting up emacs, including but not limited to the [[https://www.youtube.com/watch?v=AfkrzFodoNw][series in creating a website with org-mode]] which I have loosely followed in creating this site.
+
+Thank you to [[https://github.com/PineaFan][PineappleFan]] for their help in determining what features should be in the final project.
+
+Thank you to [[https://clicksminuteper.net][Clicks Minute Per]] for use of the Clicks Minute Per server.
+
+The image on file:Documents/poem-based-on-an-image.org is licensed under the [[https://www.123rf.com/license.php#standard][123rf standard license]].
