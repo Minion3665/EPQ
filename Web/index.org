@@ -13,13 +13,29 @@ I'm taking the EPQ because my 6th form requires me to take it, however it also o
 For my EPQ, I'm making a process management daemon. I [[file:Documents/process-manager-project-requirements.org][wrote a specification in year 11 for what this could look like]], which is what I'll be following as a rough guide. When the project is finished, I'll be taking it on to our production server and using it to run all of our bots, websites & other projects.
 
 * All pages
+- [[file:credits.org][Credits, Licenses & Sources]] (Created on 2021-10-27 at 19:19:44)
 - *Notes/*
-  - [[file:Notes/20211018105127-homepage.org][Notes]] (Created at 2021-10-24)
+  - [[file:Notes/20211028133315-former_project_example_analysis.org][Former project example analysis]] (Created on 2021-10-28 at 21:02:48)
+  - [[file:Notes/20211028204303-why_switch_from_notion.org][Why switch from notion? (Soon™)]] (Created on 2021-10-28 at 20:43:30)
+  - [[file:Notes/20211027145658-templates.org][Templates]] (Created on 2021-10-27 at 14:56:59)
+  - [[file:Notes/20211025184129-our_current_infrastructure.org][Our current infrastructure]] (Created on 2021-10-26 at 19:11:01)
+  - [[file:Notes/20211025183249-an_investigation_into_containerization.org][An investigation into containerization]] (Created on 2021-10-26 at 09:25:09)
+  - [[file:Notes/20211018105127-homepage.org][Notes]] (Created on 2021-10-26 at 08:15:35)
+  - [[file:Notes/20211025183307-docker_vs_lxc.org][Docker vs LXC]] (Created on 2021-10-25 at 18:41:32)
+  - [[file:Notes/20211024201928-upper_6th_meeting.org][Upper 6th Meeting]] (Created on 2021-10-24 at 20:33:54)
+  - [[file:Notes/20211024202440-can_my_project_be_researched.org][Can my project be researched?]] (Created on 2021-10-24 at 20:31:01)
   - *Notes/daily/*
-    - [[file:Notes/daily/2021-10-24.org][2021-10-24]] (Created at 2021-10-24)
-    - [[file:Notes/daily/2021-10-23.org][2021-10-23]] (Created at 2021-10-24)
+    - [[file:Notes/daily/2021-10-25.org][2021-10-25]] (Created on 2021-10-28 at 21:26:29)
+    - [[file:Notes/daily/2021-10-28.org][2021-10-28]] (Created on 2021-10-28 at 21:11:00)
+    - [[file:Notes/daily/2021-10-27.org][2021-10-27]] (Created on 2021-10-27 at 22:06:53)
+    - [[file:Notes/daily/2021-10-26.org][2021-10-26]] (Created on 2021-10-27 at 14:53:09)
+    - [[file:Notes/daily/2021-10-24.org][2021-10-24]] (Created on 2021-10-25 at 08:27:25)
+    - [[file:Notes/daily/2021-10-23.org][2021-10-23]] (Created on 2021-10-24 at 11:06:10)
 - *Documents/*
-  - [[file:Documents/process-manager-project-requirements.org][Project specification]] (Created at 2021-10-24)
-  - [[file:Documents/poem-based-on-an-image.org][Just existing]] (Created at 2021-10-24)
-  - [[file:Documents/why-this-project.org][Why have I chosen this project?]] (Created at 2021-10-19)
-  - [[file:Documents/personal-audit.org][EPQ personal audit]] (Created at 2021-10-18)
+  - [[file:Documents/personal-audit.org][EPQ personal audit]] (Created on 2021-10-26 at 19:18:49)
+  - [[file:Documents/project-progression-record.org][(Soon™) Project Progression Record (PPR)]] (Created on 2021-10-25 at 10:09:39)
+  - [[file:Documents/poem-based-on-an-image.org][Just existing]] (Created on 2021-10-25 at 09:19:21)
+  - [[file:Documents/questioning-a-co-owner.org][Doing research on what users would like to see]] (Created on 2021-10-24 at 20:50:16)
+  - [[file:Documents/project-idea-mindmap.org][Mindmap of project ideas]] (Created on 2021-10-24 at 20:38:54)
+  - [[file:Documents/process-manager-project-requirements.org][Project specification]] (Created on 2021-10-24 at 18:23:18)
+  - [[file:Documents/why-this-project.org][Why have I chosen this project?]] (Created on 2021-10-19 at 22:33:19)
