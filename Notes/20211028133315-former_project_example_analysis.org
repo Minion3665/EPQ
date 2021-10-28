@@ -9,15 +9,29 @@ For each project:
 - How will this influence the way you work?
 
 * AR Ant poster
-
+** What went well?
+** What could be better?
+** What can I learn?
+** How will this influence my project?
 * Embroidered family tree
-
+** What went well?
+** What could be better?
+** What can I learn?
+** How will this influence my project?
 * Hydroponics
-
+** What went well?
+- Explanation at the start of what hydroponics is, as I didn't know what hydroponics was at the start this was useful
+** What could be better?
+- There were a lot of diary entries that were essentially empty, and it feels like it could have been condensed a little more in places
+** What can I learn?
+- Again, the effectiveness of the diary entries are really important. I saw another project that used color-coding on this, which really helped to make the important information more visible, and is something I'll probably be doing in my project
+- Adding explanations for terms the reader does not understand may be important for my project
+** How will this influence my project?
+- I'll explain things that the average person would not understand, as I am aware that I have some specialist knowledge going in to making my project
 * Computer game
-** What went well
+** What went well?
 - Demonstration video worked well as a presentation format, as it allowed explanation alongside an example of the project working
-** What could be better
+** What could be better?
 - Didn't have a lot of time to iron out bugs (not very much time to tweak combat, walking animation glitches, general jankiness of pathfinding)
 ** What can I learn?
 - Doing a large project can lead you to not have enough time to polish stuff well enough, scalability is important in project choice, as is polishing as you go along rather than implementing a lot and ultimately getting a worse result
@@ -25,10 +39,14 @@ For each project:
 - I'll incrementally add features in order of importance, polishing acceptably at each level rather than leaving that until the end
 - My project would also work well with the format of a demonstration video, which I'll do at the end of the project
 * Science animations
-** What went well
+** What went well?
 - Their 'evaluation of sources' page is really well-made, showing relevance and quality alongside sources is a great idea
 - In general, the documentation that they've produced seels to be very high-quality
+- Their time-tracking allowed them to see how far they were through their project and rectify initial issues with being behind
 ** What could be better?
+- The initial idea of the project was too ambitious
 ** What can I learn?
+- Scheduling time properly can be very important for proper project management
 ** How will this influence my project?
 - I'll spend a lot more time on creating intuitive and useful documentation than I otherwise would have, and I'll look at what other students have done in their documentation for inspiration
+- I'll put time-management processes and planning in from the start, [[id:8d39261e-e994-45ef-a06e-8a72dea32fff][adding them to today's task list]]. The suggested time on an EPQ is 2h/w, so I'll schedule that much to start with and evaluate how far I get with that, tweaking as needed
