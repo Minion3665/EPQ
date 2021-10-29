@@ -118,7 +118,16 @@ For my EPQ, I'm making a process management daemon. I [[file:Documents/process-m
 	     :sitemap-function 'org-publish-org-sitemap
 	     :sitemap-format-entry 'sitemap-format-entry-function
 
-	     :html-preamble (concat "<div class=\"header\"><span class=\"title\">%t</span><div class=\"links\"><a href=\"/\">Home</a><a href=\"/Notes/daily/" (replace-regexp-in-string "\.org$" "" (latest-org-file "./Notes/daily")) ".html\">Latest daily note</a></div></div>")
+	     :html-preamble (concat "
+<div class=\"header\">
+    <span class=\"title\">%t</span>
+    <div class=\"links\">
+        <a href=\"/\">Home</a>
+        <a href=\"/Notes/daily/" (replace-regexp-in-string "\.org$" "" (latest-org-file "./Notes/daily")) ".html\">Latest daily</a>
+        <a href=\"https://github.com/Minion3665/EPQ/issues/new\">Report issue</a>
+        <a href=\"https://github.com/Minion3665/EPQ\">View source</a>
+    </div>
+</div>")
 	     )
        (list "org-static"
 	     :base-directory "./Web"
