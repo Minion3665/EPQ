@@ -2,3 +2,12 @@
 :ID:       8d1867e7-3ec4-43a2-a4d1-5ba562ef7312
 :END:
 #+title: 2021-10-29
+- [ ] Copy the PPR to documents
+  - [ ] Get permission from OCR to publish PPR
+  - [ ] Copy it over
+- [ ] Add a link back to the main page from each page on the site, as well as a link to the source on github
+- [ ] Create a schedule of when the EPQ will be done (2hrs/w to start with)
+- [ ] Create a kanban board (perhaps [[https://quire.io][quire]] to start with?, or [[https://github.com/Minion3665/EPQ/projects][github projects to better integrate with the existing systems]])
+- [ ] Create a timeline of when stuff should be done by, or add time estimates to the kanban board
+
+0:00:00 Alright, so overnight I thought of a way to add links to github, so I'm going to do that quickly & then start on the time-management tasks
