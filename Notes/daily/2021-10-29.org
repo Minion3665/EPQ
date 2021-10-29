@@ -13,3 +13,6 @@
 0:00:00 Alright, so overnight I thought of a way to add links to github, so I'm going to do that quickly & then start on the time-management tasks
 
 0:03:10 I've done that, so I can mark that task as completed and start on the project-management side of things. I'm going to be using google calendar for scheduling as it's a calendar that I use for scheduling other things (such as all my lessons). I'm going to schedule 2 hours of work per week on the weekends, although I will undoubtedly use more time like that during the week in unscheduled time. 
+
+0:17:03 [[https://calendar.google.com/calendar/u/0?cid=cWdiYjk1MXRsbXJnZDBzbTNubDFmOWU2N2NAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ][Here's a link to the calendar]]. Google took a while to create it, so while it was creating it I fixed the css for the header (making it wrap on smaller screens)
+
