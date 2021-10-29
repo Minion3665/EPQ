@@ -18,4 +18,4 @@
 
 0:24:53 [[https://github.com/Minion3665/EPQ/projects/1][And here's a link to the kanban board]]. As a bonus, github issues will automatically be placed on the kanban board as well as having dated history. I'm therefore going to be using them instead of org agenda checkboxes (although I might still use the checkboxes for daily tasklists). I won't be adding past tasks to the kanban board, as there's no point, but I've added all present incomplete tasks to the board.
 
-0:28:40 I've ended the timer for now, I'll likely be returning to do more work later under a different timer. When I do, I'll be working on the [[id:8ee72434-d01f-46c9-a903-09ee8a03439c][Docker vs LXC]] series of notes that I haven't yet finished writing up.
+0:28:40 I've ended the timer for now, I'll likely be returning to do more work later under a different timer. When I do, I'll probably be working on the [[id:8ee72434-d01f-46c9-a903-09ee8a03439c][Docker vs LXC]] series of notes that I haven't yet finished writing up.
