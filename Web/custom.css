@@ -7,6 +7,7 @@ body {
     max-width: max(60%, 45rem) !important;
     padding-left: 10rem;
     padding-right: 10rem;
+    overflow-y:scroll;  /* Always showing the scrollbar stops the page jumping when switching between shorter & longer pages*/
 }
 a {
     --accent: #82aaff !important;
@@ -74,4 +75,3 @@ h6 {
 #preamble {
     border-bottom: 2px solid var(--text);
 }
-
