@@ -63,6 +63,7 @@ h6 {
 }
 .header {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: baseline;
 }
@@ -71,6 +72,7 @@ h6 {
     font-size: 1.5em;
     display: flex;
     gap: 20px;
+    flex-wrap: wrap;
 }
 #preamble {
     border-bottom: 2px solid var(--text);
