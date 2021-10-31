@@ -15,6 +15,7 @@ For my EPQ, I'm making a process management daemon. I [[file:Documents/process-m
 * All pages
 - [[file:credits.org][Credits, Licenses & Sources]] (Created on 2021-10-27 at 18:19:44)
 - *Notes/*
+  - [[file:Notes/20211029093544-what_exactly_is_containerd.org][What exactly is containerd]] (Created on 2021-10-29 at 08:35:47)
   - [[file:Notes/20211025183307-docker_vs_lxc.org][Docker vs LXC]] (Created on 2021-10-28 at 21:07:10)
   - [[file:Notes/20211028133315-former_project_example_analysis.org][Former project example analysis]] (Created on 2021-10-28 at 20:02:49)
   - [[file:Notes/20211028204303-why_switch_from_notion.org][Why switch from notion? (Soon™)]] (Created on 2021-10-28 at 19:43:31)
@@ -25,7 +26,7 @@ For my EPQ, I'm making a process management daemon. I [[file:Documents/process-m
   - [[file:Notes/20211024201928-upper_6th_meeting.org][Upper 6th Meeting]] (Created on 2021-10-24 at 19:33:54)
   - [[file:Notes/20211024202440-can_my_project_be_researched.org][Can my project be researched?]] (Created on 2021-10-24 at 19:31:01)
   - *Notes/daily/*
-    - [[file:Notes/daily/2021-10-29.org][2021-10-29]] (Created on 2021-10-29 at 08:10:04)
+    - [[file:Notes/daily/2021-10-29.org][2021-10-29]] (Created on 2021-10-29 at 08:34:43)
     - [[file:Notes/daily/2021-10-28.org][2021-10-28]] (Created on 2021-10-29 at 08:03:50)
     - [[file:Notes/daily/2021-10-27.org][2021-10-27]] (Created on 2021-10-28 at 09:21:06)
     - [[file:Notes/daily/2021-10-26.org][2021-10-26]] (Created on 2021-10-27 at 13:53:03)

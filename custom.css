@@ -7,6 +7,7 @@ body {
     max-width: max(60%, 45rem) !important;
     padding-left: 10rem;
     padding-right: 10rem;
+    overflow-y:scroll;  /* Always showing the scrollbar stops the page jumping when switching between shorter & longer pages*/
 }
 a {
     --accent: #82aaff !important;
@@ -62,6 +63,7 @@ h6 {
 }
 .header {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: baseline;
 }
@@ -70,8 +72,8 @@ h6 {
     font-size: 1.5em;
     display: flex;
     gap: 20px;
+    flex-wrap: wrap;
 }
 #preamble {
     border-bottom: 2px solid var(--text);
 }
-
