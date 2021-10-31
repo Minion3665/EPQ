@@ -21,7 +21,7 @@ For each project:
 - Primary research can be useful; remember people around you who have the skills and tools which you will be using
 ** How will this influence my project?
 - I will proofread work to ensure that it is readable & accessible
-- I know [[file:~/School/EPQ/Documents/questioning-a-co-owner.org][the people who will be using the project]], as well as someone who works at [[https://docker.com][docker]], so it'd be possible to ask them about what my project needs & what exists in docker to do some useful primary research
+- I know [[file:../Documents/questioning-a-co-owner.org][the people who will be using the project]], as well as someone who works at [[https://docker.com][docker]], so it'd be possible to ask them about what my project needs & what exists in docker to do some useful primary research
 * Embroidered family tree
 ** What went well?
 - Evaluates reliability of sources
