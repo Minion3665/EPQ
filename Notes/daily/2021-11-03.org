@@ -8,6 +8,12 @@ In the last note I mentioned creating a project breakdown, which is a decomposit
 I'm going to break the project into broad steps, and then break each of the steps down into smaller substeps
 
 - Initial research step
+  - Check that people want it
+  - Check if there's a need for it
+  - Check that there are no existing solutions that fully encompass the use-case
+- Initial planning step
+  - Plan basic outline of features
+  - Plan basic timeline of feature implementation
 - Development cycle
   - Research
     - Research into what future users want (owner interviews)
