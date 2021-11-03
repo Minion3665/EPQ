@@ -3,3 +3,25 @@
 :END:
 #+title: 2021-11-03
 * Project breakdown
+In the last note I mentioned creating a project breakdown, which is a decomposition of project tasks. The breakdown I made then was acceptable, but I still feel that it missed some points, so I'm going to make another one here
+
+I'm going to break the project into broad steps, and then break each of the steps down into smaller substeps
+
+- Development cycle
+  - Research
+  - Prototyping
+  - Development
+  - Testing
+- Deployment
+  - Deployment to non-critical systems
+    - Sky@Pi
+    - Mini'sMacMini
+    - Possible DC2 deployment (DC2 is a slated server improvement, it is (as of now) unclear if it will be production critical or when exactly it will occur)
+  - Deployment to critical servers
+    - DC1 deployment (DC1 is the main server, currently hosting https://clicksminuteper.net. While the software running on it needs an overhaul, it's still a production-critical server)
+    - Possible DC2 deployment (DC2 is a slated server improvement, it is (as of now) unclear if it will be production critical or when exactly it will occur)
+- Evaluation
+  - Evaluation of final product
+    - Self evaluation
+    - Peer evaluation
+  - Evaluation of project management
