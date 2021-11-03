@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       46a9907e-ba6b-43b6-9a7c-b2ab1a031b29
+:END:
+#+title: 2021-11-01
+* EPQ lesson notes (1h5m)
+- [X] Creating a project breakdown
+A project breakdown is a [[https://en.wikipedia.org/wiki/Decomposition_(computer_science)][decomposition]] of tasks in the project. Issues [[https://github.com/Minion3665/EPQ/issues/7][#7]] to [[https://github.com/Minion3665/EPQ/issues/15][#15]] on github have been created as an in-order decomposition of tasks that will need to be done
+
+- [ ] Making a project timeline
+The tasks in the breakdown will need to be dated by the month I plan to complete them in, and this will need to be made into a timeline form (presumably using figma)
