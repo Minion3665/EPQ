@@ -1,0 +1,28 @@
+:PROPERTIES:
+:ID:       f9134f80-c1b6-4f5d-a90c-527bd06be80b
+:END:
+#+title: 2021-11-04
+* Breakdown to timeline
+Yesterday I made a project breakdown, but I need a project timeline, so I'm going to be setting months for each of the major items on the breakdown. I'll then make that into a timeline in figma.
+
+- Initial research step (November 2021)
+- Initial planning step (November 2021)
+- Development part 1 [Creating a basic process manager (sans-api)] (November 2021 - Janurary 2022)
+  - Research (November 2021 - December 2021)
+  - Development (December 2021 - Janurary 2022
+- Development part 2 [Creating an API to manage the process manager] (February 2022 - March 2022)
+  - Research (February 2022)
+  - Development (March 2022)
+- Development part 3 [Optional depending on time] [Creating a system to manage the API, perhaps a web dashboard?] (April 2022 - June 2022)
+  - Research (April 2022)
+  - Development (April 2022 - June 2022)
+- Deployment (June 2022 - Project end)
+  - Deployment to non-critical systems (June 2022 - July 2022)
+  - Deployment to critical servers (August 2022 & Beyond (It's important to note that /this step is not critical for completion of the EPQ/, which is why it can (and should if not fully ready) be pushed back past the deadline end))
+- Evaluation (July 2022 - Project end)
+  - Evaluation of final product (July 2022)
+    - Self evaluation (July 2022)
+    - Peer evaluation (July 2022)
+  - Evaluation of project management (July 2022)
+
+/This is a rough/first-draft schedule; it won't necessarily be accurate and times may be shifted around in future notes. While I have attempted to create enough scalability that if stuff takes too long there is enough I can shorten or remove (and I've not scheduled the last month so that I can overflow into that if absolute necessary), I haven't created a contingency plan for if this takes far shorter than estimated. My current idea is to create a way to get SSL certificates and reverse proxy to those containers more easily, as that is a system that will be needed anyway and will likely be developed post-EPQ./
