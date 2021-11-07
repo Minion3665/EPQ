@@ -26,7 +26,8 @@ For my EPQ, I'm making a process management daemon. I [[file:Documents/process-m
   - [[file:Notes/20211024201928-upper_6th_meeting.org][Upper 6th Meeting]] (Created on 2021-10-24 at 19:33:54)
   - [[file:Notes/20211024202440-can_my_project_be_researched.org][Can my project be researched?]] (Created on 2021-10-24 at 19:31:01)
   - *Notes/daily/*
-    - [[file:Notes/daily/2021-11-04.org][2021-11-04]] (Created on 2021-11-04 at 11:58:59)
+    - [[file:Notes/daily/2021-11-06.org][2021-11-06]] (Created on 2021-11-07 at 00:26:49)
+    - [[file:Notes/daily/2021-11-04.org][2021-11-04]] (Created on 2021-11-06 at 23:33:10)
     - [[file:Notes/daily/2021-11-03.org][2021-11-03]] (Created on 2021-11-03 at 10:14:58)
     - [[file:Notes/daily/2021-11-01.org][2021-11-01]] (Created on 2021-11-03 at 09:43:14)
     - [[file:Notes/daily/2021-10-29.org][2021-10-29]] (Created on 2021-10-31 at 11:11:43)

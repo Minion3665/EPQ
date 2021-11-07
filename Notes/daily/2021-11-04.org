@@ -9,7 +9,7 @@ Yesterday I made a project breakdown, but I need a project timeline, so I'm goin
 - Initial planning step (November 2021)
 - Development part 1 [Creating a basic process manager (sans-api)] (November 2021 - Janurary 2022)
   - Research (November 2021 - December 2021)
-  - Development (December 2021 - Janurary 2022
+  - Development (December 2021 - Janurary 2022)
 - Development part 2 [Creating an API to manage the process manager] (February 2022 - March 2022)
   - Research (February 2022)
   - Development (March 2022)
