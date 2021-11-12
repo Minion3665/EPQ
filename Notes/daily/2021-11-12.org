@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       f0fa886d-e4b5-4815-b981-03e56035191c
+:END:
+#+title: 2021-11-12
+* Discussions over languages
+- [[https://containerd.io/docs/getting-started/][Containerd uses 'go' on its documentation]]
+- [[https://golang.org/doc/tutorial/web-service-gin][golang.org contains a tutorial for making a restful API]]
+
+
+  
