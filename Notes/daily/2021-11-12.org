@@ -2,9 +2,38 @@
 :ID:       f0fa886d-e4b5-4815-b981-03e56035191c
 :END:
 #+title: 2021-11-12
+* What happened here?
+Yesterday I was talking with the other co-owner[fn:1], TheCodedProf, about how I should do the project, and we got onto discussing languages that we could use. We then hopped into an IDE[fn:2] and played around with 'go', a language that I've never used before but which was used on the containerd documentation. We created both a small program to clone down a container [[https://containerd.io/docs/getting-started/][(as specified on the containerd documentation)]] as well as a basic hello-world web api [[https://golang.org/doc/tutorial/web-service-gin][(using examples from the golang docs)]].
+
 * Discussions over languages
+** go
 - [[https://containerd.io/docs/getting-started/][Containerd uses 'go' on its documentation]]
 - [[https://golang.org/doc/tutorial/web-service-gin][golang.org contains a tutorial for making a restful API]]
 
+But on the other hand...
+- Neither I nor any of my team know go (Although that could be good for skill development?)
+- Go isn't great at making web dashboards, javascript is a lot better
+** javascript
+- I am fluent in javascript, as is the rest of my team. This means that I won't have to spend so much time looking at documentation and if I have a question I can ask for help very easily
+- Javascript is essentially required for web development ([[https://golangbot.com/webassembly-using-go/][WASM]] can be used, but something like [[https://reactjs.org/][React]] is a lot better)
+- [[https://www.npmjs.com/package/run-container][There]] [[https://www.npmjs.com/package/node-container][are]] [[https://www.npmjs.com/package/testcontainers][APIs]] to interact with docker in nodejs, although they are commonly not particularly stable and seem to interact with docker rather than containerd itself. In theory it should be possible to interact with containerd though as the daemon uses sockets to communicate with clients
 
-  
+But on the other hand...
+- Using sockets directly to interact with containerd or using docker via a perhaps only partially stable module seems like an overcomplicated and not particularly good solution, especially when go has a module made for this already
+- Javascript is weakly typed, which may make my code more difficult to debug. Solutions to this (like typescript) do exist, but often have poor support with some modules
+** python
+- I know python very well, and will almost never have to look at documentation for it
+- The original specification was written with python in mind, which means I've already got reccomendations for some modules
+- I know the python ecosystem very well, so I know what module to use to solve many problems
+- [[https://pypi.org/project/containerd/][Python has a containerd package!]]
+
+But on the other hand...
+- My team is phasing out python programs due to issues with module development, creating a new python program would not necessarily be the best idea, and would cause issues later down the line if I wanted to integrate it with discord bots
+- Python isn't javascript, and web development support is /very/ poor in some places, infact in my original specification I restricted a whole class of python web-api modules because they are so terrible to work with
+- Python is very slow, and this program should probably be quick and lightweight
+
+* Footnotes
+
+[fn:2]IDE stands for 'integrated development environment'. It's basically a fancy text editor with better support for writing code 
+
+[fn:1]i.e. the co-owner who was not interviewed in the first [[file:~/School/EPQ/Documents/questioning-a-co-owner.org][co-owner interview]] 
