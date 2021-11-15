@@ -14,6 +14,8 @@
 (setq org-roam-v2-ack t)
 (package-install 'org-roam)
 (package-install 'org)
+(package-install 'org-contrib)
+(org-version)
 (require 'org-roam)
 
 (setq org-roam-directory (file-truename "./Notes"))
