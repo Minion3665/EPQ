@@ -1,0 +1,9 @@
+* Example Work
+:PROPERTIES:
+:TITLE:    Example Work
+:BTYPE:    book
+:AUTHOR:   Skyler Turner
+:PUBLISHER: Clicks Minute Publishing^{TM}
+:YEAR:     2015
+:CUSTOM_ID: example
+:END:
