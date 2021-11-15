@@ -3,3 +3,6 @@
 :END:
 #+title: 2021-11-15
 * Research
+[cite:@example]
+
+#+print_bibliography
