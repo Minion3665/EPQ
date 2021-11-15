@@ -6,8 +6,7 @@
 
 ;; Initialize the package system
 (package-initialize)
-(unless package-archive-contents
-  (package-refresh-contents))
+(package-refresh-contents)
 
 ;; Install dependencies
 (package-install 'htmlize)
