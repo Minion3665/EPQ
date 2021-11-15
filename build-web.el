@@ -1,7 +1,7 @@
 (require 'ox-publish)
 (require 'package)
 (setq package-user-dir (expand-file-name "./.packages"))
-(setq package-archives '(("melpa" . "https://melpa.org/packages/")
+(setq package-archives '(("nongnu" . "https://elpa.nongnu.org/nongnu/")
 			 ("elpa" . "https://elpa.gnu.org/packages/")))
 
 ;; Initialize the package system
