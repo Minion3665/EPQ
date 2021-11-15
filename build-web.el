@@ -146,3 +146,4 @@ For my EPQ, I'm making a process management daemon. I [[file:Documents/process-m
 (org-publish-all t)
 
 (message "Built website")
+(message (org-version))
