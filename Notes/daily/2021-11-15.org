@@ -2,7 +2,8 @@
 :ID:       5310889e-3d4a-4720-83a6-b57cf96088db
 :END:
 #+title: 2021-11-15
+#+bibliography: ~/School/EPQ/Documents/bibliography.bib
 * Research
 [cite:@example]
 
-#+print_bibliography
+#+print_bibliography:
