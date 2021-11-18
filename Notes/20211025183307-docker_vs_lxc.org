@@ -23,7 +23,8 @@ The fiest place I went was my search engine of choice 'DuckDuckGo', with the que
 * [[https://www.upguard.com/blog/docker-vs-lxc][This upguard blog article on the differences between docker and LXC and why docker is better]]
 
 * The containerd website
-[[https://containerd.io/img/architecture.png]]
+[[file:~/School/EPQ/Documents/containerd-architecture.png]]
+
 
 * Footnotes
 [fn:1] I decided to research the difference between docker and lxc as they are often-considered-to-be-similar containerization services
