@@ -8,10 +8,12 @@
 (package-refresh-contents)
 
 ;; Install dependencies
+(package-install 'org)
 (package-install 'org-contrib)
 (package-install 'htmlize)
 (setq org-roam-v2-ack t)
 (package-install 'org-roam)
+(require 'org)
 (require 'org-roam)
 (require 'ox-publish)
 (setq org-roam-directory (file-truename "./Notes"))
