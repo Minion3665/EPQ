@@ -2,10 +2,24 @@
 :ID:       8ee72434-d01f-46c9-a903-09ee8a03439c
 :END:
 #+title: Docker vs LXC
-The first thing I've decided to research is docker and LXC
+The first thing I've decided to research is docker and LXC[fn:1]
 
 This writeup is actually being produced by future me, because I stumbled across this rabbit hole while trying to do an unrelated task, so I can tell you now that it'll lead us on a multipart series of learning about docker, and teach us some things that I predict will be essential for the final project.
 
 Enjoy.
 
-Before I begin, it's worth mentioning that I do have some prior knowledge of both docker and LXC. I'm currently using LXC to manage my containerization systems currently. If you'd like to know more about the current infrastructure, I've 
+Before I begin, it's worth mentioning that I do have some prior knowledge of both docker and LXC. I'm currently using LXC to manage my containerization systems currently. If you'd like to know more about the current infrastructure, I've (TODO: ADD LINK TO NOTE : written a note explaining how we currently deploy and some of the problems with that).
+
+So, with that said let's get started:
+
+The fiest place I went was my search engine of choice 'DuckDuckGo', with the query 'docker vs lxc'. This is due to it being a very quick way to get a lot of information which I can later check for reliability. I expected to find a number of comparison websites and articles comparing the two services. Here's what I found
+
+* A link to the docker FAQ page, which has information on docker and LXC
+
+* [[https://www.upguard.com/blog/docker-vs-lxc][This upguard blog article on the differences between docker and LXC and why docker is better]]
+
+* The containerd website
+[[https://containerd.io/img/architecture.png]]
+
+* Footnotes
+[fn:1] I decided to research the difference between docker and lxc as they are often-considered-to-be-similar containerization services
