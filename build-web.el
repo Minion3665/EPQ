@@ -8,7 +8,7 @@
 (package-refresh-contents)
 
 ;; Install dependencies
-(package-install 'org)
+(package-install 'org-mode)
 (package-install 'org-contrib)
 (require 'org-loaddefs)
 (package-install 'htmlize)
