@@ -1,15 +1,15 @@
 (require 'ox-publish)
 (require 'package)
 (setq package-user-dir (expand-file-name "./.packages"))
-(setq package-archives '(("melpa" . "https://melpa.org/packages/")
+(setq package-archives '(("nongnu" . "https://elpa.nongnu.org/nongnu/")
 			 ("elpa" . "https://elpa.gnu.org/packages/")))
 
 ;; Initialize the package system
 (package-initialize)
-(unless package-archive-contents
-  (package-refresh-contents))
+(package-refresh-contents)
 
 ;; Install dependencies
+(package-install 'org-contrib)
 (package-install 'htmlize)
 (setq org-roam-v2-ack t)
 (package-install 'org-roam)
@@ -145,3 +145,4 @@ For my EPQ, I'm making a process management daemon. I [[file:Documents/process-m
 (org-publish-all t)
 
 (message "Built website")
+(message (org-version))

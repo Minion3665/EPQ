@@ -2,13 +2,17 @@
 :ID:       8ee72434-d01f-46c9-a903-09ee8a03439c
 :END:
 #+title: Docker vs LXC
+Related notes:
+- [[id:2eb80361-b6cf-47dd-8426-e5d9c217aea6][An investigation into containerization]]
+- [[id:08e9ceb0-7009-4c37-98b5-175f23b8416b][What exactly is containerd]]
+
 The first thing I've decided to research is docker and LXC[fn:1]
 
 This writeup is actually being produced by future me, because I stumbled across this rabbit hole while trying to do an unrelated task, so I can tell you now that it'll lead us on a multipart series of learning about docker, and teach us some things that I predict will be essential for the final project.
 
 Enjoy.
 
-Before I begin, it's worth mentioning that I do have some prior knowledge of both docker and LXC. I'm currently using LXC to manage my containerization systems currently. If you'd like to know more about the current infrastructure, I've (TODO: ADD LINK TO NOTE : written a note explaining how we currently deploy and some of the problems with that).
+Before I begin, it's worth mentioning that I do have some prior knowledge of both docker and LXC. I'm currently using LXC to manage my containerization systems currently. If you'd like to know more about the current infrastructure, I've [[id:a907489b-22b8-46e5-89fb-95319c995df3][written a note about how I currently run things]]. My father works for docker & I've used it to set up [[https://mailcow.github.io/mailcow-dockerized-docs/][an email server using mailcow dockerized]], although this doesn't involve much if any knowledge on how docker works from a developer perspective.
 
 So, with that said let's get started:
 

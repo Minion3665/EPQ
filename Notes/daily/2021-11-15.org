@@ -1,0 +1,23 @@
+:PROPERTIES:
+:ID:       5310889e-3d4a-4720-83a6-b57cf96088db
+:END:
+#+title: 2021-11-15
+#+bibliography: ~/School/EPQ/Documents/bibliography.bib
+* Research
+[cite:@example]
+
+#+print_bibliography:
+* Diary entry
+** What have I done since the last entry?
+Since the last entry I've
+- [[file:2021-11-03.org][Done some research on what language I should use for my project]]
+- Talked to the second co-owner on what language I should use for my project
+- Started work on an [[https://github.com/ClicksMinutePer/process-manager][early/test version of the project]]
+- Learned about how to research & cite, [[file:~/School/EPQ/Documents/bibliography.org][created a bibliography]] which [[https://www.orgmode.org/Changes.html][will go live when I update the website's build script to org 9.5, as that's the first version that has support for citations]]
+** What have I learned & how?
+- I've learned how to properly cite researched work by being given resources by HRSFC
+- I've learned a small amount of go by trying it out
+** What worked well?
+- The discussion with the second co-owner was particularly productive
+** What would I do differently next time?
+- I would properly cite and evaluate my sources for the research on what language to use, as that would save me from having to go back and do it later
