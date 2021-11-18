@@ -15,7 +15,7 @@ For my EPQ, I'm making a process management daemon. I [[file:Documents/process-m
 * All pages
 - [[file:credits.org][Credits, Licenses & Sources]] (Created on 2021-11-18 at 11:37:27)
 - *Documents/*
-  - [[file:Documents/bibliography.org][bibliography]] (Created on 2021-11-15 at 11:00:41)
+  - [[file:Documents/bibliography.org][bibliography]] (Created on 2021-11-18 at 23:13:37)
   - [[file:Documents/project-progression-record.org][(Soon™) Project Progression Record (PPR)]] (Created on 2021-10-25 at 09:09:39)
   - [[file:Documents/personal-audit.org][EPQ personal audit]] (Created on 2021-10-25 at 08:49:14)
   - [[file:Documents/poem-based-on-an-image.org][Just existing]] (Created on 2021-10-25 at 08:19:21)
