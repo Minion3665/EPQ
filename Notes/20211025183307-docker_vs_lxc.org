@@ -23,8 +23,11 @@ The fiest place I went was my search engine of choice 'DuckDuckGo', with the que
 * [[https://www.upguard.com/blog/docker-vs-lxc][This upguard blog article on the differences between docker and LXC and why docker is better]]
 
 * The containerd website
-[[file:~/School/EPQ/Documents/containerd-architecture.png]]
+[[file:~/School/EPQ/Documents/containerd-architecture.png]][fn:2]
 
 
 * Footnotes
+
+[fn:2] This image is unmodified from [[https://containerd.io/][the main page of the containerd website, under the section starting 'containerd is available as a daemon for Linux and Windows']], © containerd Authors 2021. Containerd documentation is distributed under the [[https://creativecommons.org/licenses/by/4.0/][CC BY 4.0 creativecommons license]], which states that you must provide attribution and not add any legal terms or technological measures restricting others from doing anything the license permits.
+
 [fn:1] I decided to research the difference between docker and lxc as they are often-considered-to-be-similar containerization services
