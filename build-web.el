@@ -1,3 +1,6 @@
+(add-to-list 'load-path "emacs-src/org-mode/lisp")
+(require 'org-loaddefs)
+
 (require 'package)
 (setq package-user-dir (expand-file-name "./.packages"))
 (setq package-archives '(("nongnu" . "https://elpa.nongnu.org/nongnu/")
@@ -8,9 +11,7 @@
 (package-refresh-contents)
 
 ;; Install dependencies
-(package-install 'org-mode)
 (package-install 'org-contrib)
-(require 'org-loaddefs)
 (package-install 'htmlize)
 (setq org-roam-v2-ack t)
 (package-install 'org-roam)
