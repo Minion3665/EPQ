@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Our current infrastructure</title>
+<meta name="generator" content="Org Mode" />
+<link rel="stylesheet" href="/simple.min.css" /><link rel="stylesheet" href="/custom.css" />
+</head>
+<body>
+<div id="preamble" class="status">
+
+<div class="header">
+    <span class="title">Our current infrastructure</span>
+    <div class="links">
+        <a href="/">Home</a>
+        <a href="/Notes/daily/2021-11-15.html">Latest daily</a>
+        <a href="https://github.com/Minion3665/EPQ/issues/new">Report issue</a>
+        <a href="https://github.com/Minion3665/EPQ">View source</a>
+    </div>
+</div>
+</div>
+<div id="content" class="content">
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#orgf65392d">How is it run?</a></li>
+<li><a href="#orgaa8c676">Scenarios</a>
+<ul>
+<li><a href="#orgbe6441f">When trying to update a project running on the host</a></li>
+<li><a href="#orgdca4af5">When trying to check the status of a bot running on the host</a></li>
+</ul>
+</li>
+<li><a href="#orgee11afb">Problems</a>
+<ul>
+<li><a href="#org8f9b5bc">It's too slow</a></li>
+<li><a href="#org3fd7d2a">xterm and noVNC <i>suck</i></a>
+<ul>
+<li><a href="#orga6462d2">xterm sucks</a></li>
+<li><a href="#org469070d">noVNC sucks</a></li>
+</ul>
+</li>
+<li><a href="#org2211e36">Remembering passwords is annoying</a></li>
+<li><a href="#orgf4eb869">Dependency issues are easy to cause</a></li>
+<li><a href="#orgfd68a75">It's fairly insecure</a></li>
+<li><a href="#org27e17a7">Personal access tokens make me sad</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<p>
+We use several tools to do the work that will be accomplished by our process manager; here's how we currently run a single process on our server. For this example, we'll assume that the process is a python discord bot containing a web server for checking the latency, such as is active on our bot RSM (<a href="https://rsm.bots.clicksminuteper.net/">the latency for RSM is displayed on this webpage, for easy access from CMPing, our status checker running in a separate location</a>). We'll then run over a few problems with this method.
+</p>
+
+<div id="outline-container-orgf65392d" class="outline-2">
+<h2 id="orgf65392d">How is it run?</h2>
+<div class="outline-text-2" id="text-orgf65392d">
+<p>
+Firstly, we own our own server. This is a mid to high range machine, and is fully capable of running a lot of bots, services &amp; soforth.
+</p>
+
+<p>
+On that server, we have different bots which in some cases are owned by different users, need different environments, and should be kept separate for security reasons. To do this, we run an LXC for each project or group of projects. As an example, we run one LXC for all of our websites, as they generally need the same permissions to access. In contrast (by a quirk of fate) we run both our own forms bot and a direct competitor on this host, we obviously manage our own forms bot but don't want our competitor to be able to manage our forms bot. We therefore run these on separate containers.
+</p>
+
+<p>
+Inside each container, we manually install all the things we need to run our bot, this can cause problems if developers have a different environment, or if the environment gets updated. With node.js this is less of a problem, because while the node version can vary if installed differently packages have versions specified. In python, installing a package does not store which version has been installed meaning that it's not possible to recover that later, this can very easily cause the wrong version of something to be installed in production.
+</p>
+
+<p>
+We then use a program called PM2 to start, collect logs for &amp; manage processes. If a process needs to be restarted, we can run <code>pm2 restart id</code> to restart it, we can use <code>pm2 logs id</code> to view the logs, and <code>pm2 ls</code> to see what processes are running on a given machine.
+</p>
+
+<p>
+If the process is a discord bot with a web server for checking latency, then we'll have a port out: we don't run a strong firewall on each of the internal containers (the services exposed are normally SSH &amp; any services which are running as part of the bots), so we run a firewall blocking outbound traffic from the router to our services. We run a locked-down container that hosts and controls this firewall, known as a 'DMZ', for demilitarized-zone. In practice, this machine holds a firewall using UFW<sup><a id="fnr.1" class="footref" href="#fn.1" role="doc-backlink">1</a></sup> and a reverse proxy<sup><a id="fnr.2" class="footref" href="#fn.2" role="doc-backlink">2</a></sup> using NGINX for punching holes through that firewall. If we have a website, we tell that machine that 'port x of machine y should end up at z.clicksminuteper.net', and any traffic for z.clicksminuteper.net will end up at machine y port x.
+</p>
+
+<p>
+It's worth noting that SSL<sup><a id="fnr.3" class="footref" href="#fn.3" role="doc-backlink">3</a></sup> certificates are managed on the DMZ. This means that the following is true:
+<code>Host container &lt;---- Insecure ----&gt; DMZ &lt;---- Secure ----&gt; Your machine</code>
+The path from the DMZ to your machine is secured, but the path from the DMZ to our host container is not. In reality, that's fairly low-risk, but problems could be caused by a developer going rogue.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgaa8c676" class="outline-2">
+<h2 id="orgaa8c676">Scenarios</h2>
+<div class="outline-text-2" id="text-orgaa8c676">
+</div>
+<div id="outline-container-orgbe6441f" class="outline-3">
+<h3 id="orgbe6441f">When trying to update a project running on the host</h3>
+<div class="outline-text-3" id="text-orgbe6441f">
+<p>
+One needs to&#x2026;
+</p>
+<ol class="org-ol">
+<li>Login to the main web dashboard for our server (we do not expose SSH to the outside world)</li>
+<li>Open a terminal for the server, we will use either noVNC<sup><a id="fnr.4" class="footref" href="#fn.4" role="doc-backlink">4</a></sup> or xterm.js<sup><a id="fnr.6" class="footref" href="#fn.6" role="doc-backlink">6</a></sup> for this, both of which have substantial problems</li>
+<li><code>cd</code><sup><a id="fnr.7" class="footref" href="#fn.7" role="doc-backlink">7</a></sup> into the bot's directory</li>
+<li>Run <code>git pull</code><sup><a id="fnr.8" class="footref" href="#fn.8" role="doc-backlink">8</a></sup>, putting a personal access token in for authentication</li>
+<li>Run any commands needed to update dependencies</li>
+<li>Run <code>pm2 ls</code> to get the id of the process that you need to restart</li>
+<li>Run <code>pm2 restart id</code> to restart the process</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-orgdca4af5" class="outline-3">
+<h3 id="orgdca4af5">When trying to check the status of a bot running on the host</h3>
+<div class="outline-text-3" id="text-orgdca4af5">
+<p>
+One needs to&#x2026;
+</p>
+<ol class="org-ol">
+<li>Login to the main web dashboard for our server (we do not expose SSH to the outside world)</li>
+<li>Open a terminal for the server, we will use either noVNC<sup><a id="fnr.4.100" class="footref" href="#fn.4" role="doc-backlink">4</a></sup> or xterm.js<sup><a id="fnr.6.100" class="footref" href="#fn.6" role="doc-backlink">6</a></sup> for this, both of which have substantial problems</li>
+<li>Run <code>pm2 ls</code> to view processes and see if they're stopped or started</li>
+<li>Run <code>pm2 logs id</code> to view the logs for the process</li>
+</ol>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgee11afb" class="outline-2">
+<h2 id="orgee11afb">Problems</h2>
+<div class="outline-text-2" id="text-orgee11afb">
+</div>
+<div id="outline-container-org8f9b5bc" class="outline-3">
+<h3 id="org8f9b5bc">It's too slow</h3>
+<div class="outline-text-3" id="text-org8f9b5bc">
+<p>
+Even though it's considerably easier to do this than to do everything manually, it still requires substantial manual effort to check if a bot is erroring, let alone to deploy a new version.
+</p>
+</div>
+</div>
+<div id="outline-container-org3fd7d2a" class="outline-3">
+<h3 id="org3fd7d2a">xterm and noVNC <i>suck</i></h3>
+<div class="outline-text-3" id="text-org3fd7d2a">
+</div>
+<div id="outline-container-orga6462d2" class="outline-4">
+<h4 id="orga6462d2">xterm sucks</h4>
+<div class="outline-text-4" id="text-orga6462d2">
+<p>
+xterm is my preferred option for connecting to a container, but it still sucks. The xterm window is buggy &amp; on VMs takes a fair amount of setup. Copy and paste also only <i>sometimes</i> works, and on certain browsers doesn't work at all. On certain browsers, typing certain characters does not work. 
+</p>
+</div>
+</div>
+<div id="outline-container-org469070d" class="outline-4">
+<h4 id="org469070d">noVNC sucks</h4>
+<div class="outline-text-4" id="text-org469070d">
+<p>
+noVNC is, if possible, worse than xterm.js. It doesn't have copy/paste functionality at all, and that means that you must type everything out by hand (or, as is slightly more common, us a command to type everything out for you). This makes it dreadful for typing personal access tokens. In addition, as a remote desktop application it's not very lightweight &amp; you can't change the aspect ratio of the terminal.
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org2211e36" class="outline-3">
+<h3 id="org2211e36">Remembering passwords is annoying</h3>
+<div class="outline-text-3" id="text-org2211e36">
+<p>
+You must type multiple passwords to change anything. Suppose I want to change something on a VM, I'll need to remember not only my own password but also the password to the VM. You may foolishly assume this increases security, but due to their lighter nature we generally run everything in containers which have a slightly more convoluted way to access them that requires different passwords. For accessing a given container without remembering the container password, I need to enter my password, the same password, 3 times.
+</p>
+</div>
+</div>
+<div id="outline-container-orgf4eb869" class="outline-3">
+<h3 id="orgf4eb869">Dependency issues are easy to cause</h3>
+<div class="outline-text-3" id="text-orgf4eb869">
+<p>
+Let's assume you need python3.10. You'll have to install that manually. If you want to update python, you'll need to do that manually too. If you've got multiple bots running on the same host they'll all need to use versions that can be installed alongside each other. If you want to use the same version of python but different version of libraries then you're out of luck. If you want to install a library and that later gets an update that breaks your code, you're absolutely screwed: <code>pip install -Ur requirements.txt</code> will update everything indiscriminately. If you forget to add something to that requirements file, by the way, you won't install it and stuff will break.
+</p>
+</div>
+</div>
+<div id="outline-container-orgfd68a75" class="outline-3">
+<h3 id="orgfd68a75">It's fairly insecure</h3>
+<div class="outline-text-3" id="text-orgfd68a75">
+<p>
+If you're inside the walled-garden that is our host, you have far too much power. Let's assume you are a malicious staff member who wants to take us down, here are your options:
+</p>
+<ul class="org-ul">
+<li>Fake your server's IP address, moving to the IP of one of our website's VMs, if you manage to get that IP when the system restarts you'll now control (with https) one of our websites</li>
+<li>Use far too many system resources, meaning they can't be used for everything else and grinding everything to a halt</li>
+<li>Find a VM where someone hasn't logged out properly, login &amp; cause havoc (note: this one can't actually happen normally, because people are only given permissions to view VMs they need to access, however it does rather negate the usefulness of a password option so I've left it in)</li>
+<li>Find a VM where a vulnerable service is exposed to the inside (but not the outside world). Exploit it and cause havoc. (Note: email was like this for a while due to a misconfiguration where it trusted its network, databases will trust the network more than outside access etc.)</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org27e17a7" class="outline-3">
+<h3 id="org27e17a7">Personal access tokens make me sad</h3>
+<div class="outline-text-3" id="text-org27e17a7">
+<ul class="org-ul">
+<li>They require you to create a token, can be dangerous if you type them out in the open as they give access to every repo you own, including personal ones. They are long, and hard to type, and copy and paste is buggy at best, and they're just like a longer, more annoying, more insecure password.
+And they make me sad.
+Very sad.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="footnotes">
+<h2 class="footnotes">Footnotes: </h2>
+<div id="text-footnotes">
+
+<div class="footdef"><sup><a id="fn.1" class="footnum" href="#fnr.1" role="doc-backlink">1</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+A small easy-to-use firewall program 
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.2" class="footnum" href="#fnr.2" role="doc-backlink">2</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+A reverse proxy looks for incoming traffic and sends it on to the right destination
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.3" class="footnum" href="#fnr.3" role="doc-backlink">3</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+SSL is encryption for websites; when you go to a website with 'https', it's secure and uses SSL, when you go to a website with 'http', someone may be able to read the traffic. 
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.4" class="footnum" href="#fnr.4" role="doc-backlink">4</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+NoVNC is a program to run a VNC<sup><a id="fnr.5" class="footref" href="#fn.5" role="doc-backlink">5</a></sup> client in a web-browser
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.5" class="footnum" href="#fnr.5" role="doc-backlink">5</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+VNC is a remote desktop software, we normally use it to expose a terminal to clients, but we can also use a normal, graphical desktop if we so desire
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.6" class="footnum" href="#fnr.6" role="doc-backlink">6</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+xterm.js is a way of getting a terminal in javascript; it requires more per-machine setup than VNC but is lighter and easier to use. It cannot be used to display a graphical desktop 
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.7" class="footnum" href="#fnr.7" role="doc-backlink">7</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+<code>cd</code> is a unix command, it stands for 'change directory'
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.8" class="footnum" href="#fnr.8" role="doc-backlink">8</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+<code>git pull</code> downloads the new code from our version control system<sup><a id="fnr.9" class="footref" href="#fn.9" role="doc-backlink">9</a></sup> 
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.9" class="footnum" href="#fnr.9" role="doc-backlink">9</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+version control is a way of storing code and allowing us to view &amp; move to past code (hence 'version' control) 
+</p></div></div>
+
+
+</div>
+</div></div>
+</body>
+</html>

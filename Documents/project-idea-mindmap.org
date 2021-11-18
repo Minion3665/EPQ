@@ -1,0 +1,6 @@
+#+Title: Mindmap of project ideas
+#+Date: 11th October 2021
+
+I mindmapped some potential project ideas to help me explore all the possibilities. Here is the mindmap:
+[[file:mindmap-1.jpg]]
+[[file:mindmap-2.jpg]]

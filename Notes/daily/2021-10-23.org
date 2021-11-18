@@ -1,0 +1,26 @@
+#+title: 2021-10-23
+
+* Creating a website
+Today is the day I've finally got this website working along with a sitemap (which was a crucial part of this). Here's how the process went:
+
+** Steps taken
+- Attempted to use notion, decided on orgmode for better version control support (through git vs on a paid plan that I do not own)
+- Transferred most files into orgmode, created website builder
+- Sitemap wouldn't build, spent a long time trying to get it to build
+- After debugging, I realized that the orgmode version on the github runner was an earlier one that contained a bug, I attempted to install a later version through elpa
+- I attempted to install a later version through use-package
+- I decided to install a later version of emacs that came packaged with the correct orgmode
+- I attempted to install this through flatpak
+- I installed this through snap; sitemap building worked
+- I attempted to customize the look of the sitemap page by adding a description, this failed due to strange property issues & the generation of a list in a weird way
+- I switched to rendering pages in a list rather than in a heading format, this appears to render a lot better
+
+** Stuff left to do
+- [ ] Dates (perhaps modification dates?) on the pages would be nice, currently they just show the titles
+- [ ] The rest of the work from notion needs to be transferred over
+- [ ] Links to the website need to be added to the class notebook & onedrive folder
+- [ ] Links to the sitemap & other useful pages, as well as a short description need to be added to the main homepage
+- [ ] The notes homepage should no longer be called homepage
+- [ ] Templates should be created for daily diary notes
+
+That's it for now though, it's ~11pm and I'm going to bed, goodnight world!
