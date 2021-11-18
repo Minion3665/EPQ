@@ -1,4 +1,3 @@
-(require 'ox-publish)
 (require 'package)
 (setq package-user-dir (expand-file-name "./.packages"))
 (setq package-archives '(("nongnu" . "https://elpa.nongnu.org/nongnu/")
@@ -9,13 +8,14 @@
 (package-refresh-contents)
 
 ;; Install dependencies
+(package-install 'org)
 (package-install 'org-contrib)
+(require 'org-loaddefs)
 (package-install 'htmlize)
 (setq org-roam-v2-ack t)
 (package-install 'org-roam)
-(package-install 'org)
 (require 'org-roam)
-
+(require 'ox-publish)
 (setq org-roam-directory (file-truename "./Notes"))
 (setq org-id-link-to-org-use-id t)
 ;; (org-roam-db-autosync-mode)
