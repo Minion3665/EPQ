@@ -1,5 +1,0 @@
-:PROPERTIES:
-:ID:       63face7d-f6b3-4a98-8e7c-a2e92325e529
-:END:
-#+title: Templates
-
