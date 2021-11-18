@@ -1,5 +1,4 @@
-#+OPTIONS: d
-#+OPTIONS: prop
+#+OPTIONS: prop:t
 
 * Example Work
 :PROPERTIES:
