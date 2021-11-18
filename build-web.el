@@ -1,4 +1,4 @@
-(add-to-list 'load-path "./emacs-src/org-mode/lisp")
+(add-to-list 'load-path "./.emacs-src/org-mode/lisp")
 (require 'org-loaddefs)
 
 (message (org-version))
