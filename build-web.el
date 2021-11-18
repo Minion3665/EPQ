@@ -18,7 +18,7 @@
 (require 'org-roam)
 (require 'ox-publish)
 (setq org-roam-directory (file-truename "./Notes"))
-(setq org-cite-global-bibliography '("./Documents/bibliography.bib"))
+(setq org-cite-global-bibliography '(file-truename "./Documents/bibliography.bib"))
 (setq org-id-link-to-org-use-id t)
 ;; (org-roam-db-autosync-mode)
 
