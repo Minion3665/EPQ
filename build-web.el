@@ -1,8 +1,3 @@
-(add-to-list 'load-path "./.emacs-src/org-mode/lisp")
-(require 'org-loaddefs)
-
-(message (org-version))
-
 (require 'package)
 (setq package-user-dir (expand-file-name "./.packages"))
 (setq package-archives '(("nongnu" . "https://elpa.nongnu.org/nongnu/")
