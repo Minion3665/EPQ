@@ -19,7 +19,7 @@ So, with that said let's get started:
 The fiest place I went was my search engine of choice 'DuckDuckGo', with the query 'docker vs lxc'. This is due to it being a very quick way to get a lot of information which I can later check for reliability. I expected to find a number of comparison websites and articles comparing the two services. Here's what I found
 
 * A link to the docker FAQ page, which has information on docker and LXC
-
+[cite:@docker_faq_lxc]
 
 * [[https://www.upguard.com/blog/docker-vs-lxc][This upguard blog article on the differences between docker and LXC and why docker is better]]
 
