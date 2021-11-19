@@ -11,7 +11,7 @@
 * Docker FAQ, 'What does Docker technology add to just plain LXC?'
 :PROPERTIES:
 :TITLE:    Docker FAQ, 'What does Docker technology add to just plain LXC?'
-:BTYPE:    website
+:BTYPE:    misc
 :URL: https://docs.docker.com/engine/faq/#what-does-docker-technology-add-to-just-plain-lxc
 :author: Docker Inc.
 :date: <2021-11-19 Fri>
