@@ -1,3 +1,5 @@
+#+OPTIONS: prop:t
+
 * Example Work
 :PROPERTIES:
 :TITLE:    Example Work
