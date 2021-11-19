@@ -32,3 +32,6 @@ The fiest place I went was my search engine of choice 'DuckDuckGo', with the que
 [fn:2] This image is unmodified from [[https://containerd.io/][the main page of the containerd website, under the section starting 'containerd is available as a daemon for Linux and Windows']], © containerd Authors 2021. Containerd documentation is distributed under the [[https://creativecommons.org/licenses/by/4.0/][CC BY 4.0 creativecommons license]], which states that you must provide attribution and not add any legal terms or technological measures restricting others from doing anything the license permits.
 
 [fn:1] I decided to research the difference between docker and lxc as they are often-considered-to-be-similar containerization services
+
+* Bibliography
+#+print_bibliography:
