@@ -9,3 +9,13 @@
 :YEAR:     2015
 :CUSTOM_ID: example
 :END:
+
+* Docker FAQ, 'What does Docker technology add to just plain LXC?'
+:PROPERTIES:
+:TITLE:    Docker FAQ, 'What does Docker technology add to just plain LXC?'
+:BTYPE:    misc
+:URL: https://docs.docker.com/engine/faq/#what-does-docker-technology-add-to-just-plain-lxc
+:author: Docker Inc.
+:date: <2021-11-19 Fri>
+:CUSTOM_ID: docker_faq_lxc
+:END:

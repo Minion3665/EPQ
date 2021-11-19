@@ -27,26 +27,26 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org9db000b">How is it run?</a></li>
-<li><a href="#org1dd7578">Scenarios</a>
+<li><a href="#orgabf5e61">How is it run?</a></li>
+<li><a href="#orgd71af40">Scenarios</a>
 <ul>
-<li><a href="#org35d8fcb">When trying to update a project running on the host</a></li>
-<li><a href="#orgd48fa0a">When trying to check the status of a bot running on the host</a></li>
+<li><a href="#org934d5d7">When trying to update a project running on the host</a></li>
+<li><a href="#org6df7aea">When trying to check the status of a bot running on the host</a></li>
 </ul>
 </li>
-<li><a href="#orgeb0e8ed">Problems</a>
+<li><a href="#orga6824a0">Problems</a>
 <ul>
-<li><a href="#org668b5ac">It's too slow</a></li>
-<li><a href="#orgc6ea849">xterm and noVNC <i>suck</i></a>
+<li><a href="#org138b4a1">It's too slow</a></li>
+<li><a href="#org5063f54">xterm and noVNC <i>suck</i></a>
 <ul>
-<li><a href="#orgb1d2ebe">xterm sucks</a></li>
-<li><a href="#org451f64b">noVNC sucks</a></li>
+<li><a href="#orgc994df9">xterm sucks</a></li>
+<li><a href="#org4163a79">noVNC sucks</a></li>
 </ul>
 </li>
-<li><a href="#org7583b36">Remembering passwords is annoying</a></li>
-<li><a href="#orgba5c562">Dependency issues are easy to cause</a></li>
-<li><a href="#org019224a">It's fairly insecure</a></li>
-<li><a href="#orgc9f6076">Personal access tokens make me sad</a></li>
+<li><a href="#org1f28b65">Remembering passwords is annoying</a></li>
+<li><a href="#org7e6b6e3">Dependency issues are easy to cause</a></li>
+<li><a href="#org288a6d5">It's fairly insecure</a></li>
+<li><a href="#orgddeecbc">Personal access tokens make me sad</a></li>
 </ul>
 </li>
 </ul>
@@ -56,9 +56,9 @@
 We use several tools to do the work that will be accomplished by our process manager; here's how we currently run a single process on our server. For this example, we'll assume that the process is a python discord bot containing a web server for checking the latency, such as is active on our bot RSM (<a href="https://rsm.bots.clicksminuteper.net/">the latency for RSM is displayed on this webpage, for easy access from CMPing, our status checker running in a separate location</a>). We'll then run over a few problems with this method.
 </p>
 
-<div id="outline-container-org9db000b" class="outline-2">
-<h2 id="org9db000b">How is it run?</h2>
-<div class="outline-text-2" id="text-org9db000b">
+<div id="outline-container-orgabf5e61" class="outline-2">
+<h2 id="orgabf5e61">How is it run?</h2>
+<div class="outline-text-2" id="text-orgabf5e61">
 <p>
 Firstly, we own our own server. This is a mid to high range machine, and is fully capable of running a lot of bots, services &amp; soforth.
 </p>
@@ -87,13 +87,13 @@ The path from the DMZ to your machine is secured, but the path from the DMZ to o
 </div>
 </div>
 
-<div id="outline-container-org1dd7578" class="outline-2">
-<h2 id="org1dd7578">Scenarios</h2>
-<div class="outline-text-2" id="text-org1dd7578">
+<div id="outline-container-orgd71af40" class="outline-2">
+<h2 id="orgd71af40">Scenarios</h2>
+<div class="outline-text-2" id="text-orgd71af40">
 </div>
-<div id="outline-container-org35d8fcb" class="outline-3">
-<h3 id="org35d8fcb">When trying to update a project running on the host</h3>
-<div class="outline-text-3" id="text-org35d8fcb">
+<div id="outline-container-org934d5d7" class="outline-3">
+<h3 id="org934d5d7">When trying to update a project running on the host</h3>
+<div class="outline-text-3" id="text-org934d5d7">
 <p>
 One needs to&#x2026;
 </p>
@@ -109,9 +109,9 @@ One needs to&#x2026;
 </div>
 </div>
 
-<div id="outline-container-orgd48fa0a" class="outline-3">
-<h3 id="orgd48fa0a">When trying to check the status of a bot running on the host</h3>
-<div class="outline-text-3" id="text-orgd48fa0a">
+<div id="outline-container-org6df7aea" class="outline-3">
+<h3 id="org6df7aea">When trying to check the status of a bot running on the host</h3>
+<div class="outline-text-3" id="text-org6df7aea">
 <p>
 One needs to&#x2026;
 </p>
@@ -125,58 +125,58 @@ One needs to&#x2026;
 </div>
 </div>
 
-<div id="outline-container-orgeb0e8ed" class="outline-2">
-<h2 id="orgeb0e8ed">Problems</h2>
-<div class="outline-text-2" id="text-orgeb0e8ed">
+<div id="outline-container-orga6824a0" class="outline-2">
+<h2 id="orga6824a0">Problems</h2>
+<div class="outline-text-2" id="text-orga6824a0">
 </div>
-<div id="outline-container-org668b5ac" class="outline-3">
-<h3 id="org668b5ac">It's too slow</h3>
-<div class="outline-text-3" id="text-org668b5ac">
+<div id="outline-container-org138b4a1" class="outline-3">
+<h3 id="org138b4a1">It's too slow</h3>
+<div class="outline-text-3" id="text-org138b4a1">
 <p>
 Even though it's considerably easier to do this than to do everything manually, it still requires substantial manual effort to check if a bot is erroring, let alone to deploy a new version.
 </p>
 </div>
 </div>
-<div id="outline-container-orgc6ea849" class="outline-3">
-<h3 id="orgc6ea849">xterm and noVNC <i>suck</i></h3>
-<div class="outline-text-3" id="text-orgc6ea849">
+<div id="outline-container-org5063f54" class="outline-3">
+<h3 id="org5063f54">xterm and noVNC <i>suck</i></h3>
+<div class="outline-text-3" id="text-org5063f54">
 </div>
-<div id="outline-container-orgb1d2ebe" class="outline-4">
-<h4 id="orgb1d2ebe">xterm sucks</h4>
-<div class="outline-text-4" id="text-orgb1d2ebe">
+<div id="outline-container-orgc994df9" class="outline-4">
+<h4 id="orgc994df9">xterm sucks</h4>
+<div class="outline-text-4" id="text-orgc994df9">
 <p>
 xterm is my preferred option for connecting to a container, but it still sucks. The xterm window is buggy &amp; on VMs takes a fair amount of setup. Copy and paste also only <i>sometimes</i> works, and on certain browsers doesn't work at all. On certain browsers, typing certain characters does not work. 
 </p>
 </div>
 </div>
-<div id="outline-container-org451f64b" class="outline-4">
-<h4 id="org451f64b">noVNC sucks</h4>
-<div class="outline-text-4" id="text-org451f64b">
+<div id="outline-container-org4163a79" class="outline-4">
+<h4 id="org4163a79">noVNC sucks</h4>
+<div class="outline-text-4" id="text-org4163a79">
 <p>
 noVNC is, if possible, worse than xterm.js. It doesn't have copy/paste functionality at all, and that means that you must type everything out by hand (or, as is slightly more common, us a command to type everything out for you). This makes it dreadful for typing personal access tokens. In addition, as a remote desktop application it's not very lightweight &amp; you can't change the aspect ratio of the terminal.
 </p>
 </div>
 </div>
 </div>
-<div id="outline-container-org7583b36" class="outline-3">
-<h3 id="org7583b36">Remembering passwords is annoying</h3>
-<div class="outline-text-3" id="text-org7583b36">
+<div id="outline-container-org1f28b65" class="outline-3">
+<h3 id="org1f28b65">Remembering passwords is annoying</h3>
+<div class="outline-text-3" id="text-org1f28b65">
 <p>
 You must type multiple passwords to change anything. Suppose I want to change something on a VM, I'll need to remember not only my own password but also the password to the VM. You may foolishly assume this increases security, but due to their lighter nature we generally run everything in containers which have a slightly more convoluted way to access them that requires different passwords. For accessing a given container without remembering the container password, I need to enter my password, the same password, 3 times.
 </p>
 </div>
 </div>
-<div id="outline-container-orgba5c562" class="outline-3">
-<h3 id="orgba5c562">Dependency issues are easy to cause</h3>
-<div class="outline-text-3" id="text-orgba5c562">
+<div id="outline-container-org7e6b6e3" class="outline-3">
+<h3 id="org7e6b6e3">Dependency issues are easy to cause</h3>
+<div class="outline-text-3" id="text-org7e6b6e3">
 <p>
 Let's assume you need python3.10. You'll have to install that manually. If you want to update python, you'll need to do that manually too. If you've got multiple bots running on the same host they'll all need to use versions that can be installed alongside each other. If you want to use the same version of python but different version of libraries then you're out of luck. If you want to install a library and that later gets an update that breaks your code, you're absolutely screwed: <code>pip install -Ur requirements.txt</code> will update everything indiscriminately. If you forget to add something to that requirements file, by the way, you won't install it and stuff will break.
 </p>
 </div>
 </div>
-<div id="outline-container-org019224a" class="outline-3">
-<h3 id="org019224a">It's fairly insecure</h3>
-<div class="outline-text-3" id="text-org019224a">
+<div id="outline-container-org288a6d5" class="outline-3">
+<h3 id="org288a6d5">It's fairly insecure</h3>
+<div class="outline-text-3" id="text-org288a6d5">
 <p>
 If you're inside the walled-garden that is our host, you have far too much power. Let's assume you are a malicious staff member who wants to take us down, here are your options:
 </p>
@@ -188,9 +188,9 @@ If you're inside the walled-garden that is our host, you have far too much power
 </ul>
 </div>
 </div>
-<div id="outline-container-orgc9f6076" class="outline-3">
-<h3 id="orgc9f6076">Personal access tokens make me sad</h3>
-<div class="outline-text-3" id="text-orgc9f6076">
+<div id="outline-container-orgddeecbc" class="outline-3">
+<h3 id="orgddeecbc">Personal access tokens make me sad</h3>
+<div class="outline-text-3" id="text-orgddeecbc">
 <ul class="org-ul">
 <li>They require you to create a token, can be dangerous if you type them out in the open as they give access to every repo you own, including personal ones. They are long, and hard to type, and copy and paste is buggy at best, and they're just like a longer, more annoying, more insecure password.
 And they make me sad.

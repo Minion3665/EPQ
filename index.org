@@ -15,7 +15,7 @@ For my EPQ, I'm making a process management daemon. I [[file:Documents/process-m
 * All pages
 - [[file:credits.org][Credits, Licenses & Sources]] (Created on 2021-11-18 at 11:37:27)
 - *Documents/*
-  - [[file:Documents/bibliography.org][bibliography]] (Created on 2021-11-18 at 23:28:35)
+  - [[file:Documents/bibliography.org][bibliography]] (Created on 2021-11-19 at 10:59:01)
   - [[file:Documents/project-progression-record.org][(Soon™) Project Progression Record (PPR)]] (Created on 2021-10-25 at 09:09:39)
   - [[file:Documents/personal-audit.org][EPQ personal audit]] (Created on 2021-10-25 at 08:49:14)
   - [[file:Documents/poem-based-on-an-image.org][Just existing]] (Created on 2021-10-25 at 08:19:21)
@@ -24,7 +24,7 @@ For my EPQ, I'm making a process management daemon. I [[file:Documents/process-m
   - [[file:Documents/process-manager-project-requirements.org][Project specification]] (Created on 2021-10-24 at 17:23:18)
   - [[file:Documents/why-this-project.org][Why have I chosen this project?]] (Created on 2021-10-19 at 21:33:19)
 - *Notes/*
-  - [[file:Notes/20211025183307-docker_vs_lxc.org][Docker vs LXC]] (Created on 2021-11-18 at 11:36:57)
+  - [[file:Notes/20211025183307-docker_vs_lxc.org][Docker vs LXC]] (Created on 2021-11-19 at 11:07:59)
   - [[file:Notes/20211028133315-former_project_example_analysis.org][Former project example analysis]] (Created on 2021-10-31 at 10:24:18)
   - [[file:Notes/20211029093544-what_exactly_is_containerd.org][What exactly is containerd]] (Created on 2021-10-29 at 08:35:47)
   - [[file:Notes/20211028204303-why_switch_from_notion.org][Why switch from notion? (Soon™)]] (Created on 2021-10-28 at 19:43:31)
