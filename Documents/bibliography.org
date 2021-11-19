@@ -16,6 +16,6 @@
 :BTYPE:    misc
 :howpublished: On the web at https://docs.docker.com/engine/faq/#what-does-docker-technology-add-to-just-plain-lxc
 :author: Docker Inc.
-:note: Access date <2021-11-19 Fri>
+:year: Unknown publishing year, Access date <2021-11-19 Fri>
 :CUSTOM_ID: docker_faq_lxc
 :END:
