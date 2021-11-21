@@ -47,7 +47,7 @@
       <if type="chapter paper-conference" match="none">
         <names variable="editor translator" delimiter=". ">
           <label form="verb" text-case="capitalize-first" suffix=" "/>
-          <name and="text" initialize-with="."/>
+          <name and="text" initialize-with="." initialize="false"/>
         </names>
       </if>
       <else-if variable="container-author" match="any">
