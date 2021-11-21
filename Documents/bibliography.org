@@ -1,0 +1,32 @@
+#+OPTIONS: prop:t
+
+* Example Work
+:PROPERTIES:
+:TITLE:    Example Work
+:BTYPE:    book
+:AUTHOR:   Skyler Turner
+:PUBLISHER: Clicks Minute Publishing^{TM}
+:YEAR:     2015
+:CUSTOM_ID: example
+:END:
+
+* Docker FAQ, 'What does Docker technology add to just plain LXC?'
+:PROPERTIES:
+:TITLE:    Docker FAQ, 'What does Docker technology add to just plain LXC?'
+:BTYPE:    online
+:url: https://docs.docker.com/engine/faq/#what-does-docker-technology-add-to-just-plain-lxc
+:author: Docker Inc.
+:urldate: <2021-11-19 Fri>
+:CUSTOM_ID: docker_faq_lxc
+:END:
+
+* Mailcow dockerized,'running in ntested containers is not supported'
+:PROPERTIES:
+:TITLE:    Mailcow dockerized,'running in nested containers is not supported'
+:BTYPE:    online
+:url: https://mailcow.github.io/mailcow-dockerized-docs/prerequisite-system/
+:author: andryyy
+:urldate: <2021-11-21 Sun>
+:CUSTOM_ID: mailcow_unsupported_nesting
+:END:
+

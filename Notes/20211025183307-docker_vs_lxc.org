@@ -1,0 +1,55 @@
+:PROPERTIES:
+:ID:       8ee72434-d01f-46c9-a903-09ee8a03439c
+:END:
+#+title: Docker vs LXC
+Related notes:
+- [[id:2eb80361-b6cf-47dd-8426-e5d9c217aea6][An investigation into containerization]]
+- [[id:08e9ceb0-7009-4c37-98b5-175f23b8416b][What exactly is containerd]]
+
+The first thing I've decided to research is docker and LXC[fn:1]
+
+This writeup is actually being produced by future me, because I stumbled across this rabbit hole while trying to do an unrelated task, so I can tell you now that it'll lead us on a multipart series of learning about docker, and teach us some things that I predict will be essential for the final project.
+
+Enjoy.
+
+Before I begin, it's worth mentioning that I do have some prior knowledge of both docker and LXC. I'm currently using LXC to manage my containerization systems currently. If you'd like to know more about the current infrastructure, I've [[id:a907489b-22b8-46e5-89fb-95319c995df3][written a note about how I currently run things]]. My father works for docker & I've used it to set up [[https://mailcow.github.io/mailcow-dockerized-docs/][an email server using mailcow dockerized]], although this doesn't involve much if any knowledge on how docker works from a developer perspective.
+
+So, with that said let's get started:
+
+The fiest place I went was my search engine of choice 'DuckDuckGo', with the query 'docker vs lxc'. This is due to it being a very quick way to get a lot of information which I can later check for reliability. I expected to find a number of comparison websites and articles comparing the two services. Here's what I found
+
+* A link to the docker FAQ page, which has information on docker and LXC
+/Note: this link does not address some important things about LXC, such as the fact that LXD (built ontop of LXC) introduces a lot of features that bring it more into parity with docker/
+#+begin_quote
+/Portable deployment across machines/. Docker defines a format for bundling an application and all its dependencies into a single object called a container. This container can be transferred to any Docker-enabled machine. The container can be executed there with the guarantee that the execution environment exposed to the application is the same in development, testing, and production. LXC implements process sandboxing, which is an important pre-requisite for portable deployment, but is not sufficient for portable deployment. If you sent me a copy of your application installed in a custom LXC configuration, it would almost certainly not run on my machine the way it does on yours. The app you sent me is tied to your machine’s specific configuration: networking, storage, logging, etc. Docker defines an abstraction for these machine-specific settings. The exact same Docker container can run - unchanged - on many different machines, with many different configurations. [cite:@docker_faq_lxc]
+#+end_quote
+This is a great point and a feature that I've noticed being severely lacking in LXC: a vast amount of system configuration appears to be needed in order to set up LXC, and much essential configuration isn't defined by the container. This is generally bad, as it means that containers aren't properly portable.
+
+Docker also markets itself as /application-centric/[cite:@docker_faq_lxc], which is very different to the /machine-centric/ LXC. It's not necessarily a bad thing to think about containers as machines though, and while I'd like to deploy all our apps in separate containers something more akin to LXC's system would fit better with our current workflows.
+
+Docker supports /automatic building of containers/[cite:@docker_faq_lxc], which is one of the most useful features of docker from our perspective, and we've considered switching to docker because of it before. With LXC the process of setting up a container is sometimes arduous, however with docker this could be simplified by using dockerfiles to pull and build necessary software; I plan to go one step further and abstract the creation of a dockerfile into something more akin to [[https://docs.netlify.com/configure-builds/get-started/][netlify's 'build script' options]].
+
+Docker has a git-like /versioning/ system[cite:@docker_faq_lxc], which is likely not as useful for us as the other features, as we intend to use git to store our code and keep regular backups of data-storing containers. This would likely be really useful if we were intending to transfer containers around, but we're more likely to create containers on our host, use them for a CI step, and then push them into production.
+
+Docker's capability for /component reuse/[cite:@docker_faq_lxc] could be very useful for us, allowing us to have a base 'python' and a base 'javascript' container with everything preinstalled, [[https://ubuntu.com/tutorials/create-custom-lxd-images][although similar things can already be done with LXD]].
+
+Docker's public registry has a lot of images including [[https://hub.docker.com/_/python][officially]] [[https://hub.docker.com/_/postgres][maintained]] [[https://hub.docker.com/_/node][images]] [[https://hub.docker.com/_/golang][for]] [[https://hub.docker.com/_/redis][tools]] [[https://hub.docker.com/_/nginx][and]] [[https://hub.docker.com/_/debian][languages]] [[https://hub.docker.com/_/bash][we]] [[https://hub.docker.com/_/openjdk][already]] [[https://hub.docker.com/_/solr][use]], and [[https://mailcow.github.io/mailcow-dockerized-docs/][some of our existing tools use docker]] ([[https://mailcow.github.io/mailcow-dockerized-docs/prerequisite-system/][and we're running them through unsupported methods with docker inside proxmox containers... oops]] ('Do not try to install mailcow on a Synology/QNAP device (any NAS), OpenVZ, LXC or other container platforms',[cite:@mailcow_unsupported_nesting]))
+
+* [[https://linuxcontainers.org/lxd/][The LXD page on linuxcontainers.org]], most notably the features section
+- Due to LXD's introduction, LXC has become much more of a viable option
+- LXD has support for container templates, although a lot fewer are available than on docker
+- LXD has support for using VMs instead of containers, which could be useful in situtations where a VM is needed. In fact, we've been using this as a way to give people who we don't want to give containers access to the system. It's possible we could instead decide to [[https://linux-audit.com/how-and-why-linux-daemons-drop-privileges/][start containers as root and drop privileges, similar to how LXD and docker do unprivelaged containers]] (see also: [[https://docs.docker.com/engine/security/userns-remap/][docker's article on user namespaces]]), meaning that VMs were no longer useful or necessary; this would be particularly desirable as VMs are a lot heavier than containers
+
+
+* The containerd website
+[[file:../Documents/containerd-architecture.png]][fn:2]
+
+
+* Footnotes
+
+[fn:2] This image is unmodified from [[https://containerd.io/][the main page of the containerd website, under the section starting 'containerd is available as a daemon for Linux and Windows']], © containerd Authors 2021. Containerd documentation is distributed under the [[https://creativecommons.org/licenses/by/4.0/][CC BY 4.0 creativecommons license]], which states that you must provide attribution and not add any legal terms or technological measures restricting others from doing anything the license permits.
+
+[fn:1] I decided to research the difference between docker and lxc as they are often-considered-to-be-similar containerization services
+
+* Bibliography
+#+print_bibliography:

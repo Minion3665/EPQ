@@ -1,0 +1,79 @@
+html {
+    background-color: #28264c;
+    --text: #e3e9fa !important;
+}
+body {
+    --bg: #2d2b55 !important;
+    max-width: max(60%, 45rem) !important;
+    padding-left: min(10vw, 10rem);
+    padding-right: min(10vw, 10rem);
+    overflow-y:scroll;  /* Always showing the scrollbar stops the page jumping when switching between shorter & longer pages*/
+}
+a {
+    --accent: #82aaff !important;
+}
+img {
+    max-width: 100%;
+}
+h2::before, h3::before, h4::before, h5::before, h6::before {
+    font-size: 70%;
+}
+
+h2::before {
+    content: "# ";
+}
+h2 {
+    color: #50c4fa;
+}
+
+h3::before {
+    content: "## ";
+    padding-left: 1em;
+}
+h3 {
+    color: #9effff;
+}
+
+h4::before {
+    content: "### ";
+    padding-left: 2em;
+}
+h4 {
+    color: #ff98a4;
+}
+
+h5::before {
+    content: "#### ";
+    padding-left: 3em;
+}
+h5 {
+    color: #82aaff;
+}
+
+h6::before {
+    content: "##### ";
+    padding-left: 4em;
+}
+h6 {
+    color: #ff9d00;
+}
+
+.title {
+    font-size: 2em;
+}
+.header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: baseline;
+}
+.links {
+    float: right;
+    font-size: 1.5em;
+    display: flex;
+    column-gap: 20px;
+    flex-wrap: wrap;
+}
+#preamble {
+    border-bottom: 2px solid var(--text);
+}
