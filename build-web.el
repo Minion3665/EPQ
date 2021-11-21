@@ -18,6 +18,7 @@
 (require 'org)
 (require 'org-roam)
 (require 'ox-publish)
+(require 'citeproc)
 (setq org-roam-directory (file-truename "./Notes"))
 (setq org-cite-global-bibliography (list (file-truename "./Documents/bibliography.bib")))
 (setq org-id-link-to-org-use-id t)
