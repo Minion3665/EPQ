@@ -53,7 +53,7 @@
       <else-if variable="container-author" match="any">
         <names variable="editor translator" delimiter=". ">
           <label form="verb" text-case="capitalize-first" suffix=" "/>
-          <name and="text" initialize-with=". " delimiter=", "/>
+          <name and="text" initialize-with=". " initialize="false" delimiter=", "/>
         </names>
       </else-if>
     </choose>
