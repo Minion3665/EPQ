@@ -23,7 +23,7 @@
 (setq org-roam-directory (file-truename "./Notes"))
 (setq org-cite-global-bibliography (list (file-truename "./Documents/bibliography.bib")))
 (setq org-id-link-to-org-use-id t)
-(setq org-cite-export-processors '((t csl "./harvard.csl")))
+(setq org-cite-export-processors `((t csl ,(file-truename "./harvard.csl"))))
 ;; (org-roam-db-autosync-mode)
 
 (setq org-id-extra-files (org-roam-list-files))
