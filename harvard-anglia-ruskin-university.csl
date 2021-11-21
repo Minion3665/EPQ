@@ -17,7 +17,7 @@
   </info>
   <locale xml:lang="en-GB">
     <terms>
-      <term name="editor" form="short">
+      <term name="editor" form="long">
         <single>ed.</single>
         <multiple>eds</multiple>
       </term>
@@ -252,7 +252,7 @@
       <if is-numeric="edition">
         <group delimiter=" ">
           <number variable="edition" form="ordinal"/>
-          <text term="edition" form="short" strip-periods="true"/>
+          <text term="edition" form="long" strip-periods="true"/>
         </group>
       </if>
       <else>
