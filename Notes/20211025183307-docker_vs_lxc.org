@@ -19,14 +19,22 @@ So, with that said let's get started:
 The fiest place I went was my search engine of choice 'DuckDuckGo', with the query 'docker vs lxc'. This is due to it being a very quick way to get a lot of information which I can later check for reliability. I expected to find a number of comparison websites and articles comparing the two services. Here's what I found
 
 * A link to the docker FAQ page, which has information on docker and LXC
-[cite:@docker_faq_lxc]
+/Note: this link does not address some important things about LXC, such as the fact that LXD (built ontop of LXC) introduces a lot of features that bring it more into parity with docker/
+#+begin_quote
+/Portable deployment across machines/. Docker defines a format for bundling an application and all its dependencies into a single object called a container. This container can be transferred to any Docker-enabled machine. The container can be executed there with the guarantee that the execution environment exposed to the application is the same in development, testing, and production. LXC implements process sandboxing, which is an important pre-requisite for portable deployment, but is not sufficient for portable deployment. If you sent me a copy of your application installed in a custom LXC configuration, it would almost certainly not run on my machine the way it does on yours. The app you sent me is tied to your machine’s specific configuration: networking, storage, logging, etc. Docker defines an abstraction for these machine-specific settings. The exact same Docker container can run - unchanged - on many different machines, with many different configurations. [cite:@docker_faq_lxc]
+#+end_quote
+This is a great point and a feature that I've noticed being severely lacking in LXC: a vast amount of system configuration appears to be needed in order to set up LXC, and much essential configuration isn't defined by the container. This is generally bad, as it means that containers aren't properly portable.
+
+Docker also markets itself as /application-centric/[cite:@docker_faq_lxc], which is very different to the /machine-centric/ LXC. It's not necessarily a bad thing to think about containers as machines though, and while I'd like to deploy all our apps in separate containers something more akin to LXC's system would fit better with our current workflows.
+
+/Automatic build/ is one of the most useful features of docker from our perspective, and we've considered switching to docker because of it before. With LXC the process of setting up a container is sometimes arduous, however with docker this could be simplified by using dockerfiles to pull and build necessary software; I plan to go one step further and abstract the creation of a dockerfile into something more akin to [[https://docs.netlify.com/configure-builds/get-started/][netlify's 'build script' options]].
+
+
 
 * [[https://linuxcontainers.org/lxd/][The LXD page on linuxcontainers.org]], most notably the features section
 - Due to LXD's introduction, LXC has become much more of a viable option
 - LXD has support for container templates, although a lot fewer are available than on docker
 - LXD has support for using VMs instead of containers, which could be useful in situtations where a VM is needed. In fact, we've been using this as a way to give people who we don't want to give containers access to the system. It's possible we could instead decide to [[https://linux-audit.com/how-and-why-linux-daemons-drop-privileges/][start containers as root and drop privileges, similar to how LXD and docker do unprivelaged containers]] (see also: [[https://docs.docker.com/engine/security/userns-remap/][docker's article on user namespaces]]), meaning that VMs were no longer useful or necessary; this would be particularly desirable as VMs are a lot heavier than containers
-
-* [[https://www.upguard.com/blog/docker-vs-lxc][This upguard blog article on the differences between docker and LXC and why docker is better]]
 
 
 * The containerd website
