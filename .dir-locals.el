@@ -10,4 +10,4 @@
 					     )
 	 (org-cite-global-bibliography "~/School/EPQ/Documents/bibliography.bib")
 	 (org-bibtex-export-arbitrary-fields 't)
-	 (org-bibtex-prefix 't))))
+	 (org-bibtex-prefix ))))
