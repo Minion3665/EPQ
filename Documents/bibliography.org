@@ -13,9 +13,20 @@
 * Docker FAQ, 'What does Docker technology add to just plain LXC?'
 :PROPERTIES:
 :TITLE:    Docker FAQ, 'What does Docker technology add to just plain LXC?'
-:BTYPE:    misc
-:howpublished: On the web at https://docs.docker.com/engine/faq/#what-does-docker-technology-add-to-just-plain-lxc
+:BTYPE:    online
+:url: https://docs.docker.com/engine/faq/#what-does-docker-technology-add-to-just-plain-lxc
 :author: Docker Inc.
-:year: Unknown publishing year, Access date <2021-11-19 Fri>
+:urldate: <2021-11-19 Fri>
 :CUSTOM_ID: docker_faq_lxc
 :END:
+
+* Mailcow dockerized,'running in ntested containers is not supported'
+:PROPERTIES:
+:TITLE:    Mailcow dockerized,'running in ntested containers is not supported'
+:BTYPE:    online
+:url: https://mailcow.github.io/mailcow-dockerized-docs/prerequisite-system/
+:author: [[https://github.com/mailcow/mailcow-dockerized-docs/commit/cce96aea546aecef7db64dcb46aea4fef74873a3][andryyy]]
+:urldate: <2021-11-19 Fri>
+:CUSTOM_ID: docker_faq_lxc
+:END:
+
