@@ -27,34 +27,34 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org773fa07">What happened here?</a></li>
-<li><a href="#orgc291283">Discussions over languages</a>
+<li><a href="#org8caaa15">What happened here?</a></li>
+<li><a href="#org59b85e0">Discussions over languages</a>
 <ul>
-<li><a href="#org43da515">go</a></li>
-<li><a href="#org6c5e363">javascript</a></li>
-<li><a href="#orgfc6ffda">python</a></li>
+<li><a href="#orga735704">go</a></li>
+<li><a href="#org4e9bc76">javascript</a></li>
+<li><a href="#org4fa37d9">python</a></li>
 </ul>
 </li>
-<li><a href="#org1940b33">What did we decide?</a></li>
+<li><a href="#org9d104e1">What did we decide?</a></li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org773fa07" class="outline-2">
-<h2 id="org773fa07">What happened here?</h2>
-<div class="outline-text-2" id="text-org773fa07">
+<div id="outline-container-org8caaa15" class="outline-2">
+<h2 id="org8caaa15">What happened here?</h2>
+<div class="outline-text-2" id="text-org8caaa15">
 <p>
 Yesterday I was talking with the other co-owner<sup><a id="fnr.1" class="footref" href="#fn.1" role="doc-backlink">1</a></sup>, TheCodedProf, about how I should do the project, and we got onto discussing languages that we could use. We then hopped into an IDE<sup><a id="fnr.2" class="footref" href="#fn.2" role="doc-backlink">2</a></sup> and played around with 'go', a language that I've never used before but which was used on the containerd documentation. We created both a small program to clone down a container <a href="https://containerd.io/docs/getting-started/">(as specified on the containerd documentation)</a> as well as a basic hello-world web api <a href="https://golang.org/doc/tutorial/web-service-gin">(using examples from the golang docs)</a>.
 </p>
 </div>
 </div>
 
-<div id="outline-container-orgc291283" class="outline-2">
-<h2 id="orgc291283">Discussions over languages</h2>
-<div class="outline-text-2" id="text-orgc291283">
+<div id="outline-container-org59b85e0" class="outline-2">
+<h2 id="org59b85e0">Discussions over languages</h2>
+<div class="outline-text-2" id="text-org59b85e0">
 </div>
-<div id="outline-container-org43da515" class="outline-3">
-<h3 id="org43da515">go</h3>
-<div class="outline-text-3" id="text-org43da515">
+<div id="outline-container-orga735704" class="outline-3">
+<h3 id="orga735704">go</h3>
+<div class="outline-text-3" id="text-orga735704">
 <ul class="org-ul">
 <li><a href="https://containerd.io/docs/getting-started/">Containerd uses 'go' on its documentation</a></li>
 <li><a href="https://golang.org/doc/tutorial/web-service-gin">golang.org contains a tutorial for making a restful API</a></li>
@@ -69,9 +69,9 @@ But on the other hand&#x2026;
 </ul>
 </div>
 </div>
-<div id="outline-container-org6c5e363" class="outline-3">
-<h3 id="org6c5e363">javascript</h3>
-<div class="outline-text-3" id="text-org6c5e363">
+<div id="outline-container-org4e9bc76" class="outline-3">
+<h3 id="org4e9bc76">javascript</h3>
+<div class="outline-text-3" id="text-org4e9bc76">
 <ul class="org-ul">
 <li>I am fluent in javascript, as is the rest of my team. This means that I won't have to spend so much time looking at documentation and if I have a question I can ask for help very easily</li>
 <li>Javascript is essentially required for web development (<a href="https://golangbot.com/webassembly-using-go/">WASM</a> can be used, but something like <a href="https://reactjs.org/">React</a> is a lot better)</li>
@@ -87,9 +87,9 @@ But on the other hand&#x2026;
 </ul>
 </div>
 </div>
-<div id="outline-container-orgfc6ffda" class="outline-3">
-<h3 id="orgfc6ffda">python</h3>
-<div class="outline-text-3" id="text-orgfc6ffda">
+<div id="outline-container-org4fa37d9" class="outline-3">
+<h3 id="org4fa37d9">python</h3>
+<div class="outline-text-3" id="text-org4fa37d9">
 <ul class="org-ul">
 <li>I know python very well, and will almost never have to look at documentation for it</li>
 <li>The original specification was written with python in mind, which means I've already got reccomendations for some modules</li>
@@ -109,9 +109,9 @@ But on the other hand&#x2026;
 </div>
 </div>
 
-<div id="outline-container-org1940b33" class="outline-2">
-<h2 id="org1940b33">What did we decide?</h2>
-<div class="outline-text-2" id="text-org1940b33">
+<div id="outline-container-org9d104e1" class="outline-2">
+<h2 id="org9d104e1">What did we decide?</h2>
+<div class="outline-text-2" id="text-org9d104e1">
 <ul class="org-ul">
 <li>In the end we decided to test using go, as it looks like it could be the best solution in the long term. <a href="https://github.com/ClicksMinutePer/process-manager/tree/ff7ba96e05f3b56ab72be1f04a27594a41ec9190">We made a quick project and used the code from the golang and containerd documentation to create a redis container and run a restful API</a>.</li>
 </ul>
