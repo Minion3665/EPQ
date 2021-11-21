@@ -17,7 +17,7 @@
   </info>
   <locale xml:lang="en-GB">
     <terms>
-      <term name="editor" form="long">
+      <term name="editor" form="short">
         <single>ed.</single>
         <multiple>eds</multiple>
       </term>
@@ -79,7 +79,7 @@
   </macro>
   <macro name="author-long">
     <names variable="author">
-      <name form="long" and="text" delimiter=", " delimiter-precedes-last="never" initialize-with=". "/>
+      <name form="long" and="text" delimiter=", " delimiter-precedes-last="never" initialize-with=". " initialize="false"/>
       <et-al font-style="italic"/>
       <substitute>
         <names variable="editor"/>
