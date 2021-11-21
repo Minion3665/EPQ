@@ -27,7 +27,11 @@ This is a great point and a feature that I've noticed being severely lacking in 
 
 Docker also markets itself as /application-centric/[cite:@docker_faq_lxc], which is very different to the /machine-centric/ LXC. It's not necessarily a bad thing to think about containers as machines though, and while I'd like to deploy all our apps in separate containers something more akin to LXC's system would fit better with our current workflows.
 
-/Automatic build/ is one of the most useful features of docker from our perspective, and we've considered switching to docker because of it before. With LXC the process of setting up a container is sometimes arduous, however with docker this could be simplified by using dockerfiles to pull and build necessary software; I plan to go one step further and abstract the creation of a dockerfile into something more akin to [[https://docs.netlify.com/configure-builds/get-started/][netlify's 'build script' options]].
+Docker supports /automatic building of containers/[cite:@docker_faq_lxc], which is one of the most useful features of docker from our perspective, and we've considered switching to docker because of it before. With LXC the process of setting up a container is sometimes arduous, however with docker this could be simplified by using dockerfiles to pull and build necessary software; I plan to go one step further and abstract the creation of a dockerfile into something more akin to [[https://docs.netlify.com/configure-builds/get-started/][netlify's 'build script' options]].
+
+Docker has a git-like /versioning/ system[cite:@docker_faq_lxc], which is likely not as useful for us as the other features, as we intend to use git to store our code and keep regular backups of data-storing containers. This would likely be really useful if we were intending to transfer containers around, but we're more likely to create containers on our host, use them for a CI step, and then push them into production.
+
+/Component reuse/ could be very useful for us, allowing us to have a base 'python' and a base 'javascript' container with everything preinstalled, [[https://ubuntu.com/tutorials/create-custom-lxd-images][although similar things can already be done with LXD]].
 
 
 
