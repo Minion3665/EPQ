@@ -79,7 +79,7 @@
   </macro>
   <macro name="author-long">
     <names variable="author">
-      <name form="short" and="text" delimiter=", " delimiter-precedes-last="never" initialize-with=". "/>
+      <name form="long" and="text" delimiter=", " delimiter-precedes-last="never" initialize-with=". "/>
       <et-al font-style="italic"/>
       <substitute>
         <names variable="editor"/>
