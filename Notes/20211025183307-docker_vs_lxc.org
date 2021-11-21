@@ -22,6 +22,9 @@ The fiest place I went was my search engine of choice 'DuckDuckGo', with the que
 [cite:@docker_faq_lxc]
 
 * [[https://linuxcontainers.org/lxd/][The LXD page on linuxcontainers.org]], most notably the features section
+- Due to LXD's introduction, LXC has become much more of a viable option
+- LXD has support for container templates, although a lot fewer are available than on docker
+- LXD has support for using VMs instead of containers, which could be useful in situtations where a VM is needed. In fact, we've been using this as a way to give people who we don't want to give containers access to the system. It's possible we could instead decide to [[https://linux-audit.com/how-and-why-linux-daemons-drop-privileges/][start containers as root and drop privileges, similar to how LXD and docker do unprivelaged containers]] (see also: [[https://docs.docker.com/engine/security/userns-remap/][docker's article on user namespaces]]), meaning that VMs were no longer useful or necessary; this would be particularly desirable as VMs are a lot heavier than containers
 
 * [[https://www.upguard.com/blog/docker-vs-lxc][This upguard blog article on the differences between docker and LXC and why docker is better]]
 
