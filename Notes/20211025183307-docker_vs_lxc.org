@@ -21,7 +21,10 @@ The fiest place I went was my search engine of choice 'DuckDuckGo', with the que
 * A link to the docker FAQ page, which has information on docker and LXC
 [cite:@docker_faq_lxc]
 
+* [[https://linuxcontainers.org/lxd/][The LXD page on linuxcontainers.org]], most notably the features section
+
 * [[https://www.upguard.com/blog/docker-vs-lxc][This upguard blog article on the differences between docker and LXC and why docker is better]]
+
 
 * The containerd website
 [[file:../Documents/containerd-architecture.png]][fn:2]
