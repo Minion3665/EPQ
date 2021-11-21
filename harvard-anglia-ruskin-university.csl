@@ -60,7 +60,7 @@
   </macro>
   <macro name="author">
     <names variable="author">
-      <name and="text" delimiter-precedes-last="never" initialize-with="." name-as-sort-order="all"/>
+      <name and="text" delimiter-precedes-last="never" initialize-with="." initialize="false" name-as-sort-order="all"/>
       <label form="short" prefix=" (" suffix=")"/>
       <et-al font-style="italic"/>
       <substitute>
