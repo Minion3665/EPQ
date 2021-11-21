@@ -27,10 +27,10 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#orgeee4e60">A link to the docker FAQ page, which has information on docker and LXC</a></li>
-<li><a href="#org929d471">The LXD page on linuxcontainers.org, most notably the features section</a></li>
-<li><a href="#org732495c">The containerd website</a></li>
-<li><a href="#org415608a">Bibliography</a></li>
+<li><a href="#org4560af1">A link to the docker FAQ page, which has information on docker and LXC</a></li>
+<li><a href="#org842e89c">The LXD page on linuxcontainers.org, most notably the features section</a></li>
+<li><a href="#org7bd4a7f">The containerd website</a></li>
+<li><a href="#org0e4ba44">Bibliography</a></li>
 </ul>
 </div>
 </div>
@@ -66,9 +66,9 @@ So, with that said let's get started:
 The fiest place I went was my search engine of choice 'DuckDuckGo', with the query 'docker vs lxc'. This is due to it being a very quick way to get a lot of information which I can later check for reliability. I expected to find a number of comparison websites and articles comparing the two services. Here's what I found
 </p>
 
-<div id="outline-container-orgeee4e60" class="outline-2">
-<h2 id="orgeee4e60">A link to the docker FAQ page, which has information on docker and LXC</h2>
-<div class="outline-text-2" id="text-orgeee4e60">
+<div id="outline-container-org4560af1" class="outline-2">
+<h2 id="org4560af1">A link to the docker FAQ page, which has information on docker and LXC</h2>
+<div class="outline-text-2" id="text-org4560af1">
 <p>
 <i>Note: this link does not address some important things about LXC, such as the fact that LXD (built ontop of LXC) introduces a lot of features that bring it more into parity with docker</i>
 </p>
@@ -98,14 +98,14 @@ Docker's capability for <i>component reuse</i> (<a href="#citeproc_bib_item_1">D
 </p>
 
 <p>
-Docker's public registry has a lot of images including <a href="https://hub.docker.com/_/python">officially</a> <a href="https://hub.docker.com/_/postgres">maintained</a> <a href="https://hub.docker.com/_/node">images</a> <a href="https://hub.docker.com/_/golang">for</a> <a href="https://hub.docker.com/_/redis">tools</a> <a href="https://hub.docker.com/_/nginx">and</a> <a href="https://hub.docker.com/_/debian">languages</a> <a href="https://hub.docker.com/_/bash">we</a> <a href="https://hub.docker.com/_/openjdk">already</a> <a href="https://hub.docker.com/_/solr">use</a>, and <a href="https://mailcow.github.io/mailcow-dockerized-docs/">some of our existing tools use docker</a> (<a href="https://mailcow.github.io/mailcow-dockerized-docs/prerequisite-system/">and we're running them through unsupported methods with docker inside proxmox containers&#x2026; oops</a> ('Do not try to install mailcow on a Synology/QNAP device (any NAS), OpenVZ, LXC or other container platforms', (<a href="#citeproc_bib_item_2">[[https://github.com/mailcow/mailcow-dockerized-docs/commit/cce96aea546aecef7db64dcb46aea4fef74873a3][andryyy]], no date</a>)))
+Docker's public registry has a lot of images including <a href="https://hub.docker.com/_/python">officially</a> <a href="https://hub.docker.com/_/postgres">maintained</a> <a href="https://hub.docker.com/_/node">images</a> <a href="https://hub.docker.com/_/golang">for</a> <a href="https://hub.docker.com/_/redis">tools</a> <a href="https://hub.docker.com/_/nginx">and</a> <a href="https://hub.docker.com/_/debian">languages</a> <a href="https://hub.docker.com/_/bash">we</a> <a href="https://hub.docker.com/_/openjdk">already</a> <a href="https://hub.docker.com/_/solr">use</a>, and <a href="https://mailcow.github.io/mailcow-dockerized-docs/">some of our existing tools use docker</a> (<a href="https://mailcow.github.io/mailcow-dockerized-docs/prerequisite-system/">and we're running them through unsupported methods with docker inside proxmox containers&#x2026; oops</a> ('Do not try to install mailcow on a Synology/QNAP device (any NAS), OpenVZ, LXC or other container platforms', (<a href="#citeproc_bib_item_2">andryyy, no date</a>)))
 </p>
 </div>
 </div>
 
-<div id="outline-container-org929d471" class="outline-2">
-<h2 id="org929d471"><a href="https://linuxcontainers.org/lxd/">The LXD page on linuxcontainers.org</a>, most notably the features section</h2>
-<div class="outline-text-2" id="text-org929d471">
+<div id="outline-container-org842e89c" class="outline-2">
+<h2 id="org842e89c"><a href="https://linuxcontainers.org/lxd/">The LXD page on linuxcontainers.org</a>, most notably the features section</h2>
+<div class="outline-text-2" id="text-org842e89c">
 <ul class="org-ul">
 <li>Due to LXD's introduction, LXC has become much more of a viable option</li>
 <li>LXD has support for container templates, although a lot fewer are available than on docker</li>
@@ -115,9 +115,9 @@ Docker's public registry has a lot of images including <a href="https://hub.dock
 </div>
 
 
-<div id="outline-container-org732495c" class="outline-2">
-<h2 id="org732495c">The containerd website</h2>
-<div class="outline-text-2" id="text-org732495c">
+<div id="outline-container-org7bd4a7f" class="outline-2">
+<h2 id="org7bd4a7f">The containerd website</h2>
+<div class="outline-text-2" id="text-org7bd4a7f">
 <p>
 <img src="../Documents/containerd-architecture.png" alt="containerd-architecture.png" /><sup><a id="fnr.2" class="footref" href="#fn.2" role="doc-backlink">2</a></sup>
 </p>
@@ -125,12 +125,12 @@ Docker's public registry has a lot of images including <a href="https://hub.dock
 </div>
 
 
-<div id="outline-container-org415608a" class="outline-2">
-<h2 id="org415608a">Bibliography</h2>
-<div class="outline-text-2" id="text-org415608a">
+<div id="outline-container-org0e4ba44" class="outline-2">
+<h2 id="org0e4ba44">Bibliography</h2>
+<div class="outline-text-2" id="text-org0e4ba44">
 <div class="csl-bib-body">
   <div class="csl-entry"><a id="citeproc_bib_item_1"></a>Docker Inc. (no date) <i>Docker FAQ, ’What does Docker technology add to just plain LXC?’</i>. Available at: <a href="https://docs.docker.com/engine/faq/#what-does-docker-technology-add-to-just-plain-lxc">https://docs.docker.com/engine/faq/#what-does-docker-technology-add-to-just-plain-lxc</a> (Accessed: November 19, 2021).</div>
-  <div class="csl-entry"><a id="citeproc_bib_item_2"></a>[[https://github.com/mailcow/mailcow-dockerized-docs/commit/cce96aea546aecef7db64dcb46aea4fef74873a3][andryyy]] (no date) <i>Mailcow dockerized,’running in nested containers is not supported’</i>. Available at: <a href="https://mailcow.github.io/mailcow-dockerized-docs/prerequisite-system/">https://mailcow.github.io/mailcow-dockerized-docs/prerequisite-system/</a> (Accessed: November 21, 2021).</div>
+  <div class="csl-entry"><a id="citeproc_bib_item_2"></a>andryyy (no date) <i>Mailcow dockerized,’running in nested containers is not supported’</i>. Available at: <a href="https://mailcow.github.io/mailcow-dockerized-docs/prerequisite-system/">https://mailcow.github.io/mailcow-dockerized-docs/prerequisite-system/</a> (Accessed: November 21, 2021).</div>
 </div>
 </div>
 </div>
