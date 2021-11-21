@@ -19,10 +19,11 @@
 (require 'org-roam)
 (require 'ox-publish)
 (require 'citeproc)
+(require 'oc-csl)
 (setq org-roam-directory (file-truename "./Notes"))
 (setq org-cite-global-bibliography (list (file-truename "./Documents/bibliography.bib")))
 (setq org-id-link-to-org-use-id t)
-(setq org-cite-export-processors '((t csl)))
+(setq org-cite-export-processors '((t (citeproc-create (true-filename "./harvard-anglia-ruskin-university.csl")))))
 ;; (org-roam-db-autosync-mode)
 
 (setq org-id-extra-files (org-roam-list-files))
