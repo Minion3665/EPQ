@@ -29,12 +29,12 @@
     <choose>
       <if type="chapter paper-conference" match="any">
         <names variable="container-author" delimiter=", " suffix=", ">
-          <name and="text" initialize-with=". " delimiter=", " sort-separator=", " name-as-sort-order="all"/>
+          <name and="text" initialize-with=". " initialize="false" delimiter=", " sort-separator=", " name-as-sort-order="all"/>
         </names>
         <choose>
           <if variable="container-author" match="none">
             <names variable="editor translator" delimiter=", ">
-              <name and="text" initialize-with="." name-as-sort-order="all"/>
+              <name and="text" initialize-with="." initialize="false" name-as-sort-order="all"/>
               <label form="short" prefix=" (" suffix=")"/>
             </names>
           </if>
