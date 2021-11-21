@@ -23,8 +23,7 @@
 (setq org-roam-directory (file-truename "./Notes"))
 (setq org-cite-global-bibliography (list (file-truename "./Documents/bibliography.bib")))
 (setq org-id-link-to-org-use-id t)
-(setq skyler/csl-path (file-truename "./harvard-anglia-ruskin-university.csl"))
-(setq org-cite-export-processors '((t csl 'skyler/csl-path)))
+(setq org-cite-export-processors '((t csl :BIBLIOGRAPHY-STYLE (file-truename "./harvard-anglia-ruskin-university.csl"))))
 ;; (org-roam-db-autosync-mode)
 
 (setq org-id-extra-files (org-roam-list-files))
