@@ -14,6 +14,7 @@
 (package-install 'htmlize)
 (setq org-roam-v2-ack t)
 (package-install 'org-roam)
+(package-install 'citeproc-el)
 (require 'org)
 (require 'org-roam)
 (require 'ox-publish)
