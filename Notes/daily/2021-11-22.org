@@ -1,0 +1,21 @@
+:PROPERTIES:
+:ID:       4ad527fa-b99c-47bc-bea4-7b7d40173429
+:END:
+#+title: 2021-11-22
+* Diary entry
+** What have I done since the last entry?
+** What have I learned & how?
+** What worked well?
+** What would I do differently next time?
+* Diary entry
+** What have I done since the last entry?
+- I've made the build system use the harvard 'cite them right' system of referencing to automatically reference my sources in the correct format based on [[file:~/School/EPQ/Documents/bibliography.org][my bibliography file]]
+- I've [[file:~/School/EPQ/Notes/20211029093544-what_exactly_is_containerd.org][researched what containerd is]]
+** What have I learned & how?
+- I've learned a little more lisp, including the difference between ='= and =`=
+- I've learned how different citation styles work, including that 'there is no single, definitive version of Harvard Style'
+- I've learned some essential bits of information about containerd, including but not limited to the fact that it is almost certainly the right tool for the job, but that it will need to be tethered with other tools to provide features such as network support. This means I'll likely have to adjust my timeline (and it's why I left a few extra months in the original)
+** What worked well?
+- The citing worked really well in today's research; and I'm very happy with how much time it saved me
+** What would I do differently next time?
+- I feel like I spent a long time implementing the citation style change, and while it was important a less-precise format probably could have worked
