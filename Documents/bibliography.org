@@ -35,8 +35,8 @@
 :TITLE:    Docker blog, 'Containerd was designed to be used by Docker'
 :BTYPE:    online
 :url: https://www.docker.com/blog/what-is-containerd-runtime/
-:author: andryyy
-:urldate: 
+:author: Michael Crosby
+:urldate: <2021-11-22 Mon>
 :year: 2017
 :month: August
 :CUSTOM_ID: mailcow_unsupported_nesting
