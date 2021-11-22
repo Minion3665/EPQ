@@ -33,6 +33,9 @@ h3::before {
 h3 {
     color: #9effff;
 }
+.outline-text-3 {
+    padding-left: 1em;
+}
 
 h4::before {
     content: "### ";
@@ -40,6 +43,9 @@ h4::before {
 }
 h4 {
     color: #ff98a4;
+}
+.outline-text-4 {
+    padding-left: 2em;
 }
 
 h5::before {
@@ -49,6 +55,9 @@ h5::before {
 h5 {
     color: #82aaff;
 }
+.outline-text-5 {
+    padding-left: 3em;
+}
 
 h6::before {
     content: "##### ";
@@ -56,6 +65,9 @@ h6::before {
 }
 h6 {
     color: #ff9d00;
+}
+.outline-text-6 {
+    padding-left: 4em;
 }
 
 .title {

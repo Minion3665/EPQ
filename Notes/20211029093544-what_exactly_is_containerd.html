@@ -16,7 +16,7 @@
     <span class="title">What exactly is containerd</span>
     <div class="links">
         <a href="/">Home</a>
-        <a href="/Notes/daily/2021-11-15.html">Latest daily</a>
+        <a href="/Notes/daily/2021-11-22.html">Latest daily</a>
         <a href="https://github.com/Minion3665/EPQ/issues/new">Report issue</a>
         <a href="https://github.com/Minion3665/EPQ">View source</a>
     </div>
@@ -27,31 +27,31 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#orgdfd585b">Why is this research useful?</a></li>
-<li><a href="#orgdae8c7e">Why not use docker?</a></li>
-<li><a href="#org1aa492e">Why not use LXC?</a></li>
-<li><a href="#org17b7774">So what exactly is containerd?</a>
+<li><a href="#org9791a42">Why is this research useful?</a></li>
+<li><a href="#org2f06dcf">Why not use docker?</a></li>
+<li><a href="#orgae0ae30">Why not use LXC?</a></li>
+<li><a href="#orga6f29ea">So what exactly is containerd?</a>
 <ul>
-<li><a href="#org5c3c75c">What does it do?</a></li>
-<li><a href="#orge1de4d5">What <i>doesn't</i> it do?</a></li>
+<li><a href="#org49ecaee">What does it do?</a></li>
+<li><a href="#org510095c">What <i>doesn't</i> it do?</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-orgdfd585b" class="outline-2">
-<h2 id="orgdfd585b">Why is this research useful?</h2>
-<div class="outline-text-2" id="text-orgdfd585b">
+<div id="outline-container-org9791a42" class="outline-2">
+<h2 id="org9791a42">Why is this research useful?</h2>
+<div class="outline-text-2" id="text-org9791a42">
 <p>
 Let's be honest, containerd will probably be the system that I use for containerization. While I could write a wrapper around docker or LXC, it's probably better to use containerd.
 </p>
 </div>
 </div>
 
-<div id="outline-container-orgdae8c7e" class="outline-2">
-<h2 id="orgdae8c7e">Why not use docker?</h2>
-<div class="outline-text-2" id="text-orgdae8c7e">
+<div id="outline-container-org2f06dcf" class="outline-2">
+<h2 id="org2f06dcf">Why not use docker?</h2>
+<div class="outline-text-2" id="text-org2f06dcf">
 <p>
 <i>Note to future Skyler: This could probably be expanded into its own document</i>
 Docker is very good, but it's also more complex than we need and I'd still need to write wrappers around it as it doesn't have everything that we want. Docker is built on containerd anyway, and infact 'containerd was designed to be used by docker' (<a href="#citeproc_bib_item_3">Michael Crosby, 2017</a>), so all of the features that docker has will be available in containerd without using the middleman docker. This will allow me to use containerd on a lower level than I would otherwise be able to, accessing features that docker may not expose, but also reducing the overhead of running the process manager.
@@ -59,35 +59,35 @@ Docker is very good, but it's also more complex than we need and I'd still need 
 </div>
 </div>
 
-<div id="outline-container-org1aa492e" class="outline-2">
-<h2 id="org1aa492e">Why not use LXC?</h2>
-<div class="outline-text-2" id="text-org1aa492e">
+<div id="outline-container-orgae0ae30" class="outline-2">
+<h2 id="orgae0ae30">Why not use LXC?</h2>
+<div class="outline-text-2" id="text-orgae0ae30">
 <p>
 As mentioned in <a href="20211025183307-docker_vs_lxc.html">my research on docker VS LXC</a>, LXC is much more suited to running full operating systems. While that's what we're doing right now, it's probably better if in future each application gets its own container, and therefore the focus would be more on applications than systems.
 </p>
 </div>
 </div>
 
-<div id="outline-container-org17b7774" class="outline-2">
-<h2 id="org17b7774">So what exactly is containerd?</h2>
-<div class="outline-text-2" id="text-org17b7774">
+<div id="outline-container-orga6f29ea" class="outline-2">
+<h2 id="orga6f29ea">So what exactly is containerd?</h2>
+<div class="outline-text-2" id="text-orga6f29ea">
 <p>
 A good place to start seems to be <a href="https://www.docker.com/blog/what-is-containerd-runtime/">this docker blog post</a>, as it goes into depth on containerd. Another place to look could be <a href="https://containerd.io/docs/">the containerd docs</a>, although they're under construction so don't have a wealth of information.
 </p>
 </div>
 
-<div id="outline-container-org5c3c75c" class="outline-3">
-<h3 id="org5c3c75c">What does it do?</h3>
-<div class="outline-text-3" id="text-org5c3c75c">
+<div id="outline-container-org49ecaee" class="outline-3">
+<h3 id="org49ecaee">What does it do?</h3>
+<div class="outline-text-3" id="text-org49ecaee">
 <p>
 Containerd is a container daemon (<a href="#citeproc_bib_item_3">Michael Crosby, 2017</a>)<sup><a id="fnr.1" class="footref" href="#fn.1" role="doc-backlink">1</a></sup>, which explains the name<sup><a id="fnr.2" class="footref" href="#fn.2" role="doc-backlink">2</a></sup>. This means that it is a daemon<sup><a id="fnr.1.100" class="footref" href="#fn.1" role="doc-backlink">1</a></sup> which manages containers. It provides an interface to access kernel features to 'containerize' apps, as 'the [linux] kernel does not recognize "containers" as objects in their own right' (<a href="#citeproc_bib_item_3">Michael Crosby, 2017</a>; <a href="#citeproc_bib_item_2">Jonathan Corbet, 2019</a>; <a href="#citeproc_bib_item_1">James Bottomley, 2019</a>). Containerd provides an API to access these features in a much simpler way, 'It's so much nicer to work with Container, Task, and Snapshot types than it is to manage calls to clone() or mount().' (<a href="#citeproc_bib_item_3">Michael Crosby, 2017</a>). This means that containerd may be ideal for creating containers in my EP, as it's 1 level of abstraction above a kernel level and therefore relatively easy to use without being overly bloated.
 </p>
 </div>
 </div>
 
-<div id="outline-container-orge1de4d5" class="outline-3">
-<h3 id="orge1de4d5">What <i>doesn't</i> it do?</h3>
-<div class="outline-text-3" id="text-orge1de4d5">
+<div id="outline-container-org510095c" class="outline-3">
+<h3 id="org510095c">What <i>doesn't</i> it do?</h3>
+<div class="outline-text-3" id="text-org510095c">
 <p>
 'Things like networking are out of scope for containerd' (<a href="#citeproc_bib_item_3">Michael Crosby, 2017</a>), which is something that <a href="https://docs.docker.com/network/">docker implements fairly well</a>. This could be a major limitation for using it in the EP, as I'll need good networking support. With containerd I will have to write my own networking support, which could be complicated.
 </p>

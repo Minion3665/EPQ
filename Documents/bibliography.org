@@ -65,3 +65,15 @@
 :month: February
 :CUSTOM_ID: containers_are_not_kernel_objects_email
 :END:
+
+* Harvard style isn't a single citation style
+:PROPERTIES:
+:TITLE: Harvard Style, learn to cite
+:BTYPE: online
+:url: https://libguides.mjc.edu/c.php?g=255746&p=3205500
+:author: Modesto Junior College
+:urldate: <2021-11-22 Mon>
+:year: 2021
+:month: November
+:CUSTOM_ID: harvard_citation_style
+:END:
