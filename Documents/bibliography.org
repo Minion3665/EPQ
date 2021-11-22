@@ -41,3 +41,15 @@
 :month: August
 :CUSTOM_ID: docker_on_what_is_containerd
 :END:
+
+* Containers are not kernel objects
+:PROPERTIES:
+:TITLE:    LWN archive, 'Containers as kernel objects — again'
+:BTYPE:    online
+:url: https://lwn.net/Articles/780364/
+:author: Jonathan Corbet
+:urldate: <2021-11-22 Mon>
+:year: 2019
+:month: February
+:CUSTOM_ID: containers_are_not_kernel_objects
+:END:
