@@ -16,7 +16,12 @@ As mentioned in [[file:20211025183307-docker_vs_lxc.org][my research on docker V
 * So what exactly is containerd?
 A good place to start seems to be [[https://www.docker.com/blog/what-is-containerd-runtime/][this docker blog post]], as it goes into depth on containerd. Another place to look could be [[https://containerd.io/docs/][the containerd docs]], although they're under construction so don't have a wealth of information.
 
-Containerd is a container daemon[cite:@docker_on_what_is_containerd][fn:1], which explains the name[fn:2]. This means that it is a daemon[fn:1] which manages containers. It provides an interface to access kernel features to 'containerize' apps, as 'the [linux] kernel does not recognize "containers" as objects in their own right'
+** What does it do?
+Containerd is a container daemon[cite:@docker_on_what_is_containerd][fn:1], which explains the name[fn:2]. This means that it is a daemon[fn:1] which manages containers. It provides an interface to access kernel features to 'containerize' apps, as 'the [linux] kernel does not recognize "containers" as objects in their own right'[cite:@containers_are_not_kernel_objects_article;@containers_are_not_kernel_objects_email;@docker_on_what_is_containerd]. Containerd provides an API to access these features in a much simpler way, 'It's so much nicer to work with Container, Task, and Snapshot types than it is to manage calls to clone() or mount().'[cite:@docker_on_what_is_containerd]. This means that containerd may be ideal for creating containers in my EP, as it's 1 level of abstraction above a kernel level and therefore relatively easy to use without being overly bloated.
+
+** What /doesn't/ it do?
+
+
 
 * Footnotes
 
