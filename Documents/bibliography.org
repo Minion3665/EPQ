@@ -30,3 +30,14 @@
 :CUSTOM_ID: mailcow_unsupported_nesting
 :END:
 
+* Containerd was made for docker
+:PROPERTIES:
+:TITLE:    Docker blog, 'Containerd was designed to be used by Docker'
+:BTYPE:    online
+:url: https://www.docker.com/blog/what-is-containerd-runtime/
+:author: andryyy
+:urldate: 
+:year: 2017
+:month: August
+:CUSTOM_ID: mailcow_unsupported_nesting
+:END:
