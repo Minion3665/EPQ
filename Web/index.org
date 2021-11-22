@@ -14,7 +14,7 @@ For my EPQ, I'm making a process management daemon. I [[file:Documents/process-m
 
 :NOTE:
 * Important note:
-You seem to be reading this in orgmode, so the creation times may not be fully accurate. Due to the way that I'm getting creation times on git, unless you're viewing this file on https://epq.crawling.us or the =gh-pages= branch of my repo, these times actually show *the last edit times at the time I last built the website*. Please go to https://epq.crawling.us to see accurate times.
+You seem to be reading this in orgmode, so the creation times in the 'All pages' section below may not be fully accurate. Due to the way that I'm getting creation times on git, unless you're viewing this file on https://epq.crawling.us or the =gh-pages= branch of my repo, these times actually show *the last edit times at the time I last built the website*. Please go to https://epq.crawling.us to see accurate times.
 :END:
 
 * All pages
