@@ -32,12 +32,12 @@
 
 * Containerd was made for docker
 :PROPERTIES:
-:TITLE:    Docker blog, 'Containerd was designed to be used by Docker'
+:TITLE:    Docker blog, 'What is containerd?'
 :BTYPE:    online
 :url: https://www.docker.com/blog/what-is-containerd-runtime/
 :author: Michael Crosby
 :urldate: <2021-11-22 Mon>
 :year: 2017
 :month: August
-:CUSTOM_ID: mailcow_unsupported_nesting
+:CUSTOM_ID: docker_on_what_is_containerd
 :END:
