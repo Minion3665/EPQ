@@ -29,7 +29,10 @@
 <ul>
 <li><a href="#example">Example Work</a></li>
 <li><a href="#docker_faq_lxc">Docker FAQ, 'What does Docker technology add to just plain LXC?'</a></li>
-<li><a href="#mailcow_unsupported_nesting">Mailcow dockerized,'running in ntested containers is not supported'</a></li>
+<li><a href="#mailcow_unsupported_nesting">Mailcow dockerized,'running in nested containers is not supported'</a></li>
+<li><a href="#docker_on_what_is_containerd">Containerd was made for docker</a></li>
+<li><a href="#containers_are_not_kernel_objects_article">Containers are not kernel objects</a></li>
+<li><a href="#containers_are_not_kernel_objects_email">Containers are not kernel objects (mailing list archive)</a></li>
 </ul>
 </div>
 </div>
@@ -63,7 +66,7 @@ CUSTOM_ID: docker_faq_lxc
 </div>
 
 <div id="outline-container-mailcow_unsupported_nesting" class="outline-2">
-<h2 id="mailcow_unsupported_nesting">Mailcow dockerized,'running in ntested containers is not supported'</h2>
+<h2 id="mailcow_unsupported_nesting">Mailcow dockerized,'running in nested containers is not supported'</h2>
 <div class="outline-text-2" id="text-mailcow_unsupported_nesting">
 <pre class="example">
 TITLE: Mailcow dockerized,'running in nested containers is not supported'
@@ -72,6 +75,54 @@ url: https://mailcow.github.io/mailcow-dockerized-docs/prerequisite-system/
 author: andryyy
 urldate: <2021-11-21 Sun>
 CUSTOM_ID: mailcow_unsupported_nesting
+</pre>
+</div>
+</div>
+
+<div id="outline-container-docker_on_what_is_containerd" class="outline-2">
+<h2 id="docker_on_what_is_containerd">Containerd was made for docker</h2>
+<div class="outline-text-2" id="text-docker_on_what_is_containerd">
+<pre class="example">
+TITLE: Docker blog, 'What is containerd?'
+BTYPE: online
+url: https://www.docker.com/blog/what-is-containerd-runtime/
+author: Michael Crosby
+urldate: <2021-11-22 Mon>
+year: 2017
+month: August
+CUSTOM_ID: docker_on_what_is_containerd
+</pre>
+</div>
+</div>
+
+<div id="outline-container-containers_are_not_kernel_objects_article" class="outline-2">
+<h2 id="containers_are_not_kernel_objects_article">Containers are not kernel objects</h2>
+<div class="outline-text-2" id="text-containers_are_not_kernel_objects_article">
+<pre class="example">
+TITLE: LWN archive, 'Containers as kernel objects — again'
+BTYPE: online
+url: https://lwn.net/Articles/780364/
+author: Jonathan Corbet
+urldate: <2021-11-22 Mon>
+year: 2019
+month: February
+CUSTOM_ID: containers_are_not_kernel_objects_article
+</pre>
+</div>
+</div>
+
+<div id="outline-container-containers_are_not_kernel_objects_email" class="outline-2">
+<h2 id="containers_are_not_kernel_objects_email">Containers are not kernel objects (mailing list archive)</h2>
+<div class="outline-text-2" id="text-containers_are_not_kernel_objects_email">
+<pre class="example">
+TITLE: email archive, (LKML archive, Re: [RFC PATCH 02/27] containers: Implement containers as kernel objects)
+BTYPE: online
+url: https://www.mail-archive.com/linux-kernel@vger.kernel.org/msg1936761.html
+author: James Bottomley
+urldate: <2021-11-22 Mon>
+year: 2019
+month: February
+CUSTOM_ID: containers_are_not_kernel_objects_email
 </pre>
 </div>
 </div>

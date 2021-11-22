@@ -3,3 +3,31 @@
 :END:
 #+title: What exactly is containerd
 
+* Why is this research useful?
+Let's be honest, containerd will probably be the system that I use for containerization. While I could write a wrapper around docker or LXC, it's probably better to use containerd.
+
+* Why not use docker?
+/Note to future Skyler: This could probably be expanded into its own document/
+Docker is very good, but it's also more complex than we need and I'd still need to write wrappers around it as it doesn't have everything that we want. Docker is built on containerd anyway, and infact 'containerd was designed to be used by docker'[cite:@docker_on_what_is_containerd], so all of the features that docker has will be available in containerd without using the middleman docker. This will allow me to use containerd on a lower level than I would otherwise be able to, accessing features that docker may not expose, but also reducing the overhead of running the process manager.
+
+* Why not use LXC?
+As mentioned in [[file:20211025183307-docker_vs_lxc.org][my research on docker VS LXC]], LXC is much more suited to running full operating systems. While that's what we're doing right now, it's probably better if in future each application gets its own container, and therefore the focus would be more on applications than systems.
+
+* So what exactly is containerd?
+A good place to start seems to be [[https://www.docker.com/blog/what-is-containerd-runtime/][this docker blog post]], as it goes into depth on containerd. Another place to look could be [[https://containerd.io/docs/][the containerd docs]], although they're under construction so don't have a wealth of information.
+
+** What does it do?
+Containerd is a container daemon[cite:@docker_on_what_is_containerd][fn:1], which explains the name[fn:2]. This means that it is a daemon[fn:1] which manages containers. It provides an interface to access kernel features to 'containerize' apps, as 'the [linux] kernel does not recognize "containers" as objects in their own right'[cite:@containers_are_not_kernel_objects_article;@containers_are_not_kernel_objects_email;@docker_on_what_is_containerd]. Containerd provides an API to access these features in a much simpler way, 'It's so much nicer to work with Container, Task, and Snapshot types than it is to manage calls to clone() or mount().'[cite:@docker_on_what_is_containerd]. This means that containerd may be ideal for creating containers in my EP, as it's 1 level of abstraction above a kernel level and therefore relatively easy to use without being overly bloated.
+
+** What /doesn't/ it do?
+'Things like networking are out of scope for containerd'[cite:@docker_on_what_is_containerd], which is something that [[https://docs.docker.com/network/][docker implements fairly well]]. This could be a major limitation for using it in the EP, as I'll need good networking support. With containerd I will have to write my own networking support, which could be complicated.
+
+In general, it's important to remember that containerd is only a platform for creating containers, which means it doesn't handle many of the other complexities of docker or other container platforms. These will need to be handled by my wrapper script.
+
+#+print_bibliography:
+
+* Footnotes
+
+[fn:2] Convention is to have daemons named after what they do with a 'd' on the end, examples of this are 'syslogd', 'dockerd', and 'spotifyd'
+
+[fn:1] a daemon is a program that runs in the background, see [[https://en.wikipedia.org/wiki/Daemon_(computing)][this wikipedia article]] for more information on daemons
