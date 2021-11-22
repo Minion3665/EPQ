@@ -12,6 +12,10 @@ I'm taking the EPQ because my 6th form requires me to take it, however it also o
 * What am I doing for EPQ?
 For my EPQ, I'm making a process management daemon. I [[file:Documents/process-manager-project-requirements.org][wrote a specification in year 11 for what this could look like]], which is what I'll be following as a rough guide. When the project is finished, I'll be taking it on to our production server and using it to run all of our bots, websites & other projects.
 
+:NOTE:
+You seem to be reading this in orgmode, so the creation times may not be fully accurate. Due to the way that I'm getting creation times on git, unless you're viewing this file on https://epq.crawling.us or the =gh-pages= branch of my repo, these times actually show *the last edit times at the time I last built the website*. Please go to https://epq.crawling.us to see accurate times.
+:END:
+
 * All pages
 - [[file:credits.org][Credits, Licenses & Sources]] (Created on 2021-11-18 at 11:39:50)
 - *Documents/*
