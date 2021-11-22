@@ -3,3 +3,9 @@
 :END:
 #+title: What exactly is containerd
 
+* Why is this research useful?
+Let's be honest, containerd will probably be the system that I use for containerization. While I could write a wrapper around docker or LXC, it's probably better to use containerd.
+
+* Why not use docker?
+/Note to future Skyler: This could probably be expanded into its own document/
+Docker is very good, but it's also more complex than we need and I'd still need to write wrappers around it as it doesn't have everything that we want.
