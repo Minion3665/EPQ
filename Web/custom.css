@@ -77,3 +77,6 @@ h6 {
 #preamble {
     border-bottom: 2px solid var(--text);
 }
+div.footpara {
+    display: inline-block;
+}
