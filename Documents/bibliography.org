@@ -20,7 +20,7 @@
 :CUSTOM_ID: docker_faq_lxc
 :END:
 
-* Mailcow dockerized,'running in ntested containers is not supported'
+* Mailcow dockerized,'running in nested containers is not supported'
 :PROPERTIES:
 :TITLE:    Mailcow dockerized,'running in nested containers is not supported'
 :BTYPE:    online
