@@ -51,5 +51,15 @@
 :urldate: <2021-11-22 Mon>
 :year: 2019
 :month: February
-:CUSTOM_ID: containers_are_not_kernel_objects
+:CUSTOM_ID: containers_are_not_kernel_objects_article
 :END:
+
+* Containers are not kernel objects (mailing list archive)
+:TITLE: email archive, (LKML archive, Re: [RFC PATCH 02/27] containers: Implement containers as kernel objects)
+:BTYPE: online
+:url: https://www.mail-archive.com/linux-kernel@vger.kernel.org/msg1936761.html
+:author: James Bottomley
+:urldate: <2021-11-22 Mon>
+:year: 2019
+:month: February
+:CUSTOM_ID: containers_are_not_kernel_objects_email
