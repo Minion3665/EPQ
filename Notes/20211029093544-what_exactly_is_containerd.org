@@ -24,6 +24,7 @@ Containerd is a container daemon[cite:@docker_on_what_is_containerd][fn:1], whic
 
 In general, it's important to remember that containerd is only a platform for creating containers, which means it doesn't handle many of the other complexities of docker or other container platforms. These will need to be handled by my wrapper script.
 
+#+print_bibliography:
 
 * Footnotes
 
