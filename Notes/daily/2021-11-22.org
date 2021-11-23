@@ -4,11 +4,6 @@
 #+title: 2021-11-22
 * Diary entry
 ** What have I done since the last entry?
-** What have I learned & how?
-** What worked well?
-** What would I do differently next time?
-* Diary entry
-** What have I done since the last entry?
 - I've made the build system use the harvard 'cite them right' system of referencing to automatically reference my sources in the correct format based on [[file:~/School/EPQ/Documents/bibliography.org][my bibliography file]]
 - I've [[file:~/School/EPQ/Notes/20211029093544-what_exactly_is_containerd.org][researched what containerd is]]
 ** What have I learned & how?
