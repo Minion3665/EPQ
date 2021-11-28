@@ -2,4 +2,5 @@
 :ID:       3f64a1d4-b52d-4b7f-9a25-d2ebf1587810
 :END:
 #+title: Language comparisons
+In order to decide what language I should use, I'm going to be using a few different metrics. These are based on what I think will be most important for this project.
 
