@@ -77,3 +77,15 @@
 :month: November
 :CUSTOM_ID: harvard_citation_style
 :END:
+
+* Harvard style isn't a single citation style
+:PROPERTIES:
+:TITLE: The Stackoverflow developer survey (2021)
+:BTYPE: online
+:url: https://insights.stackoverflow.com/survey/2021
+:author: Prosus N.V.
+:urldate: <2021-11-28 Sun>
+:year: 2021
+:month: May
+:CUSTOM_ID: so_dev_survey_2021
+:END:
