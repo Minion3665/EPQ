@@ -40,7 +40,8 @@ My current experience and what I want for the future of Clicks Minute Per must p
 ** My prior usage of these langauges
 I have experience using javascript and python, and no experience with go. Both javascript and python have been languages I've ultimately had good experiences with, and despite a shaky start with typescript I'm currently using it in a different project. This means that at the start I'm a lot more likely to know how to use these langauges than go.
 ** The future of Clicks
-Clicks is moving away from using python in our bots, after 
+Clicks is moving away from using python in our bots, after discord.py was deprecated due to problematic handling from discord[cite:@discord_py_closing_announcement]. We're moving towards using more javascript and typescript. We're also looking into alternative platforms, but we'll likely use javascript to interact with those too. [[*Benchmarks][Python is a slower language by far]], and discord.py was our main reason to use it. Given we're also doing web development for which javascript is very important we've decided to use javascript for everything. This would suggest javascript or typescript as a good language for this project.
 ** Experience conclusion
+Although I know python better than javascript, javascript is better from a point-of-view of what we're doing currently. As I know them both very well, javascript seems to get a win for this section.
 * Tool availablility
 * Benchmarks
