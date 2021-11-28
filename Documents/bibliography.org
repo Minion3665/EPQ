@@ -122,4 +122,5 @@
 :urldate: <2021-11-28 Sun>
 :year: 2021
 :month: August
+:CUSTOM_ID: discord_py_closing_announcement
 :END:
