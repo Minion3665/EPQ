@@ -35,4 +35,12 @@ On the desired list, python sits at the top, followed by typescript and then jav
 This metric places python in the best position, although a mention can go out to javascript, and specifically typescript as it is counted as a separate language on the loved/dreaded survey and scores incredibly highly, so it could be argued that it should be recognized as the winner here and better than python.
 ** Popularity conclusion
 Overall, python wins this one. It's growing extremely fast and is very popular with people who use it. Javascript and derivatives come second, with an extremely high portion of developers using them and very high satisfaction for 'typescript' (typed javascript) in particular. Go comes last, although with results that still shouldn't be sniffed at. All 3 of these languages would be viable results.
+* My current experience
+My current experience and what I want for the future of Clicks Minute Per must play a part in deciding the lanaguage used. It'd generally be a bad idea to use lua, for example, as it's a language which I have little experience in but dislike, and is not particularly useful for anything else in Clicks.
+** My prior usage of these langauges
+I have experience using javascript and python, and no experience with go. Both javascript and python have been languages I've ultimately had good experiences with, and despite a shaky start with typescript I'm currently using it in a different project. This means that at the start I'm a lot more likely to know how to use these langauges than go.
+** The future of Clicks
+Clicks is moving away from using python in our bots, after 
+** Experience conclusion
+* Tool availablility
 * Benchmarks
