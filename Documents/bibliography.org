@@ -89,3 +89,26 @@
 :month: May
 :CUSTOM_ID: so_dev_survey_2021
 :END:
+
+* The stackoverflow developer survey (2020)
+:PROPERTIES:
+:TITLE: The Stackoverflow developer survey (2020)
+:BTYPE: online
+:url: https://insights.stackoverflow.com/survey/2020
+:author: Prosus N.V.
+:urldate: <2021-11-28 Sun>
+:year: 2020
+:month: February
+:CUSTOM_ID: so_dev_survey_2020
+:END:
+
+* The stackoverflow developer survey (2019)
+:PROPERTIES:
+:TITLE: The Stackoverflow developer survey (2019)
+:BTYPE: online
+:url: https://insights.stackoverflow.com/survey/2019
+:author: Prosus N.V.
+:urldate: <2021-11-28 Sun>
+:year: 2019
+:CUSTOM_ID: so_dev_survey_2019
+:END:
