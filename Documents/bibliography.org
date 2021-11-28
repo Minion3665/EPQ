@@ -112,3 +112,14 @@
 :year: 2019
 :CUSTOM_ID: so_dev_survey_2019
 :END:
+
+* Discord.py ends
+:PROPERTIES:
+:TITLE: The future of discord.py
+:BTYPE: online
+:url: https://gist.github.com/Rapptz/4a2f62751b9600a31a0d3c78100287f1
+:author: Rapptz
+:urldate: <2021-11-28 Sun>
+:year: 2021
+:month: August
+:END:
