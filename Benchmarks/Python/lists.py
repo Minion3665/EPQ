@@ -16,7 +16,7 @@ import random
 
 for size in (1000000, 100000, 10000, 1000):
     for test in range(1000000):
-        dataset = range(size)
+        dataset = list(range(size))
         random.shuffle(dataset)
 
         search_start = timeit.default_timer()
