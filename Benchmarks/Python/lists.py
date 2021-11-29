@@ -26,5 +26,5 @@ for size in (1000000, 100000, 10000, 1000):
                 break
 
         sort_start = timeit.default_timer()
-        random.sort(sort_start)
+        sort(sort_start)
         print(f"{size} - {test} - SORT - {timeit.default_timer() - sort_start}")
