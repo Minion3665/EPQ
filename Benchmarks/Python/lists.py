@@ -9,6 +9,7 @@ import random
 # The list sizes we'll be using are 1 million items, 100,000 items, 10,000 items and 1,000 items
 # The list items will be randomly shuffled for each trial. This time will not be taken into account
 
+define = """
 def create_dataset(length):
     dataset = list(range(length))
     random.shuffle(dataset)
@@ -21,12 +22,13 @@ def search(dataset):
 
 def sort(dataset):
     return sorted(dataset)
+"""
 
 for operation in ("sort", "search"):
     for size in (1000000, 100000, 10000, 1000):
         print(f"Time to {operation} {size} items")
         result = timeit.repeat(
-            setup = f"dataset = create_dataset({size})",
+            setup = f"{define}\ndataset = create_dataset({size})",
             stmt = f"{operation}(dataset)",
             number = 1000,
             repeat = 5,
