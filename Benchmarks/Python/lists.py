@@ -26,7 +26,7 @@ def sort(dataset):
 """
 
 for operation in ("sort", "search"):
-    for size in range():
+    for size in range(1, 7):
         print(f"Time to {operation} {size} items")
         result = timeit.repeat(
             setup = f"{define}\ndataset = create_dataset({size})",
