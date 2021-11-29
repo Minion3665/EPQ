@@ -27,9 +27,10 @@ def sort(dataset):
 
 for operation in ("sort", "search"):
     for size in range(1, 7):
-        print(f"Time to {operation} {size} items")
+        total_size = 10 ** size
+        print(f"Time to {operation} {total_size} items")
         result = timeit.repeat(
-            setup = f"{define}\ndataset = create_dataset({size})",
+            setup = f"{define}\ndataset = create_dataset({total_size})",
             stmt = f"{operation}(dataset)",
             number = 1000,
             repeat = 5,
