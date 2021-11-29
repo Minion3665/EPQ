@@ -1,5 +1,4 @@
 import timeit
-import random
 
 # We'll run the language's default sorting algorithm and a linear search algorithm on lists of different sizes
 # We'll run each test 5 times, we'll run each algorithm 1000 times per test
@@ -10,6 +9,8 @@ import random
 # The list items will be randomly shuffled for each trial. This time will not be taken into account
 
 define = """
+import random
+
 def create_dataset(length):
     dataset = list(range(length))
     random.shuffle(dataset)
