@@ -2,7 +2,7 @@ import timeit
 import random
 
 # We'll run the language's default sorting algorithm and a linear search algorithm on lists of different sizes
-# We'll run each test 1000
+# We'll run each test 1000 times
 
 # We'll print out the data in the following format, separated by newlines:
 # {LIST SIZE} - {TEST NUMBER} - {TEST TYPE} - {TIME TAKEN}
