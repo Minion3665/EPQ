@@ -28,7 +28,7 @@ for operation in ("sort", "search"):
         result = timeit.repeat(
             setup = f"dataset = create_dataset({size})",
             stmt = f"{operation}(dataset)",
-            times = 1000,
+            number = 1000,
             repeat = 5,
         )
         print(result)
