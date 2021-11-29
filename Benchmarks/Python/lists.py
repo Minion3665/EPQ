@@ -35,5 +35,5 @@ for operation in ("sort", "search"):
             number = 1000,
             repeat = 5,
         )
-        print(result)
+        print(f"{result}\n")
 
