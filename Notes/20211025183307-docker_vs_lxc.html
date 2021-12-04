@@ -16,7 +16,7 @@
     <span class="title">Docker vs LXC</span>
     <div class="links">
         <a href="/">Home</a>
-        <a href="/Notes/daily/2021-11-22.html">Latest daily</a>
+        <a href="/Notes/daily/2021-11-28.html">Latest daily</a>
         <a href="https://github.com/Minion3665/EPQ/issues/new">Report issue</a>
         <a href="https://github.com/Minion3665/EPQ">View source</a>
     </div>
@@ -27,10 +27,10 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org41b8edc">A link to the docker FAQ page, which has information on docker and LXC</a></li>
-<li><a href="#org4fcdac1">The LXD page on linuxcontainers.org, most notably the features section</a></li>
-<li><a href="#org9216a4d">The containerd website</a></li>
-<li><a href="#org3f3128c">Bibliography</a></li>
+<li><a href="#org3519cad">A link to the docker FAQ page, which has information on docker and LXC</a></li>
+<li><a href="#orgef35aa3">The LXD page on linuxcontainers.org, most notably the features section</a></li>
+<li><a href="#org9b9003e">The containerd website</a></li>
+<li><a href="#orgfa0a07a">Bibliography</a></li>
 </ul>
 </div>
 </div>
@@ -66,9 +66,9 @@ So, with that said let's get started:
 The fiest place I went was my search engine of choice 'DuckDuckGo', with the query 'docker vs lxc'. This is due to it being a very quick way to get a lot of information which I can later check for reliability. I expected to find a number of comparison websites and articles comparing the two services. Here's what I found
 </p>
 
-<div id="outline-container-org41b8edc" class="outline-2">
-<h2 id="org41b8edc">A link to the docker FAQ page, which has information on docker and LXC</h2>
-<div class="outline-text-2" id="text-org41b8edc">
+<div id="outline-container-org3519cad" class="outline-2">
+<h2 id="org3519cad">A link to the docker FAQ page, which has information on docker and LXC</h2>
+<div class="outline-text-2" id="text-org3519cad">
 <p>
 <i>Note: this link does not address some important things about LXC, such as the fact that LXD (built ontop of LXC) introduces a lot of features that bring it more into parity with docker</i>
 </p>
@@ -82,30 +82,30 @@ This is a great point and a feature that I've noticed being severely lacking in 
 </p>
 
 <p>
-Docker also markets itself as <i>application-centric</i> (<a href="#citeproc_bib_item_1">Docker Inc., no date</a>), which is very different to the <i>machine-centric</i> LXC. It's not necessarily a bad thing to think about containers as machines though, and while I'd like to deploy all our apps in separate containers something more akin to LXC's system would fit better with our current workflows.
+Docker also markets itself as <i>application-centric</i>(<a href="#citeproc_bib_item_1">Docker Inc., no date</a>), which is very different to the <i>machine-centric</i> LXC. It's not necessarily a bad thing to think about containers as machines though, and while I'd like to deploy all our apps in separate containers something more akin to LXC's system would fit better with our current workflows.
 </p>
 
 <p>
-Docker supports <i>automatic building of containers</i> (<a href="#citeproc_bib_item_1">Docker Inc., no date</a>), which is one of the most useful features of docker from our perspective, and we've considered switching to docker because of it before. With LXC the process of setting up a container is sometimes arduous, however with docker this could be simplified by using dockerfiles to pull and build necessary software; I plan to go one step further and abstract the creation of a dockerfile into something more akin to <a href="https://docs.netlify.com/configure-builds/get-started/">netlify's 'build script' options</a>.
+Docker supports <i>automatic building of containers</i>(<a href="#citeproc_bib_item_1">Docker Inc., no date</a>), which is one of the most useful features of docker from our perspective, and we've considered switching to docker because of it before. With LXC the process of setting up a container is sometimes arduous, however with docker this could be simplified by using dockerfiles to pull and build necessary software; I plan to go one step further and abstract the creation of a dockerfile into something more akin to <a href="https://docs.netlify.com/configure-builds/get-started/">netlify's 'build script' options</a>.
 </p>
 
 <p>
-Docker has a git-like <i>versioning</i> system (<a href="#citeproc_bib_item_1">Docker Inc., no date</a>), which is likely not as useful for us as the other features, as we intend to use git to store our code and keep regular backups of data-storing containers. This would likely be really useful if we were intending to transfer containers around, but we're more likely to create containers on our host, use them for a CI step, and then push them into production.
+Docker has a git-like <i>versioning</i> system(<a href="#citeproc_bib_item_1">Docker Inc., no date</a>), which is likely not as useful for us as the other features, as we intend to use git to store our code and keep regular backups of data-storing containers. This would likely be really useful if we were intending to transfer containers around, but we're more likely to create containers on our host, use them for a CI step, and then push them into production.
 </p>
 
 <p>
-Docker's capability for <i>component reuse</i> (<a href="#citeproc_bib_item_1">Docker Inc., no date</a>) could be very useful for us, allowing us to have a base 'python' and a base 'javascript' container with everything preinstalled, <a href="https://ubuntu.com/tutorials/create-custom-lxd-images">although similar things can already be done with LXD</a>.
+Docker's capability for <i>component reuse</i>(<a href="#citeproc_bib_item_1">Docker Inc., no date</a>) could be very useful for us, allowing us to have a base 'python' and a base 'javascript' container with everything preinstalled, <a href="https://ubuntu.com/tutorials/create-custom-lxd-images">although similar things can already be done with LXD</a>.
 </p>
 
 <p>
-Docker's public registry has a lot of images including <a href="https://hub.docker.com/_/python">officially</a> <a href="https://hub.docker.com/_/postgres">maintained</a> <a href="https://hub.docker.com/_/node">images</a> <a href="https://hub.docker.com/_/golang">for</a> <a href="https://hub.docker.com/_/redis">tools</a> <a href="https://hub.docker.com/_/nginx">and</a> <a href="https://hub.docker.com/_/debian">languages</a> <a href="https://hub.docker.com/_/bash">we</a> <a href="https://hub.docker.com/_/openjdk">already</a> <a href="https://hub.docker.com/_/solr">use</a>, and <a href="https://mailcow.github.io/mailcow-dockerized-docs/">some of our existing tools use docker</a> (<a href="https://mailcow.github.io/mailcow-dockerized-docs/prerequisite-system/">and we're running them through unsupported methods with docker inside proxmox containers&#x2026; oops</a> ('Do not try to install mailcow on a Synology/QNAP device (any NAS), OpenVZ, LXC or other container platforms', (<a href="#citeproc_bib_item_2">andryyy, no date</a>)))
+Docker's public registry has a lot of images including <a href="https://hub.docker.com/_/python">officially</a> <a href="https://hub.docker.com/_/postgres">maintained</a> <a href="https://hub.docker.com/_/node">images</a> <a href="https://hub.docker.com/_/golang">for</a> <a href="https://hub.docker.com/_/redis">tools</a> <a href="https://hub.docker.com/_/nginx">and</a> <a href="https://hub.docker.com/_/debian">languages</a> <a href="https://hub.docker.com/_/bash">we</a> <a href="https://hub.docker.com/_/openjdk">already</a> <a href="https://hub.docker.com/_/solr">use</a>, and <a href="https://mailcow.github.io/mailcow-dockerized-docs/">some of our existing tools use docker</a> (<a href="https://mailcow.github.io/mailcow-dockerized-docs/prerequisite-system/">and we're running them through unsupported methods with docker inside proxmox containers&#x2026; oops</a> ('Do not try to install mailcow on a Synology/QNAP device (any NAS), OpenVZ, LXC or other container platforms',(<a href="#citeproc_bib_item_2">andryyy, no date</a>)))
 </p>
 </div>
 </div>
 
-<div id="outline-container-org4fcdac1" class="outline-2">
-<h2 id="org4fcdac1"><a href="https://linuxcontainers.org/lxd/">The LXD page on linuxcontainers.org</a>, most notably the features section</h2>
-<div class="outline-text-2" id="text-org4fcdac1">
+<div id="outline-container-orgef35aa3" class="outline-2">
+<h2 id="orgef35aa3"><a href="https://linuxcontainers.org/lxd/">The LXD page on linuxcontainers.org</a>, most notably the features section</h2>
+<div class="outline-text-2" id="text-orgef35aa3">
 <ul class="org-ul">
 <li>Due to LXD's introduction, LXC has become much more of a viable option</li>
 <li>LXD has support for container templates, although a lot fewer are available than on docker</li>
@@ -115,9 +115,9 @@ Docker's public registry has a lot of images including <a href="https://hub.dock
 </div>
 
 
-<div id="outline-container-org9216a4d" class="outline-2">
-<h2 id="org9216a4d">The containerd website</h2>
-<div class="outline-text-2" id="text-org9216a4d">
+<div id="outline-container-org9b9003e" class="outline-2">
+<h2 id="org9b9003e">The containerd website</h2>
+<div class="outline-text-2" id="text-org9b9003e">
 <p>
 <img src="../Documents/containerd-architecture.png" alt="containerd-architecture.png" /><sup><a id="fnr.2" class="footref" href="#fn.2" role="doc-backlink">2</a></sup>
 </p>
@@ -125,11 +125,11 @@ Docker's public registry has a lot of images including <a href="https://hub.dock
 </div>
 
 
-<div id="outline-container-org3f3128c" class="outline-2">
-<h2 id="org3f3128c">Bibliography</h2>
-<div class="outline-text-2" id="text-org3f3128c">
+<div id="outline-container-orgfa0a07a" class="outline-2">
+<h2 id="orgfa0a07a">Bibliography</h2>
+<div class="outline-text-2" id="text-orgfa0a07a">
 <div class="csl-bib-body">
-  <div class="csl-entry"><a id="citeproc_bib_item_1"></a>Docker Inc. (no date) <i>Docker FAQ, ’What does Docker technology add to just plain LXC?’</i>. Available at: <a href="https://docs.docker.com/engine/faq/#what-does-docker-technology-add-to-just-plain-lxc">https://docs.docker.com/engine/faq/#what-does-docker-technology-add-to-just-plain-lxc</a> (Accessed: November 19, 2021).</div>
+  <div class="csl-entry"><a id="citeproc_bib_item_1"></a>Docker Inc. (no date) <i>Docker faq, ’what does docker technology add to just plain lxc?’</i>. Available at: <a href="https://docs.docker.com/engine/faq/#what-does-docker-technology-add-to-just-plain-lxc">https://docs.docker.com/engine/faq/#what-does-docker-technology-add-to-just-plain-lxc</a> (Accessed: November 19, 2021).</div>
   <div class="csl-entry"><a id="citeproc_bib_item_2"></a>andryyy (no date) <i>Mailcow dockerized,’running in nested containers is not supported’</i>. Available at: <a href="https://mailcow.github.io/mailcow-dockerized-docs/prerequisite-system/">https://mailcow.github.io/mailcow-dockerized-docs/prerequisite-system/</a> (Accessed: November 21, 2021).</div>
 </div>
 </div>

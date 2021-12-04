@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Language comparisons</title>
+<meta name="generator" content="Org Mode" />
+<link rel="stylesheet" href="/simple.min.css" /><link rel="stylesheet" href="/custom.css" />
+</head>
+<body>
+<div id="preamble" class="status">
+
+<div class="header">
+    <span class="title">Language comparisons</span>
+    <div class="links">
+        <a href="/">Home</a>
+        <a href="/Notes/daily/2021-11-28.html">Latest daily</a>
+        <a href="https://github.com/Minion3665/EPQ/issues/new">Report issue</a>
+        <a href="https://github.com/Minion3665/EPQ">View source</a>
+    </div>
+</div>
+</div>
+<div id="content" class="content">
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org35f55ef">Popularity</a>
+<ul>
+<li><a href="#orge83b7ea">Langauge usage and growth over the past few years:</a></li>
+<li><a href="#org7acb4ad">Language desirability according to developers</a></li>
+<li><a href="#orgcdcd989">Popularity conclusion</a></li>
+</ul>
+</li>
+<li><a href="#org687d800">My current experience</a>
+<ul>
+<li><a href="#orgfb520cf">My prior usage of these langauges</a></li>
+<li><a href="#orgc13b983">The future of Clicks</a></li>
+<li><a href="#org44063c7">Experience conclusion</a></li>
+</ul>
+</li>
+<li><a href="#orgf116895">Tool availablility</a></li>
+<li><a href="#orgacc6410">Benchmarks</a></li>
+</ul>
+</div>
+</div>
+<p>
+In order to decide what language I should use, I'm going to be using a few different metrics. These are based on what I think will be most important for this project.
+</p>
+
+<p>
+I'm just going to be comparing 'Javascript', 'Python' and 'Go' for this, as those are the only langauges which I'm considering at this point. For surveyed results I'm going to be looking at all javascript, as javascript is normally fairly cross-compatible. For non-surveyed results (for example those I benchmark myself) I'm going to be using node 16, as that's what would be used in the project were it written in javascript. Similarly, for python I'll be using python3.10 in my own research.
+</p>
+
+<div id="outline-container-org35f55ef" class="outline-2">
+<h2 id="org35f55ef">Popularity</h2>
+<div class="outline-text-2" id="text-org35f55ef">
+<p>
+Language popularity &amp; growth is an important metric for 3 reasons.
+</p>
+
+<p>
+Firstly, a language that is experiencing growth is more likely to have support given for questions. If there's a lot of people using and learning this language, there'll likely be better communities and resources to learn the language.
+</p>
+
+<p>
+Secondly, a language that is experiencing growth is more likely to have libraries made for it. For similar reasons to point 1, languages that are popular are likely to have good standard tools for doing simple and complex stuff, whereas backwater langauges are more likely not to have the same tools.
+</p>
+
+<p>
+Finally, if a langauge is growing in popularity this is probably because either there are very good features to the language or because there's a reasonable demand for people who can write the langauge (<i>and that can be because the language has features that are useful for solving certain problems easily</i>). This is a good reason to use the language, as people may enjoy using it.
+</p>
+
+<p>
+For this, I've looked at <a href="https://insights.stackoverflow.com/survey">the stackoverflow developer survey results</a> for the years <a href="https://insights.stackoverflow.com/survey/2021">2021</a>, <a href="https://insights.stackoverflow.com/survey/2020">2020</a> and <a href="https://insights.stackoverflow.com/survey/2019">2019</a>. This is fairly reliable, as stackoverflow is a huge community of developers so any outliers are unlikely to skew the wider dataset very much. While they don't necessarily represent <i>everyone</i>, they provide a good starting point for what many developers use, and give a good representation of what <i>stackoverflow's users</i> use which may be very important for getting help on problems I face.
+</p>
+</div>
+<div id="outline-container-orge83b7ea" class="outline-3">
+<h3 id="orge83b7ea">Langauge usage and growth over the past few years:</h3>
+<div class="outline-text-3" id="text-orge83b7ea">
+<p>
+Over the past 3 years, usage of Go has risen from 8.2% to 9.55% of total developers, and its percentage growth was fairly even in both years(Prosus N.V., 2019, 2020, 2021). This still puts it at under 10% of usage with both Python and Javascript breaking 40% of usage in every year sampled(Prosus N.V., 2019, 2020, 2021). It's clear therefore that go is used a lot less than python and javascript.
+</p>
+
+<p>
+While go's usage has increased, however, javascript's has started to fall, remaining fairly similar in 2019 and 2020 ($&asymp;$67.8%) before dropping in 2021 to 64.96%. There is not yet enough information to know if this trend will continue.
+</p>
+
+<p>
+Python's usage is increasing, and faster even than go. In 2019, 41.7% of developers had used it, placing it in 4th, but it has increased by a few percent per year and in the years surveyed its growth rate inreased. It's now the 3rd language, growing by over 4% of total usage in the last year.
+</p>
+
+<p>
+This metric places javascript in the best position, as it's a giant with a significant amount of investment in it. In terms of fastest growth, python could be a good choice. All in all, go is severely lagging behind.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7acb4ad" class="outline-3">
+<h3 id="org7acb4ad">Language desirability according to developers</h3>
+<div class="outline-text-3" id="text-org7acb4ad">
+<p>
+If developers love a language, it's probably ok. I therefore looked at the metrics for <a href="https://insights.stackoverflow.com/survey/2021#section-most-loved-dreaded-and-wanted-programming-scripting-and-markup-languages">'loved and dreaded'</a> as well as <a href="https://insights.stackoverflow.com/survey/2021#most-loved-dreaded-and-wanted-language-want">desired</a> langauges for 2021 only. I decided not to look at the data for past years, as it doesn't matter to me if people have consistently loved the language or if new features have been introduced that makes it amazing to use now.
+</p>
+
+<p>
+The good news is that for all of the languages I've chosen as candidates, over half of their developers like to use them. Javascript as a whole sits lowest, with around 62% of its developers loving it, but typescript and nodejs both increase this firgure, with 63% and 73% of their developers loving them respectively. Go sits around the same point as nodejs with 63% and python sits in the middle of nodejs and typescript with 68%. This shows that all of the languages are fairly reasonable to work with and that a majority of their developer communities consider them good langauges to use.
+</p>
+
+<p>
+On the desired list, python sits at the top, followed by typescript and then javascript(Prosus N.V., 2021), go is 4th. This shows that all of them may experience further growth from developers choosing to work with them in future. Python is the only language with a far greater percentage than any others, sitting at around 19%, while typescript, javascript and go all hover around 15%.
+</p>
+
+<p>
+This metric places python in the best position, although a mention can go out to javascript, and specifically typescript as it is counted as a separate language on the loved/dreaded survey and scores incredibly highly, so it could be argued that it should be recognized as the winner here and better than python.
+</p>
+</div>
+</div>
+<div id="outline-container-orgcdcd989" class="outline-3">
+<h3 id="orgcdcd989">Popularity conclusion</h3>
+<div class="outline-text-3" id="text-orgcdcd989">
+<p>
+Overall, python wins this one. It's growing extremely fast and is very popular with people who use it. Javascript and derivatives come second, with an extremely high portion of developers using them and very high satisfaction for 'typescript' (typed javascript) in particular. Go comes last, although with results that still shouldn't be sniffed at. All 3 of these languages would be viable results.
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org687d800" class="outline-2">
+<h2 id="org687d800">My current experience</h2>
+<div class="outline-text-2" id="text-org687d800">
+<p>
+My current experience and what I want for the future of Clicks Minute Per must play a part in deciding the lanaguage used. It'd generally be a bad idea to use lua, for example, as it's a language which I have little experience in but dislike, and is not particularly useful for anything else in Clicks.
+</p>
+</div>
+<div id="outline-container-orgfb520cf" class="outline-3">
+<h3 id="orgfb520cf">My prior usage of these langauges</h3>
+<div class="outline-text-3" id="text-orgfb520cf">
+<p>
+I have experience using javascript and python, and no experience with go. Both javascript and python have been languages I've ultimately had good experiences with, and despite a shaky start with typescript I'm currently using it in a different project. This means that at the start I'm a lot more likely to know how to use these langauges than go.
+</p>
+</div>
+</div>
+<div id="outline-container-orgc13b983" class="outline-3">
+<h3 id="orgc13b983">The future of Clicks</h3>
+<div class="outline-text-3" id="text-orgc13b983">
+<p>
+Clicks is moving away from using python in our bots, after discord.py was deprecated due to problematic handling from discord(Rapptz, 2021). We're moving towards using more javascript and typescript. We're also looking into alternative platforms, but we'll likely use javascript to interact with those too. <a href="#orgacc6410">Python is a slower language by far</a>, and discord.py was our main reason to use it. Given we're also doing web development for which javascript is very important we've decided to use javascript for everything. This would suggest javascript or typescript as a good language for this project.
+</p>
+</div>
+</div>
+<div id="outline-container-org44063c7" class="outline-3">
+<h3 id="org44063c7">Experience conclusion</h3>
+<div class="outline-text-3" id="text-org44063c7">
+<p>
+Although I know python better than javascript, javascript is better from a point-of-view of what we're doing currently. As I know them both very well, javascript seems to get a win for this section.
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orgf116895" class="outline-2">
+<h2 id="orgf116895">Tool availablility</h2>
+</div>
+<div id="outline-container-orgacc6410" class="outline-2">
+<h2 id="orgacc6410">Benchmarks</h2>
+</div>
+</div>
+</body>
+</html>
