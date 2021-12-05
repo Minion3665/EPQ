@@ -45,3 +45,5 @@ Clicks is moving away from using python in our bots, after discord.py was deprec
 Although I know python better than javascript, javascript is better from a point-of-view of what we're doing currently. As I know them both very well, javascript seems to get a win for this section.
 * Tool availablility
 * Benchmarks
+* Bibliography
+#+print_bibliography:
