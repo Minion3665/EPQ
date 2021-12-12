@@ -3,12 +3,15 @@
 :END:
 #+title: 2021-12-12
 * Diary entry
+It has been 2 weeks since the last entry, so I've got quite a bit to catch up on
 ** What have I done since the last entry?
+- I took a tech-week and explored some interesting technology that I've not used before; most of them (for instance [[https://geti2p.net/en/][I2P]]) aren't useful for this project, but [[https://nixos.org/][NixOS]] looks incredibly interesting. It can be used to [[https://nixos.org/#asciinema-demo-example_4][build docker images]] (which means it is compatible with containerd), and allows far more consistency than other methods I was considering, infact [[https://nixos.org/#asciinema-demo-cover][the docker images can end up /smaller/ than alpine linux]]
+- I did some API design with [[https://stoplight.io/studio/][stoplight studio]]; I still haven't designed the full spec but I have some basic info
 ** What have I learned & how?
+- I've learned more about building containers
+- I've learned more about making APIs
+- I've thought more about how I need to design my API
 ** What worked well?
+- Stoplight studio is a brilliant program for API design and prototyping
 ** What would I do differently next time?
-* Diary entry
-** What have I done since the last entry?
-** What have I learned & how?
-** What worked well?
-** What would I do differently next time?
+- I would better record and log what I have done, both as I do it and making more diary entries
