@@ -51,7 +51,16 @@ If I go down the route of building containers with it I will need to learn how t
 ** How will I provide evidence?
 If I decide on this as a goal, I will provide evidence in the form of NixOS template files that I have written for various common runtimes that we may need on our server
 * Testing
-
+** How is this relevant?
+I need to test my project, because it's going on my production servers
+** What will I need to do to get better?
+I'll need to properly understand the endpoints I'm testing
+I'll need to learn how to better write unit tests
+** How will my project help me?
+I'll be writing tests for my project because it's going on production servers
+I'll have an API that I know /well/ what it should do with any given input, and be able to craft inputs to try to break it
+** How will I provide evidence?
+I'll be writing tests for my project, which will be provided along with the source code for my project
 
 * And lastly...
 Why do your goals align so well with your project?
