@@ -31,3 +31,29 @@ I'm making an API, which I'm going to design using industry-standard tools and i
 ** How will I provide evidence?
 My final product will be a go application with the API in
 I will be providing the design (openAPI/swagger) JSON files of the API I've designed
+* Understanding of containers
+** How is this relevant?
+My project controls and manages containers
+** What will I need to do to get better?
+I'll need to research to find our more information about containers, and I'll need to work hands-on with containers beyond simply creating them and treating them as VMs
+** How will my project help me?
+I've done a fair amount of research on containers already and already understand them far better than I did at the start of the project; I'm also going to be working hands-on with containers in the future of my project
+** How will I provide evidence?
+I'm writing up my research to show information I have extracted about containers
+I will be writing an application to manage containers
+* Understanding of NixOS (unconfirmed)
+** How is this relevant?
+It might not be, but if I continue to believe that NixOS is the best option then my program will use it to build container images
+** What will I need to do to get better?
+=nix= is a declarative language for package installation and configuration; to effectively use it I will need to learn how to set it up to install packages in my containers efficiently
+** How will my project help me?
+If I go down the route of building containers with it I will need to learn how to set it up to install packages in my containers efficiently
+** How will I provide evidence?
+If I decide on this as a goal, I will provide evidence in the form of NixOS template files that I have written for various common runtimes that we may need on our server
+* Testing
+
+
+* And lastly...
+Why do your goals align so well with your project?
+
+Most of my goals are 'learn to use specific part of my project'; this works becuase my project is something that I do not currently have the skills to use but will need to use a lot once the EPQ is over. Therefore, I need the exact skills required to use my project, which also tend to be a subset of the skills required to develop any given project.
