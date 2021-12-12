@@ -1,0 +1,33 @@
+:PROPERTIES:
+:ID:       af7d5308-49fa-4ed5-b9d7-630ffb44121b
+:END:
+#+title: Skillsplosion
+"Identify some skills you need for your project/want to develop over the course of your project."
+
+- Go programming
+- API design
+- Understanding of containers
+- Understanding of NixOS
+- Testing (both unit testing & trying-to-break-it-by-crafting-bad-inputs testing)
+
+"Explode each skill to add more detail to it"
+
+* Go programming
+** How is this relevant?
+The main portion of my project (all major parts depending on if I get time to do a web dashboard (I won't get time to do a web dashboard)) will be written in 'go' due to high support for containerd
+** What will I need to do to get better?
+I'll need to develop in go
+** How will my project help me?
+The main portion of my project (all major parts depending on if I get time to do a web dashboard (I won't get time to do a web dashboard)) will be written in 'go'
+** How will I provide evidence?
+My final product will be a go application
+* API design
+** How is this relevant?
+My project largely consists of an API to control and manage containers
+** What will I need to do to get better?
+I'll need to design an API, and redesign/tweak it where it doesn't fit the intended purpose
+** How will my project help me?
+I'm making an API, which I'm going to design using industry-standard tools and implement using go
+** How will I provide evidence?
+My final product will be a go application with the API in
+I will be providing the design (openAPI/swagger) JSON files of the API I've designed
