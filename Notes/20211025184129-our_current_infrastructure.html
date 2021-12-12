@@ -27,47 +27,47 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org15b1779">My opinions</a>
+<li><a href="#orgb9f7c8f">My opinions</a>
 <ul>
-<li><a href="#orgc92ce67">How is it run?</a></li>
-<li><a href="#org3bb988e">Scenarios</a>
+<li><a href="#org2291149">How is it run?</a></li>
+<li><a href="#orga755041">Scenarios</a>
 <ul>
-<li><a href="#orgfcdd68e">When trying to update a project running on the host</a></li>
-<li><a href="#org0a6c2b5">When trying to check the status of a bot running on the host</a></li>
+<li><a href="#orgba29466">When trying to update a project running on the host</a></li>
+<li><a href="#org171d3de">When trying to check the status of a bot running on the host</a></li>
 </ul>
 </li>
-<li><a href="#org83820af">Problems</a>
+<li><a href="#org5d0e347">Problems</a>
 <ul>
-<li><a href="#orgdffbf20">It's too slow</a></li>
-<li><a href="#org4be8e67">xterm and noVNC <i>suck</i></a></li>
-<li><a href="#org6f534b5">Remembering passwords is annoying</a></li>
-<li><a href="#orgeb4d15e">Dependency issues are easy to cause</a></li>
-<li><a href="#org9c03e33">It's fairly insecure</a></li>
-<li><a href="#org84bd78a">Personal access tokens make me sad</a></li>
+<li><a href="#orgb8f5893">It's too slow</a></li>
+<li><a href="#org613e1c9">xterm and noVNC <i>suck</i></a></li>
+<li><a href="#org2cc08c4">Remembering passwords is annoying</a></li>
+<li><a href="#org116dd93">Dependency issues are easy to cause</a></li>
+<li><a href="#org3f6375c">It's fairly insecure</a></li>
+<li><a href="#orga9b1510">Personal access tokens make me sad</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a href="#orgf800bb2">Other people's opinions</a>
+<li><a href="#org009ac40">Other people's opinions</a>
 <ul>
-<li><a href="#orgf4c3bee">What are the best things?</a>
+<li><a href="#orgc6dffaf">What are the best things?</a>
 <ul>
-<li><a href="#orga5b6df4">PineappleFan</a></li>
+<li><a href="#orge8e9fe2">PineappleFan</a></li>
 </ul>
 </li>
-<li><a href="#org58eccb8">What are the worst things?</a>
+<li><a href="#orge12275d">What are the worst things?</a>
 <ul>
-<li><a href="#org5440258">PineappleFan</a></li>
+<li><a href="#orgea6f94a">PineappleFan</a></li>
 </ul>
 </li>
-<li><a href="#org72fb13f">Is there anything that you can't do that you would like to be able to do?</a>
+<li><a href="#org6e28e3b">Is there anything that you can't do that you would like to be able to do?</a>
 <ul>
-<li><a href="#orgfda3f4b">PineappleFan</a></li>
+<li><a href="#orgc9d66fe">PineappleFan</a></li>
 </ul>
 </li>
-<li><a href="#org71cf552">If you had to set up a website, how would you do it? What bits would you need to ask for help on?</a>
+<li><a href="#org676b489">If you had to set up a website, how would you do it? What bits would you need to ask for help on?</a>
 <ul>
-<li><a href="#org8039d4c">PineappleFan</a></li>
+<li><a href="#orgf1372af">PineappleFan</a></li>
 </ul>
 </li>
 </ul>
@@ -79,13 +79,13 @@
 We use several tools to do the work that will be accomplished by our process manager; here's how we currently run a single process on our server. For this example, we'll assume that the process is a python discord bot containing a web server for checking the latency, such as is active on our bot RSM (<a href="https://rsm.bots.clicksminuteper.net/">the latency for RSM is displayed on this webpage, for easy access from CMPing, our status checker running in a separate location</a>). We'll then run over a few problems with this method.
 </p>
 
-<div id="outline-container-org15b1779" class="outline-2">
-<h2 id="org15b1779">My opinions</h2>
-<div class="outline-text-2" id="text-org15b1779">
+<div id="outline-container-orgb9f7c8f" class="outline-2">
+<h2 id="orgb9f7c8f">My opinions</h2>
+<div class="outline-text-2" id="text-orgb9f7c8f">
 </div>
-<div id="outline-container-orgc92ce67" class="outline-3">
-<h3 id="orgc92ce67">How is it run?</h3>
-<div class="outline-text-3" id="text-orgc92ce67">
+<div id="outline-container-org2291149" class="outline-3">
+<h3 id="org2291149">How is it run?</h3>
+<div class="outline-text-3" id="text-org2291149">
 <p>
 Firstly, we own our own server. This is a mid to high range machine, and is fully capable of running a lot of bots, services &amp; soforth.
 </p>
@@ -114,13 +114,13 @@ The path from the DMZ to your machine is secured, but the path from the DMZ to o
 </div>
 </div>
 
-<div id="outline-container-org3bb988e" class="outline-3">
-<h3 id="org3bb988e">Scenarios</h3>
-<div class="outline-text-3" id="text-org3bb988e">
+<div id="outline-container-orga755041" class="outline-3">
+<h3 id="orga755041">Scenarios</h3>
+<div class="outline-text-3" id="text-orga755041">
 </div>
-<div id="outline-container-orgfcdd68e" class="outline-4">
-<h4 id="orgfcdd68e">When trying to update a project running on the host</h4>
-<div class="outline-text-4" id="text-orgfcdd68e">
+<div id="outline-container-orgba29466" class="outline-4">
+<h4 id="orgba29466">When trying to update a project running on the host</h4>
+<div class="outline-text-4" id="text-orgba29466">
 <p>
 One needs to&#x2026;
 </p>
@@ -136,9 +136,9 @@ One needs to&#x2026;
 </div>
 </div>
 
-<div id="outline-container-org0a6c2b5" class="outline-4">
-<h4 id="org0a6c2b5">When trying to check the status of a bot running on the host</h4>
-<div class="outline-text-4" id="text-org0a6c2b5">
+<div id="outline-container-org171d3de" class="outline-4">
+<h4 id="org171d3de">When trying to check the status of a bot running on the host</h4>
+<div class="outline-text-4" id="text-org171d3de">
 <p>
 One needs to&#x2026;
 </p>
@@ -152,32 +152,32 @@ One needs to&#x2026;
 </div>
 </div>
 
-<div id="outline-container-org83820af" class="outline-3">
-<h3 id="org83820af">Problems</h3>
-<div class="outline-text-3" id="text-org83820af">
+<div id="outline-container-org5d0e347" class="outline-3">
+<h3 id="org5d0e347">Problems</h3>
+<div class="outline-text-3" id="text-org5d0e347">
 </div>
-<div id="outline-container-orgdffbf20" class="outline-4">
-<h4 id="orgdffbf20">It's too slow</h4>
-<div class="outline-text-4" id="text-orgdffbf20">
+<div id="outline-container-orgb8f5893" class="outline-4">
+<h4 id="orgb8f5893">It's too slow</h4>
+<div class="outline-text-4" id="text-orgb8f5893">
 <p>
 Even though it's considerably easier to do this than to do everything manually, it still requires substantial manual effort to check if a bot is erroring, let alone to deploy a new version.
 </p>
 </div>
 </div>
-<div id="outline-container-org4be8e67" class="outline-4">
-<h4 id="org4be8e67">xterm and noVNC <i>suck</i></h4>
-<div class="outline-text-4" id="text-org4be8e67">
+<div id="outline-container-org613e1c9" class="outline-4">
+<h4 id="org613e1c9">xterm and noVNC <i>suck</i></h4>
+<div class="outline-text-4" id="text-org613e1c9">
 </div>
 <ul class="org-ul">
-<li><a id="org660ab4b"></a>xterm sucks<br />
-<div class="outline-text-5" id="text-org660ab4b">
+<li><a id="org40c546a"></a>xterm sucks<br />
+<div class="outline-text-5" id="text-org40c546a">
 <p>
 xterm is my preferred option for connecting to a container, but it still sucks. The xterm window is buggy &amp; on VMs takes a fair amount of setup. Copy and paste also only <i>sometimes</i> works, and on certain browsers doesn't work at all. On certain browsers, typing certain characters does not work. 
 </p>
 </div>
 </li>
-<li><a id="orgb803207"></a>noVNC sucks<br />
-<div class="outline-text-5" id="text-orgb803207">
+<li><a id="orga378ab0"></a>noVNC sucks<br />
+<div class="outline-text-5" id="text-orga378ab0">
 <p>
 noVNC is, if possible, worse than xterm.js. It doesn't have copy/paste functionality at all, and that means that you must type everything out by hand (or, as is slightly more common, us a command to type everything out for you). This makes it dreadful for typing personal access tokens. In addition, as a remote desktop application it's not very lightweight &amp; you can't change the aspect ratio of the terminal.
 </p>
@@ -185,25 +185,25 @@ noVNC is, if possible, worse than xterm.js. It doesn't have copy/paste functiona
 </li>
 </ul>
 </div>
-<div id="outline-container-org6f534b5" class="outline-4">
-<h4 id="org6f534b5">Remembering passwords is annoying</h4>
-<div class="outline-text-4" id="text-org6f534b5">
+<div id="outline-container-org2cc08c4" class="outline-4">
+<h4 id="org2cc08c4">Remembering passwords is annoying</h4>
+<div class="outline-text-4" id="text-org2cc08c4">
 <p>
 You must type multiple passwords to change anything. Suppose I want to change something on a VM, I'll need to remember not only my own password but also the password to the VM. You may foolishly assume this increases security, but due to their lighter nature we generally run everything in containers which have a slightly more convoluted way to access them that requires different passwords. For accessing a given container without remembering the container password, I need to enter my password, the same password, 3 times.
 </p>
 </div>
 </div>
-<div id="outline-container-orgeb4d15e" class="outline-4">
-<h4 id="orgeb4d15e">Dependency issues are easy to cause</h4>
-<div class="outline-text-4" id="text-orgeb4d15e">
+<div id="outline-container-org116dd93" class="outline-4">
+<h4 id="org116dd93">Dependency issues are easy to cause</h4>
+<div class="outline-text-4" id="text-org116dd93">
 <p>
 Let's assume you need python3.10. You'll have to install that manually. If you want to update python, you'll need to do that manually too. If you've got multiple bots running on the same host they'll all need to use versions that can be installed alongside each other. If you want to use the same version of python but different version of libraries then you're out of luck. If you want to install a library and that later gets an update that breaks your code, you're absolutely screwed: <code>pip install -Ur requirements.txt</code> will update everything indiscriminately. If you forget to add something to that requirements file, by the way, you won't install it and stuff will break.
 </p>
 </div>
 </div>
-<div id="outline-container-org9c03e33" class="outline-4">
-<h4 id="org9c03e33">It's fairly insecure</h4>
-<div class="outline-text-4" id="text-org9c03e33">
+<div id="outline-container-org3f6375c" class="outline-4">
+<h4 id="org3f6375c">It's fairly insecure</h4>
+<div class="outline-text-4" id="text-org3f6375c">
 <p>
 If you're inside the walled-garden that is our host, you have far too much power. Let's assume you are a malicious staff member who wants to take us down, here are your options:
 </p>
@@ -215,9 +215,9 @@ If you're inside the walled-garden that is our host, you have far too much power
 </ul>
 </div>
 </div>
-<div id="outline-container-org84bd78a" class="outline-4">
-<h4 id="org84bd78a">Personal access tokens make me sad</h4>
-<div class="outline-text-4" id="text-org84bd78a">
+<div id="outline-container-orga9b1510" class="outline-4">
+<h4 id="orga9b1510">Personal access tokens make me sad</h4>
+<div class="outline-text-4" id="text-orga9b1510">
 <ul class="org-ul">
 <li>They require you to create a token, can be dangerous if you type them out in the open as they give access to every repo you own, including personal ones. They are long, and hard to type, and copy and paste is buggy at best, and they're just like a longer, more annoying, more insecure password.
 And they make me sad.
@@ -227,20 +227,20 @@ Very sad.</li>
 </div>
 </div>
 </div>
-<div id="outline-container-orgf800bb2" class="outline-2">
-<h2 id="orgf800bb2">Other people's opinions</h2>
-<div class="outline-text-2" id="text-orgf800bb2">
+<div id="outline-container-org009ac40" class="outline-2">
+<h2 id="org009ac40">Other people's opinions</h2>
+<div class="outline-text-2" id="text-org009ac40">
 <p>
 To make sure that I wasn't getting the wrong end of the stick or removing features people really liked, I asked my teammates. The answers here have been transcribed, reformatted and reworded for your convenience, but the original meaning has been kept.
 </p>
 </div>
-<div id="outline-container-orgf4c3bee" class="outline-3">
-<h3 id="orgf4c3bee">What are the best things?</h3>
-<div class="outline-text-3" id="text-orgf4c3bee">
+<div id="outline-container-orgc6dffaf" class="outline-3">
+<h3 id="orgc6dffaf">What are the best things?</h3>
+<div class="outline-text-3" id="text-orgc6dffaf">
 </div>
-<div id="outline-container-orga5b6df4" class="outline-4">
-<h4 id="orga5b6df4">PineappleFan</h4>
-<div class="outline-text-4" id="text-orga5b6df4">
+<div id="outline-container-orge8e9fe2" class="outline-4">
+<h4 id="orge8e9fe2">PineappleFan</h4>
+<div class="outline-text-4" id="text-orge8e9fe2">
 <ul class="org-ul">
 <li>It's easy to see the stats of the VMs</li>
 <li>It's good to see what's taking up the memory and CPU</li>
@@ -249,13 +249,13 @@ To make sure that I wasn't getting the wrong end of the stick or removing featur
 </div>
 </div>
 </div>
-<div id="outline-container-org58eccb8" class="outline-3">
-<h3 id="org58eccb8">What are the worst things?</h3>
-<div class="outline-text-3" id="text-org58eccb8">
+<div id="outline-container-orge12275d" class="outline-3">
+<h3 id="orge12275d">What are the worst things?</h3>
+<div class="outline-text-3" id="text-orge12275d">
 </div>
-<div id="outline-container-org5440258" class="outline-4">
-<h4 id="org5440258">PineappleFan</h4>
-<div class="outline-text-4" id="text-org5440258">
+<div id="outline-container-orgea6f94a" class="outline-4">
+<h4 id="orgea6f94a">PineappleFan</h4>
+<div class="outline-text-4" id="text-orgea6f94a">
 <ul class="org-ul">
 <li>It can be unintuitive to do actions unless you know how</li>
 <li>The UI doesn't look particularly nice</li>
@@ -263,29 +263,29 @@ To make sure that I wasn't getting the wrong end of the stick or removing featur
 </div>
 </div>
 </div>
-<div id="outline-container-org72fb13f" class="outline-3">
-<h3 id="org72fb13f">Is there anything that you can't do that you would like to be able to do?</h3>
-<div class="outline-text-3" id="text-org72fb13f">
+<div id="outline-container-org6e28e3b" class="outline-3">
+<h3 id="org6e28e3b">Is there anything that you can't do that you would like to be able to do?</h3>
+<div class="outline-text-3" id="text-org6e28e3b">
 </div>
-<div id="outline-container-orgfda3f4b" class="outline-4">
-<h4 id="orgfda3f4b">PineappleFan</h4>
-<div class="outline-text-4" id="text-orgfda3f4b">
+<div id="outline-container-orgc9d66fe" class="outline-4">
+<h4 id="orgc9d66fe">PineappleFan</h4>
+<div class="outline-text-4" id="text-orgc9d66fe">
 <ul class="org-ul">
 <li>It'd be nice to be able to more easily create VMs for basic services, such as python bots</li>
 </ul>
 </div>
 </div>
 </div>
-<div id="outline-container-org71cf552" class="outline-3">
-<h3 id="org71cf552">If you had to set up a website, how would you do it? What bits would you need to ask for help on?</h3>
-<div class="outline-text-3" id="text-org71cf552">
+<div id="outline-container-org676b489" class="outline-3">
+<h3 id="org676b489">If you had to set up a website, how would you do it? What bits would you need to ask for help on?</h3>
+<div class="outline-text-3" id="text-org676b489">
 <ul class="org-ul">
 <li>This question was asked to see how well developers understand the system, as if they can't set up a website by themselves it shows that there's some complexity there. If developers get it wrong that's even more of a problem.</li>
 </ul>
 </div>
-<div id="outline-container-org8039d4c" class="outline-4">
-<h4 id="org8039d4c">PineappleFan</h4>
-<div class="outline-text-4" id="text-org8039d4c">
+<div id="outline-container-orgf1372af" class="outline-4">
+<h4 id="orgf1372af">PineappleFan</h4>
+<div class="outline-text-4" id="text-orgf1372af">
 <ol class="org-ol">
 <li>Create a new container (would probably have to check how)</li>
 <li>Install the NPM packages</li>

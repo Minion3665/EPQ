@@ -15,6 +15,7 @@ For my EPQ, I'm making a process management daemon. I [[file:Documents/process-m
 * All pages
 - [[file:credits.org][Credits, Licenses & Sources]] (Created on 2021-11-18 at 11:37:27)
 - *Notes/*
+  - [[file:Notes/20211212220043-skillsplosion.org][Skillsplosion]] (Created on 2021-12-12 at 22:42:12)
   - [[file:Notes/20211025184129-our_current_infrastructure.org][Our current infrastructure]] (Created on 2021-12-06 at 10:52:07)
   - [[file:Notes/20211128100407-language_comparisons.org][Language comparisons]] (Created on 2021-12-05 at 23:18:05)
   - [[file:Notes/20211029093544-what_exactly_is_containerd.org][What exactly is containerd]] (Created on 2021-11-22 at 11:30:58)
