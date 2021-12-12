@@ -1,0 +1,14 @@
+:PROPERTIES:
+:ID:       4ce0f71b-71e8-4566-99a4-4bb6b16d0d0c
+:END:
+#+title: 2021-12-12
+* Diary entry
+** What have I done since the last entry?
+** What have I learned & how?
+** What worked well?
+** What would I do differently next time?
+* Diary entry
+** What have I done since the last entry?
+** What have I learned & how?
+** What worked well?
+** What would I do differently next time?
