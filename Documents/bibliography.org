@@ -124,3 +124,13 @@
 :month: August
 :CUSTOM_ID: discord_py_closing_announcement
 :END:
+
+* OCI Main
+:PROPERTIES:
+:TITLE: The Open Conatiner Inititative main website
+:BTYPE: online
+:url: https://opencontainers.org/
+:author: Open Container Initiative
+:urldate: <2021-12-13 Mon>
+:CUSTOM_ID: oci_main
+:END:
