@@ -2,4 +2,5 @@
 :ID:       6d52f18e-b676-4488-9c0c-c769ac0ef53e
 :END:
 #+title: Open Container Initiative
+According to their website[cite:@oci_main],
 > The Open Container Initiative is an open governance structure for the express purpose of creating open industry standards around container formats and runtimes.
