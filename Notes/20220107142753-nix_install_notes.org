@@ -1,0 +1,5 @@
+:PROPERTIES:
+:ID:       5731f86e-9a84-43d9-a011-7e61f82a2667
+:END:
+#+title: Nix Install Notes
+
