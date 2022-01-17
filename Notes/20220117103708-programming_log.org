@@ -20,4 +20,7 @@ and [[https://github.com/ClicksMinutePer/process-manager/blob/097983953dc613702b
 #+begin_src go
 	err := cmd.Run()
 #+end_src
+
+#+RESULTS:
+
 ** How did this help me learn?
