@@ -1,0 +1,5 @@
+:PROPERTIES:
+:ID:       956c4043-ffaa-45d6-be32-6219c21ea597
+:END:
+#+title: Programming log
+
