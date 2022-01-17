@@ -4,7 +4,7 @@
 #+title: Programming log
 * Layout
 - Each new problem will be under a heading, roughly in chronological order that I came across them (although problems that I anticipated and solved beforehand may be placed later, as it will be more logical and easier to read)
-- If there's a problem I believed I had solved but had not, I may list it multiple times, once when I initally solved it and subsequent times when I was forced to change and improve my solution. I will 
+- If there's a problem I believed I had solved but had not, I may list it multiple times, once when I initally solved it and subsequent times when I was forced to change and improve my solution. I will mention if this is the case
 - I'll rate each problem with a difficulty (1-5)
 - I'll explain how I solved each problem
 - I'll state how coming to this solution helped me to learn
