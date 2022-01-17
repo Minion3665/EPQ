@@ -20,7 +20,33 @@ and [[https://github.com/ClicksMinutePer/process-manager/blob/097983953dc613702b
 #+begin_src go
 	err := cmd.Run()
 #+end_src
+Inbetween I redirect the output and errors from the process to my terminal so I can see if there's any problems while it's building
+#+begin_src go
+	cmd.Stdout = os.Stdout
+	cmd.Stderr = os.Stderr
+#+end_src
 
-#+RESULTS:
+I grabbed the default Nix config for docker containers, a container to say 'hello world' and built it using my script.
+#+begin_src nix
+{ pkgs ? import <nixpkgs> { }
+, pkgsLinux ? import <nixpkgs> { system = "x86_64-linux"; }
+}:
 
+pkgs.dockerTools.buildImage {
+  name = "hello-docker";
+  config = {
+    Cmd = [ "${pkgsLinux.hello}/bin/hello" ];
+  };
+}
+#+end_src
+Finally, I loaded the built file in docker and ran it
+#+begin_src bash
+  docker load < result
+  docker start -t {type}
+#+end_src
+
+This worked, and I got hello world in my console!
+** What resources did I use?
+I used [[https://nixos.org/guides/building-and-running-docker-images.html][this nixos guide]] and [[https://stackoverflow.com/a/31737077][this stackoverflow answer]] to help me understand the Nix and go sides of running commands.
 ** How did this help me learn?
+This taught me how to use Nix to build docker containers.
