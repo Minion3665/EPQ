@@ -12,5 +12,12 @@
 * Building containers programatically
 - Difficulty: 2
 ** How did I solve it?
-
+[[https://github.com/ClicksMinutePer/process-manager/blob/097983953dc613702b9ea1a350496a0f90c4113e/containerManager/main.go#L80][This line]] sets up the command that needs to be run in order to build the container
+#+begin_src go
+	cmd := exec.Command("nix-build", "./containerManager/config/"+id+"/"+version+".nix")
+#+end_src
+and [[https://github.com/ClicksMinutePer/process-manager/blob/097983953dc613702b9ea1a350496a0f90c4113e/containerManager/main.go#L85][this line]] runs the command
+#+begin_src go
+	err := cmd.Run()
+#+end_src
 ** How did this help me learn?
