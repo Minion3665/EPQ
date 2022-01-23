@@ -1,5 +1,0 @@
-:PROPERTIES:
-:ID:       c83a9bd1-2a46-47f7-9cec-d5b42d473eb4
-:END:
-#+title: Why switch from notion? (Soon™)
-
