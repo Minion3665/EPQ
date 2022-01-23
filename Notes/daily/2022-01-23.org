@@ -1,0 +1,19 @@
+:PROPERTIES:
+:ID:       b257fb7b-0981-43b6-b041-e29590901352
+:END:
+#+title: 2022-01-23
+* Diary entry
+** What have I done since the last entry?
+- I have looked a little at [[file:~/EPQ/Documents/project-improvements.org][how my project could be improved]], most of the changes are changes in evaluation rather than in content, but this is still just as important.
+- I looked at the webinars on skill development and ongoing reflection (see moodle) and took notes on how this could be applied to my project
+- I took a look at [[https://www.cni.dev/][CNI]] and [[https://mobyproject.org/][moby]] which look like they could be incredibly helpful for container networking. I still need to look further at how to setup CNI with the existing container program I have, but once that is done I will have a first prototype of the program (sans-API).
+- I used [[https://cs.github.com/][the preview of github code search (which I have access to)]] in order to look at some existing CNI code. I believe that CNI is a daemon on my system so it will need more setup than just go code but looking at that is still a good start
+- I looked at [[https://github.com/containerd/go-cni][go-cni]], a module designed to use CNI with containerd
+** What have I learned & how?
+- I've learned a bit more about how to evaluate my project, a skill which I will apply in future evaluations and diary entries
+- I've learned a bit more about how networking works, and gained skills in using code-search to view and understand other people's code. This is an important skill to have as being able to read and understand other people's code is useful to learning how different things work and are implemented. In addition, the first documentation on containerd that you will find is extremely lacking and while there is some stuff if you dig for it looking at other people's code can be a catalyst for better understanding how different functions fit together. 
+** What worked well?
+- Using code-search whent really well
+- The ongoing reflection webinar was extremely helpful to understand how I could better use reflection and evaluation in my project
+** What would I do differently next time?
+- Next time I'd ignore the skill development webinar; it was not very useful as I already knew and understood the content and have already done stuff like the [[id:af7d5308-49fa-4ed5-b9d7-630ffb44121b][Skillsplosion]] which did not need to be replicated.
