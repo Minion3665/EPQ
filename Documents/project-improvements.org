@@ -1,4 +1,4 @@
-* Evaluating how my project can be improved
+* Looking at how my project can be improved
 (please refer to https://moodle.hrsfc.ac.uk/pluginfile.php/9379/mod_resource/content/1/Improve%20your%20EPQ%20paperwork.pdf)
 
 - More & better ways of getting & evaluating information would be helpful. Right now most of my research comes either from Docker & other companies themselves (which is /fine/, they are industry experts, but also shows some level of bias towards using docker)
