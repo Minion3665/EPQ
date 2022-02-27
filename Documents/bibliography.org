@@ -137,5 +137,5 @@
 
 * Local variables :noexport:
 Local variables:
-eval: (add-hook 'after-save-hook (lambda () (interactive) (while (search-forward-regexp "<\\([0-9]+-[0-9]+-[0-9]+\\) [A-z]+>" nil t) (replace-match (match-string 1) t nil)) (org-bibtex "./bibliography.bib")) nil t)
+eval: (add-hook 'after-save-hook (lambda () (interactive) (goto-char 1) (while (search-forward-regexp "<\\([0-9]+-[0-9]+-[0-9]+\\) [A-z]+>" nil t) (replace-match (match-string 1) t nil)) (org-bibtex "./bibliography.bib")) nil t)
 End:
