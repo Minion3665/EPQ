@@ -1,0 +1,24 @@
+:PROPERTIES:
+:ID:       4ce0f71b-71e8-4566-99a4-4bb6b16d0d0c
+:END:
+#+title: 2021-12-12
+* Diary entry
+It has been 2 weeks since the last entry, so I've got quite a bit to catch up on
+** What have I done since the last entry?
+- I took a tech-week and explored some interesting technology that I've not used before; most of them (for instance [[https://geti2p.net/en/][I2P]]) aren't useful for this project, but [[https://nixos.org/][NixOS]] looks incredibly interesting. It can be used to [[https://nixos.org/#asciinema-demo-example_4][build docker images]] (which means it is compatible with containerd), and allows far more consistency than other methods I was considering, infact [[https://nixos.org/#asciinema-demo-cover][the docker images can end up /smaller/ than alpine linux]]
+- I did some API design with [[https://stoplight.io/studio/][stoplight studio]]; I still haven't designed the full spec but I have some basic info
+** What have I learned & how?
+- I've learned more about building containers
+- I've learned more about making APIs
+- I've thought more about how I need to design my API
+** What worked well?
+- Stoplight studio is a brilliant program for API design and prototyping
+** What would I do differently next time?
+- I would better record and log what I have done, both as I do it and making more diary entries
+* What will I do over the holidays?
+I'm not going to schedule any more time than the 2 hours already set out each sunday over the holidays, and here's why:
+- My mental health has been not so good, and it's getting worse. This is due to a lot too much stress, and /I need a break/.
+- I'm already doing well on my EPQ; I have the time to avoid scheduling much more time
+- I have several other projects and holiday homework that I have made commitments to complete far earlier than the EPQ; these must take priority in my scheduling
+
+This is not to say that I won't do my EPQ more than that over the holidays, I enjoy doing the EPQ and I find it more relaxing and freeing than some other tasks I have to do, but I /will not/ make a formal commitment to make any further time. I understand that this is probably not what you meant by 'create an EP Christmas holidays plan', and for this I apologise.

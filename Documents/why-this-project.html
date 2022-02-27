@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Why have I chosen this project?</title>
+<meta name="generator" content="Org Mode" />
+<link rel="stylesheet" href="/simple.min.css" /><link rel="stylesheet" href="/custom.css" />
+</head>
+<body>
+<div id="preamble" class="status">
+
+<div class="header">
+    <span class="title">Why have I chosen this project?</span>
+    <div class="links">
+        <a href="/">Home</a>
+        <a href="/Notes/daily/2022-01-23.html">Latest daily</a>
+        <a href="https://github.com/Minion3665/EPQ/issues/new">Report issue</a>
+        <a href="https://github.com/Minion3665/EPQ">View source</a>
+    </div>
+</div>
+</div>
+<div id="content" class="content">
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org9e51c75">What is the project idea?</a>
+<ul>
+<li><a href="#orgb2aa7f2">Ok but what does that actually mean?</a></li>
+</ul>
+</li>
+<li><a href="#orgd11931d">Why have I chosen this project?</a></li>
+<li><a href="#org1b60196">What are the benefits and drawbacks of this project?</a>
+<ul>
+<li><a href="#orgfbc9fce">Benefits</a></li>
+<li><a href="#orgd3ed1f1">Drawbacks</a></li>
+<li><a href="#orgc4747dd">What could I have done instead?</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org9e51c75" class="outline-2">
+<h2 id="org9e51c75">What is the project idea?</h2>
+<div class="outline-text-2" id="text-org9e51c75">
+<p>
+The project is a process management daemon to run on my Linux server, it will help to manage projects, auto-restarting them if they exit as well as providing an API (and possibly web interface) to manage variables, code through git, and the status of the project itself.
+</p>
+</div>
+
+<div id="outline-container-orgb2aa7f2" class="outline-3">
+<h3 id="orgb2aa7f2">Ok but what does that actually mean?</h3>
+<div class="outline-text-3" id="text-orgb2aa7f2">
+<p>
+My artifact will be able to
+</p>
+<ul class="org-ul">
+<li>Run a process</li>
+<li>Restart it if it fails</li>
+<li>Control the environment varibles the project runs with</li>
+<li>Give an API that lets us
+<ul class="org-ul">
+<li>Start, stop &amp; restart the project</li>
+<li>Give information about the project (memory usage, is it started, logs etc.)</li>
+</ul></li>
+<li>Pull code from git, either when updated or on command</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgd11931d" class="outline-2">
+<h2 id="orgd11931d">Why have I chosen this project?</h2>
+<div class="outline-text-2" id="text-orgd11931d">
+<ul class="org-ul">
+<li>I've had this project idea for a while (since mid-year-11)</li>
+<li>I need to run something like this on my server (see 'what could I have done instead' section)</li>
+<li>It's something I'm interested in, don't know how to do yet, but am confident I will be able to do within the EPQ time</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org1b60196" class="outline-2">
+<h2 id="org1b60196">What are the benefits and drawbacks of this project?</h2>
+<div class="outline-text-2" id="text-org1b60196">
+</div>
+<div id="outline-container-orgfbc9fce" class="outline-3">
+<h3 id="orgfbc9fce">Benefits</h3>
+<div class="outline-text-3" id="text-orgfbc9fce">
+<ul class="org-ul">
+<li>It's an interesting project</li>
+<li>I need something like this, the EPQ is a perfect excuse to set aside time to complete it better than I would otherwise</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgd3ed1f1" class="outline-3">
+<h3 id="orgd3ed1f1">Drawbacks</h3>
+<div class="outline-text-3" id="text-orgd3ed1f1">
+<ul class="org-ul">
+<li>May be more difficult to show personal growth, as I do computer programming already, although never quite like this</li>
+<li>Other solutions may already exist</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgc4747dd" class="outline-3">
+<h3 id="orgc4747dd">What could I have done instead?</h3>
+<div class="outline-text-3" id="text-orgc4747dd">
+<ul class="org-ul">
+<li>Used 'docker swarm' or 'docker compose'</li>
+<li>Continued to use PM2 (which is what we're currently using)</li>
+<li>Used the proxmox API (we're currently using proxmox, although not using the API to manage containers)</li>
+</ul>
+
+<p>
+All of these have disadvantages though
+</p>
+<ul class="org-ul">
+<li>None of these can pull from git</li>
+<li>Docker does not expose an API for container management</li>
+<li><p>
+PM2 does not expose an API for process management, and does not contain processes
+</p>
+
+<p>
+And plus, it's always nice to know how your own systems work&#x2026;
+</p></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

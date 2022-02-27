@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>2021-11-12</title>
+<meta name="generator" content="Org Mode" />
+<link rel="stylesheet" href="/simple.min.css" /><link rel="stylesheet" href="/custom.css" />
+</head>
+<body>
+<div id="preamble" class="status">
+
+<div class="header">
+    <span class="title">2021-11-12</span>
+    <div class="links">
+        <a href="/">Home</a>
+        <a href="/Notes/daily/2022-01-23.html">Latest daily</a>
+        <a href="https://github.com/Minion3665/EPQ/issues/new">Report issue</a>
+        <a href="https://github.com/Minion3665/EPQ">View source</a>
+    </div>
+</div>
+</div>
+<div id="content" class="content">
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org0aff343">What happened here?</a></li>
+<li><a href="#org1781002">Discussions over languages</a>
+<ul>
+<li><a href="#orgeafc6a3">go</a></li>
+<li><a href="#orgf549b07">javascript</a></li>
+<li><a href="#org4c06ac6">python</a></li>
+</ul>
+</li>
+<li><a href="#orgb2eca81">What did we decide?</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org0aff343" class="outline-2">
+<h2 id="org0aff343">What happened here?</h2>
+<div class="outline-text-2" id="text-org0aff343">
+<p>
+Yesterday I was talking with the other co-owner<sup><a id="fnr.1" class="footref" href="#fn.1" role="doc-backlink">1</a></sup>, TheCodedProf, about how I should do the project, and we got onto discussing languages that we could use. We then hopped into an IDE<sup><a id="fnr.2" class="footref" href="#fn.2" role="doc-backlink">2</a></sup> and played around with 'go', a language that I've never used before but which was used on the containerd documentation. We created both a small program to clone down a container <a href="https://containerd.io/docs/getting-started/">(as specified on the containerd documentation)</a> as well as a basic hello-world web api <a href="https://golang.org/doc/tutorial/web-service-gin">(using examples from the golang docs)</a>.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1781002" class="outline-2">
+<h2 id="org1781002">Discussions over languages</h2>
+<div class="outline-text-2" id="text-org1781002">
+</div>
+<div id="outline-container-orgeafc6a3" class="outline-3">
+<h3 id="orgeafc6a3">go</h3>
+<div class="outline-text-3" id="text-orgeafc6a3">
+<ul class="org-ul">
+<li><a href="https://containerd.io/docs/getting-started/">Containerd uses 'go' on its documentation</a></li>
+<li><a href="https://golang.org/doc/tutorial/web-service-gin">golang.org contains a tutorial for making a restful API</a></li>
+</ul>
+
+<p>
+But on the other hand&#x2026;
+</p>
+<ul class="org-ul">
+<li>Neither I nor any of my team know go (Although that could be good for skill development?)</li>
+<li>Go isn't great at making web dashboards, javascript is a lot better</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgf549b07" class="outline-3">
+<h3 id="orgf549b07">javascript</h3>
+<div class="outline-text-3" id="text-orgf549b07">
+<ul class="org-ul">
+<li>I am fluent in javascript, as is the rest of my team. This means that I won't have to spend so much time looking at documentation and if I have a question I can ask for help very easily</li>
+<li>Javascript is essentially required for web development (<a href="https://golangbot.com/webassembly-using-go/">WASM</a> can be used, but something like <a href="https://reactjs.org/">React</a> is a lot better)</li>
+<li><a href="https://www.npmjs.com/package/run-container">There</a> <a href="https://www.npmjs.com/package/node-container">are</a> <a href="https://www.npmjs.com/package/testcontainers">APIs</a> to interact with docker in nodejs, although they are commonly not particularly stable and seem to interact with docker rather than containerd itself. In theory it should be possible to interact with containerd though as the daemon uses sockets to communicate with clients</li>
+</ul>
+
+<p>
+But on the other hand&#x2026;
+</p>
+<ul class="org-ul">
+<li>Using sockets directly to interact with containerd or using docker via a perhaps only partially stable module seems like an overcomplicated and not particularly good solution, especially when go has a module made for this already</li>
+<li>Javascript is weakly typed, which may make my code more difficult to debug. Solutions to this (like typescript) do exist, but often have poor support with some modules</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org4c06ac6" class="outline-3">
+<h3 id="org4c06ac6">python</h3>
+<div class="outline-text-3" id="text-org4c06ac6">
+<ul class="org-ul">
+<li>I know python very well, and will almost never have to look at documentation for it</li>
+<li>The original specification was written with python in mind, which means I've already got reccomendations for some modules</li>
+<li>I know the python ecosystem very well, so I know what module to use to solve many problems</li>
+<li><a href="https://pypi.org/project/containerd/">Python has a containerd package!</a></li>
+</ul>
+
+<p>
+But on the other hand&#x2026;
+</p>
+<ul class="org-ul">
+<li>My team is phasing out python programs due to issues with module development, creating a new python program would not necessarily be the best idea, and would cause issues later down the line if I wanted to integrate it with discord bots</li>
+<li>Python isn't javascript, and web development support is <i>very</i> poor in some places, infact in my original specification I restricted a whole class of python web-api modules because they are so terrible to work with</li>
+<li>Python is very slow, and this program should probably be quick and lightweight</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgb2eca81" class="outline-2">
+<h2 id="orgb2eca81">What did we decide?</h2>
+<div class="outline-text-2" id="text-orgb2eca81">
+<ul class="org-ul">
+<li>In the end we decided to test using go, as it looks like it could be the best solution in the long term. <a href="https://github.com/ClicksMinutePer/process-manager/tree/ff7ba96e05f3b56ab72be1f04a27594a41ec9190">We made a quick project and used the code from the golang and containerd documentation to create a redis container and run a restful API</a>.</li>
+</ul>
+</div>
+</div>
+<div id="footnotes">
+<h2 class="footnotes">Footnotes: </h2>
+<div id="text-footnotes">
+
+<div class="footdef"><sup><a id="fn.1" class="footnum" href="#fnr.1" role="doc-backlink">1</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+i.e. the co-owner who was not interviewed in the first <a href="file:///home/runner/School/EPQ/Documents/questioning-a-co-owner.html">co-owner interview</a> 
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.2" class="footnum" href="#fnr.2" role="doc-backlink">2</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+IDE stands for 'integrated development environment'. It's basically a fancy text editor with better support for writing code 
+</p></div></div>
+
+
+</div>
+</div></div>
+</body>
+</html>

@@ -1,0 +1,141 @@
+#+OPTIONS: prop:t
+
+* Example Work
+:PROPERTIES:
+:TITLE:    Example Work
+:BTYPE:    book
+:AUTHOR:   Skyler Turner
+:PUBLISHER: Clicks Minute Publishing^{TM}
+:YEAR:     2015
+:CUSTOM_ID: example
+:END:
+
+* Docker FAQ, 'What does Docker technology add to just plain LXC?'
+:PROPERTIES:
+:TITLE:    Docker FAQ, 'What does Docker technology add to just plain LXC?'
+:BTYPE:    online
+:url: https://docs.docker.com/engine/faq/#what-does-docker-technology-add-to-just-plain-lxc
+:author: Docker Inc.
+:urldate: 2021-11-19
+:CUSTOM_ID: docker_faq_lxc
+:END:
+
+* Mailcow dockerized,'running in nested containers is not supported'
+:PROPERTIES:
+:TITLE:    Mailcow dockerized,'running in nested containers is not supported'
+:BTYPE:    online
+:url: https://mailcow.github.io/mailcow-dockerized-docs/prerequisite-system/
+:author: andryyy
+:urldate: 2021-11-21
+:CUSTOM_ID: mailcow_unsupported_nesting
+:END:
+
+* Containerd was made for docker
+:PROPERTIES:
+:TITLE:    Docker blog, 'What is containerd?'
+:BTYPE:    online
+:url: https://www.docker.com/blog/what-is-containerd-runtime/
+:author: Michael Crosby
+:urldate: 2021-11-22
+:year: 2017
+:month: August
+:CUSTOM_ID: docker_on_what_is_containerd
+:END:
+
+* Containers are not kernel objects
+:PROPERTIES:
+:TITLE:    LWN archive, 'Containers as kernel objects — again'
+:BTYPE:    online
+:url: https://lwn.net/Articles/780364/
+:author: Jonathan Corbet
+:urldate: 2021-11-22
+:year: 2019
+:month: February
+:CUSTOM_ID: containers_are_not_kernel_objects_article
+:END:
+
+* Containers are not kernel objects (mailing list archive)
+:PROPERTIES:
+:TITLE: email archive, (LKML archive, Re: [RFC PATCH 02/27] containers: Implement containers as kernel objects)
+:BTYPE: online
+:url: https://www.mail-archive.com/linux-kernel@vger.kernel.org/msg1936761.html
+:author: James Bottomley
+:urldate: 2021-11-22
+:year: 2019
+:month: February
+:CUSTOM_ID: containers_are_not_kernel_objects_email
+:END:
+
+* Harvard style isn't a single citation style
+:PROPERTIES:
+:TITLE: Harvard Style, learn to cite
+:BTYPE: online
+:url: https://libguides.mjc.edu/c.php?g=255746&p=3205500
+:author: Modesto Junior College
+:urldate: 2021-11-22
+:year: 2021
+:month: November
+:CUSTOM_ID: harvard_citation_style
+:END:
+
+* The stackoverflow developer survey (2021)
+:PROPERTIES:
+:TITLE: The Stackoverflow developer survey (2021)
+:BTYPE: online
+:url: https://insights.stackoverflow.com/survey/2021
+:author: Prosus N.V.
+:urldate: 2021-11-28
+:year: 2021
+:month: May
+:CUSTOM_ID: so_dev_survey_2021
+:END:
+
+* The stackoverflow developer survey (2020)
+:PROPERTIES:
+:TITLE: The Stackoverflow developer survey (2020)
+:BTYPE: online
+:url: https://insights.stackoverflow.com/survey/2020
+:author: Prosus N.V.
+:urldate: 2021-11-28
+:year: 2020
+:month: February
+:CUSTOM_ID: so_dev_survey_2020
+:END:
+
+* The stackoverflow developer survey (2019)
+:PROPERTIES:
+:TITLE: The Stackoverflow developer survey (2019)
+:BTYPE: online
+:url: https://insights.stackoverflow.com/survey/2019
+:author: Prosus N.V.
+:urldate: 2021-11-28
+:year: 2019
+:CUSTOM_ID: so_dev_survey_2019
+:END:
+
+* Discord.py ends
+:PROPERTIES:
+:TITLE: The future of discord.py
+:BTYPE: online
+:url: https://gist.github.com/Rapptz/4a2f62751b9600a31a0d3c78100287f1
+:author: Rapptz
+:urldate: 2021-11-28
+:year: 2021
+:month: August
+:CUSTOM_ID: discord_py_closing_announcement
+:END:
+
+* OCI Main
+:PROPERTIES:
+:TITLE: The Open Conatiner Inititative main website
+:BTYPE: online
+:url: https://opencontainers.org/
+:author: Open Container Initiative
+:urldate: 2021-12-13
+:CUSTOM_ID: oci_main
+:END:
+
+* Local variables :noexport:
+Local variables:
+eval: (add-hook 'after-save-hook (lambda () (interactive) (goto-char 1) (while (search-forward-regexp "<\\([0-9]+-[0-9]+-[0-9]+\\) [A-z]+>" nil t) (replace-match (match-string 1) t nil)) (org-bibtex "./bibliography.bib")) nil t)
+End:

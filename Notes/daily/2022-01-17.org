@@ -1,0 +1,20 @@
+:PROPERTIES:
+:ID:       2d142b2b-3b0d-40e2-b0a1-deb18739bbc7
+:END:
+#+title: 2022-01-17
+* Diary entry
+** What have I done since the last entry?
+- I had my holidays 🎉
+- I continued working on getting a raspberry pi to boot with NixOS, unfortunately it seems to be a massive pain on aarch64; /this could be something to consider when deciding if we want to use it, perhaps something like debian with nixpkgs could be eaiser to install?/
+- I **got a container booting from a nix config** (see [[id:956c4043-ffaa-45d6-be32-6219c21ea597][programming log]] for more details)
+** What have I learned & how?
+- I've learned more about NixOS
+- I've researched more about containerd, it turns out [[https://mobyproject.org/][it isn't a project in isolation]]
+- I've learned more about writing Nix (the language)
+- I've learned a bit more go
+** What worked well?
+- Building the container went very smoothly, which was something I was quite worried about
+** What would I do differently next time?
+- Next time I would rely a little bit more on tools such as https://cs.github.com earlier on
+** What are my plans next?
+- I need to get networking working on containers: at the moment they're not very useful as they can't, for example, install modules from NPM which is very important for javascript projects (see [[https://github.com/ClicksMinutePer/process-manager/blob/5d071af3aea89548f22ff8ddaee9a9901e3155eb/containerManager/config/mini-test/6.nix][here for my .nix file for this container]] and [[https://github.com/Minion3665/container/blob/69dddbe54e0d563440146eabe4a11664921081a2/package.json#L8][here for the script it tries to run]]). Note particularly that 'npm install' requires internet. A lack of internet is also problematic for running discord bots, as they need to contact discord in order to run. It is unclear if servers that did not contact the outside internet would be affected, as there /is/ an option to forward ports but I have not yet tested it

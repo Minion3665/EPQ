@@ -1,0 +1,52 @@
+:PROPERTIES:
+:ID:       956c4043-ffaa-45d6-be32-6219c21ea597
+:END:
+#+title: Programming log
+* Layout
+- Each new problem will be under a heading, roughly in chronological order that I came across them (although problems that I anticipated and solved beforehand may be placed later, as it will be more logical and easier to read)
+- If there's a problem I believed I had solved but had not, I may list it multiple times, once when I initally solved it and subsequent times when I was forced to change and improve my solution. I will mention if this is the case
+- I'll rate each problem with a difficulty (1-5)
+- I'll explain how I solved each problem
+- I'll state how coming to this solution helped me to learn
+
+* Building containers programatically
+- Difficulty: 2
+** How did I solve it?
+[[https://github.com/ClicksMinutePer/process-manager/blob/097983953dc613702b9ea1a350496a0f90c4113e/containerManager/main.go#L80][This line]] sets up the command that needs to be run in order to build the container
+#+begin_src go
+	cmd := exec.Command("nix-build", "./containerManager/config/"+id+"/"+version+".nix")
+#+end_src
+and [[https://github.com/ClicksMinutePer/process-manager/blob/097983953dc613702b9ea1a350496a0f90c4113e/containerManager/main.go#L85][this line]] runs the command
+#+begin_src go
+	err := cmd.Run()
+#+end_src
+Inbetween I redirect the output and errors from the process to my terminal so I can see if there's any problems while it's building
+#+begin_src go
+	cmd.Stdout = os.Stdout
+	cmd.Stderr = os.Stderr
+#+end_src
+
+I grabbed the default Nix config for docker containers, a container to say 'hello world' and built it using my script.
+#+begin_src nix
+{ pkgs ? import <nixpkgs> { }
+, pkgsLinux ? import <nixpkgs> { system = "x86_64-linux"; }
+}:
+
+pkgs.dockerTools.buildImage {
+  name = "hello-docker";
+  config = {
+    Cmd = [ "${pkgsLinux.hello}/bin/hello" ];
+  };
+}
+#+end_src
+Finally, I loaded the built file in docker and ran it
+#+begin_src bash
+  docker load < result
+  docker start -t {type}
+#+end_src
+
+This worked, and I got hello world in my console!
+** What resources did I use?
+I used [[https://nixos.org/guides/building-and-running-docker-images.html][this nixos guide]] and [[https://stackoverflow.com/a/31737077][this stackoverflow answer]] to help me understand the Nix and go sides of running commands.
+** How did this help me learn?
+This taught me how to use Nix to build docker containers.

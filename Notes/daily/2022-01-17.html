@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>2022-01-17</title>
+<meta name="generator" content="Org Mode" />
+<link rel="stylesheet" href="/simple.min.css" /><link rel="stylesheet" href="/custom.css" />
+</head>
+<body>
+<div id="preamble" class="status">
+
+<div class="header">
+    <span class="title">2022-01-17</span>
+    <div class="links">
+        <a href="/">Home</a>
+        <a href="/Notes/daily/2022-01-23.html">Latest daily</a>
+        <a href="https://github.com/Minion3665/EPQ/issues/new">Report issue</a>
+        <a href="https://github.com/Minion3665/EPQ">View source</a>
+    </div>
+</div>
+</div>
+<div id="content" class="content">
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#orgb54ef68">Diary entry</a>
+<ul>
+<li><a href="#org6f4c951">What have I done since the last entry?</a></li>
+<li><a href="#org6466dd8">What have I learned &amp; how?</a></li>
+<li><a href="#org2ec8cb6">What worked well?</a></li>
+<li><a href="#org0c0519a">What would I do differently next time?</a></li>
+<li><a href="#org6d1a039">What are my plans next?</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgb54ef68" class="outline-2">
+<h2 id="orgb54ef68">Diary entry</h2>
+<div class="outline-text-2" id="text-orgb54ef68">
+</div>
+<div id="outline-container-org6f4c951" class="outline-3">
+<h3 id="org6f4c951">What have I done since the last entry?</h3>
+<div class="outline-text-3" id="text-org6f4c951">
+<ul class="org-ul">
+<li>I had my holidays 🎉</li>
+<li>I continued working on getting a raspberry pi to boot with NixOS, unfortunately it seems to be a massive pain on aarch64; <i>this could be something to consider when deciding if we want to use it, perhaps something like debian with nixpkgs could be eaiser to install?</i></li>
+<li>I <b><b>got a container booting from a nix config</b></b> (see <a href="../20220117103708-programming_log.html#ID-956c4043-ffaa-45d6-be32-6219c21ea597">programming log</a> for more details)</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org6466dd8" class="outline-3">
+<h3 id="org6466dd8">What have I learned &amp; how?</h3>
+<div class="outline-text-3" id="text-org6466dd8">
+<ul class="org-ul">
+<li>I've learned more about NixOS</li>
+<li>I've researched more about containerd, it turns out <a href="https://mobyproject.org/">it isn't a project in isolation</a></li>
+<li>I've learned more about writing Nix (the language)</li>
+<li>I've learned a bit more go</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org2ec8cb6" class="outline-3">
+<h3 id="org2ec8cb6">What worked well?</h3>
+<div class="outline-text-3" id="text-org2ec8cb6">
+<ul class="org-ul">
+<li>Building the container went very smoothly, which was something I was quite worried about</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org0c0519a" class="outline-3">
+<h3 id="org0c0519a">What would I do differently next time?</h3>
+<div class="outline-text-3" id="text-org0c0519a">
+<ul class="org-ul">
+<li>Next time I would rely a little bit more on tools such as <a href="https://cs.github.com">https://cs.github.com</a> earlier on</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org6d1a039" class="outline-3">
+<h3 id="org6d1a039">What are my plans next?</h3>
+<div class="outline-text-3" id="text-org6d1a039">
+<ul class="org-ul">
+<li>I need to get networking working on containers: at the moment they're not very useful as they can't, for example, install modules from NPM which is very important for javascript projects (see <a href="https://github.com/ClicksMinutePer/process-manager/blob/5d071af3aea89548f22ff8ddaee9a9901e3155eb/containerManager/config/mini-test/6.nix">here for my .nix file for this container</a> and <a href="https://github.com/Minion3665/container/blob/69dddbe54e0d563440146eabe4a11664921081a2/package.json#L8">here for the script it tries to run</a>). Note particularly that 'npm install' requires internet. A lack of internet is also problematic for running discord bots, as they need to contact discord in order to run. It is unclear if servers that did not contact the outside internet would be affected, as there <i>is</i> an option to forward ports but I have not yet tested it</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

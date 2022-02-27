@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Programming log</title>
+<meta name="generator" content="Org Mode" />
+<link rel="stylesheet" href="/simple.min.css" /><link rel="stylesheet" href="/custom.css" />
+</head>
+<body>
+<div id="preamble" class="status">
+
+<div class="header">
+    <span class="title">Programming log</span>
+    <div class="links">
+        <a href="/">Home</a>
+        <a href="/Notes/daily/2022-01-23.html">Latest daily</a>
+        <a href="https://github.com/Minion3665/EPQ/issues/new">Report issue</a>
+        <a href="https://github.com/Minion3665/EPQ">View source</a>
+    </div>
+</div>
+</div>
+<div id="content" class="content">
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#orgb7359ba">Layout</a></li>
+<li><a href="#orgc970d59">Building containers programatically</a>
+<ul>
+<li><a href="#orge2ef28f">How did I solve it?</a></li>
+<li><a href="#orgafa5a3d">What resources did I use?</a></li>
+<li><a href="#orgc48620f">How did this help me learn?</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgb7359ba" class="outline-2">
+<h2 id="orgb7359ba">Layout</h2>
+<div class="outline-text-2" id="text-orgb7359ba">
+<ul class="org-ul">
+<li>Each new problem will be under a heading, roughly in chronological order that I came across them (although problems that I anticipated and solved beforehand may be placed later, as it will be more logical and easier to read)</li>
+<li>If there's a problem I believed I had solved but had not, I may list it multiple times, once when I initally solved it and subsequent times when I was forced to change and improve my solution. I will mention if this is the case</li>
+<li>I'll rate each problem with a difficulty (1-5)</li>
+<li>I'll explain how I solved each problem</li>
+<li>I'll state how coming to this solution helped me to learn</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgc970d59" class="outline-2">
+<h2 id="orgc970d59">Building containers programatically</h2>
+<div class="outline-text-2" id="text-orgc970d59">
+<ul class="org-ul">
+<li>Difficulty: 2</li>
+</ul>
+</div>
+<div id="outline-container-orge2ef28f" class="outline-3">
+<h3 id="orge2ef28f">How did I solve it?</h3>
+<div class="outline-text-3" id="text-orge2ef28f">
+<p>
+<a href="https://github.com/ClicksMinutePer/process-manager/blob/097983953dc613702b9ea1a350496a0f90c4113e/containerManager/main.go#L80">This line</a> sets up the command that needs to be run in order to build the container
+</p>
+<div class="org-src-container">
+<pre class="src src-go">cmd := exec.Command("nix-build", "./containerManager/config/"+id+"/"+version+".nix")
+</pre>
+</div>
+<p>
+and <a href="https://github.com/ClicksMinutePer/process-manager/blob/097983953dc613702b9ea1a350496a0f90c4113e/containerManager/main.go#L85">this line</a> runs the command
+</p>
+<div class="org-src-container">
+<pre class="src src-go">err := cmd.Run()
+</pre>
+</div>
+<p>
+Inbetween I redirect the output and errors from the process to my terminal so I can see if there's any problems while it's building
+</p>
+<div class="org-src-container">
+<pre class="src src-go">cmd.Stdout = os.Stdout
+cmd.Stderr = os.Stderr
+</pre>
+</div>
+
+<p>
+I grabbed the default Nix config for docker containers, a container to say 'hello world' and built it using my script.
+</p>
+<div class="org-src-container">
+<pre class="src src-nix">{ pkgs ? import &lt;nixpkgs&gt; { }
+, pkgsLinux ? import &lt;nixpkgs&gt; { system = "x86_64-linux"; }
+}:
+
+pkgs.dockerTools.buildImage {
+  name = "hello-docker";
+  config = {
+    Cmd = [ "${pkgsLinux.hello}/bin/hello" ];
+  };
+}
+</pre>
+</div>
+<p>
+Finally, I loaded the built file in docker and ran it
+</p>
+<div class="org-src-container">
+<pre class="src src-bash">docker load &lt; result
+docker start -t {<span style="font-weight: bold;">type</span>}
+</pre>
+</div>
+
+<p>
+This worked, and I got hello world in my console!
+</p>
+</div>
+</div>
+<div id="outline-container-orgafa5a3d" class="outline-3">
+<h3 id="orgafa5a3d">What resources did I use?</h3>
+<div class="outline-text-3" id="text-orgafa5a3d">
+<p>
+I used <a href="https://nixos.org/guides/building-and-running-docker-images.html">this nixos guide</a> and <a href="https://stackoverflow.com/a/31737077">this stackoverflow answer</a> to help me understand the Nix and go sides of running commands.
+</p>
+</div>
+</div>
+<div id="outline-container-orgc48620f" class="outline-3">
+<h3 id="orgc48620f">How did this help me learn?</h3>
+<div class="outline-text-3" id="text-orgc48620f">
+<p>
+This taught me how to use Nix to build docker containers.
+</p>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

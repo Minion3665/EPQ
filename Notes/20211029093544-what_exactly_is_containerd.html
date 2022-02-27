@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>What exactly is containerd</title>
+<meta name="generator" content="Org Mode" />
+<link rel="stylesheet" href="/simple.min.css" /><link rel="stylesheet" href="/custom.css" />
+</head>
+<body>
+<div id="preamble" class="status">
+
+<div class="header">
+    <span class="title">What exactly is containerd</span>
+    <div class="links">
+        <a href="/">Home</a>
+        <a href="/Notes/daily/2022-01-23.html">Latest daily</a>
+        <a href="https://github.com/Minion3665/EPQ/issues/new">Report issue</a>
+        <a href="https://github.com/Minion3665/EPQ">View source</a>
+    </div>
+</div>
+</div>
+<div id="content" class="content">
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org5c2471e">Why is this research useful?</a></li>
+<li><a href="#orgdee735d">Why not use docker?</a></li>
+<li><a href="#orgc99cb1f">Why not use LXC?</a></li>
+<li><a href="#orge30207a">So what exactly is containerd?</a>
+<ul>
+<li><a href="#orgef69335">What does it do?</a></li>
+<li><a href="#org4295470">What <i>doesn't</i> it do?</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org5c2471e" class="outline-2">
+<h2 id="org5c2471e">Why is this research useful?</h2>
+<div class="outline-text-2" id="text-org5c2471e">
+<p>
+Let's be honest, containerd will probably be the system that I use for containerization. While I could write a wrapper around docker or LXC, it's probably better to use containerd.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgdee735d" class="outline-2">
+<h2 id="orgdee735d">Why not use docker?</h2>
+<div class="outline-text-2" id="text-orgdee735d">
+<p>
+<i>Note to future Skyler: This could probably be expanded into its own document</i>
+Docker is very good, but it's also more complex than we need and I'd still need to write wrappers around it as it doesn't have everything that we want. Docker is built on containerd anyway, and infact 'containerd was designed to be used by docker'(<a href="#citeproc_bib_item_3">Michael Crosby, 2017</a>), so all of the features that docker has will be available in containerd without using the middleman docker. This will allow me to use containerd on a lower level than I would otherwise be able to, accessing features that docker may not expose, but also reducing the overhead of running the process manager.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc99cb1f" class="outline-2">
+<h2 id="orgc99cb1f">Why not use LXC?</h2>
+<div class="outline-text-2" id="text-orgc99cb1f">
+<p>
+As mentioned in <a href="20211025183307-docker_vs_lxc.html">my research on docker VS LXC</a>, LXC is much more suited to running full operating systems. While that's what we're doing right now, it's probably better if in future each application gets its own container, and therefore the focus would be more on applications than systems.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge30207a" class="outline-2">
+<h2 id="orge30207a">So what exactly is containerd?</h2>
+<div class="outline-text-2" id="text-orge30207a">
+<p>
+A good place to start seems to be <a href="https://www.docker.com/blog/what-is-containerd-runtime/">this docker blog post</a>, as it goes into depth on containerd. Another place to look could be <a href="https://containerd.io/docs/">the containerd docs</a>, although they're under construction so don't have a wealth of information.
+</p>
+</div>
+
+<div id="outline-container-orgef69335" class="outline-3">
+<h3 id="orgef69335">What does it do?</h3>
+<div class="outline-text-3" id="text-orgef69335">
+<p>
+Containerd is a container daemon(<a href="#citeproc_bib_item_3">Michael Crosby, 2017</a>)<sup><a id="fnr.1" class="footref" href="#fn.1" role="doc-backlink">1</a></sup>, which explains the name<sup><a id="fnr.2" class="footref" href="#fn.2" role="doc-backlink">2</a></sup>. This means that it is a daemon<sup><a id="fnr.1.100" class="footref" href="#fn.1" role="doc-backlink">1</a></sup> which manages containers. It provides an interface to access kernel features to 'containerize' apps, as 'the [linux] kernel does not recognize "containers" as objects in their own right'(<a href="#citeproc_bib_item_3">Michael Crosby, 2017</a>; <a href="#citeproc_bib_item_2">Jonathan Corbet, 2019</a>; <a href="#citeproc_bib_item_1">James Bottomley, 2019</a>). Containerd provides an API to access these features in a much simpler way, 'It's so much nicer to work with Container, Task, and Snapshot types than it is to manage calls to clone() or mount().'(<a href="#citeproc_bib_item_3">Michael Crosby, 2017</a>). This means that containerd may be ideal for creating containers in my EP, as it's 1 level of abstraction above a kernel level and therefore relatively easy to use without being overly bloated.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4295470" class="outline-3">
+<h3 id="org4295470">What <i>doesn't</i> it do?</h3>
+<div class="outline-text-3" id="text-org4295470">
+<p>
+'Things like networking are out of scope for containerd'(<a href="#citeproc_bib_item_3">Michael Crosby, 2017</a>), which is something that <a href="https://docs.docker.com/network/">docker implements fairly well</a>. This could be a major limitation for using it in the EP, as I'll need good networking support. With containerd I will have to write my own networking support, which could be complicated.
+</p>
+
+<p>
+In general, it's important to remember that containerd is only a platform for creating containers, which means it doesn't handle many of the other complexities of docker or other container platforms. These will need to be handled by my wrapper script.
+</p>
+
+<div class="csl-bib-body">
+  <div class="csl-entry"><a id="citeproc_bib_item_1"></a>James Bottomley (2019) <i>Email archive, (lkml archive, re: [rfc patch 02/27] containers: Implement containers as kernel objects)</i>. Available at: <a href="https://www.mail-archive.com/linux-kernel@vger.kernel.org/msg1936761.html">https://www.mail-archive.com/linux-kernel@vger.kernel.org/msg1936761.html</a> (Accessed: November 22, 2021).</div>
+  <div class="csl-entry"><a id="citeproc_bib_item_2"></a>Jonathan Corbet (2019) <i>Lwn archive, ’containers as kernel objects — again’</i>. Available at: <a href="https://lwn.net/Articles/780364/">https://lwn.net/Articles/780364/</a> (Accessed: November 22, 2021).</div>
+  <div class="csl-entry"><a id="citeproc_bib_item_3"></a>Michael Crosby (2017) <i>Docker blog, ’what is containerd?’</i>. Available at: <a href="https://www.docker.com/blog/what-is-containerd-runtime/">https://www.docker.com/blog/what-is-containerd-runtime/</a> (Accessed: November 22, 2021).</div>
+</div>
+</div>
+</div>
+</div>
+<div id="footnotes">
+<h2 class="footnotes">Footnotes: </h2>
+<div id="text-footnotes">
+
+<div class="footdef"><sup><a id="fn.1" class="footnum" href="#fnr.1" role="doc-backlink">1</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+a daemon is a program that runs in the background, see <a href="https://en.wikipedia.org/wiki/Daemon_(computing)">this wikipedia article</a> for more information on daemons
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.2" class="footnum" href="#fnr.2" role="doc-backlink">2</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+Convention is to have daemons named after what they do with a 'd' on the end, examples of this are 'syslogd', 'dockerd', and 'spotifyd'
+</p></div></div>
+
+
+</div>
+</div></div>
+</body>
+</html>

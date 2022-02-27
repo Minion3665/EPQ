@@ -1,0 +1,111 @@
+:PROPERTIES:
+:ID:       a907489b-22b8-46e5-89fb-95319c995df3
+:END:
+#+title: Our current infrastructure
+We use several tools to do the work that will be accomplished by our process manager; here's how we currently run a single process on our server. For this example, we'll assume that the process is a python discord bot containing a web server for checking the latency, such as is active on our bot RSM ([[https://rsm.bots.clicksminuteper.net/][the latency for RSM is displayed on this webpage, for easy access from CMPing, our status checker running in a separate location]]). We'll then run over a few problems with this method.
+
+* My opinions
+** How is it run?
+Firstly, we own our own server. This is a mid to high range machine, and is fully capable of running a lot of bots, services & soforth.
+
+On that server, we have different bots which in some cases are owned by different users, need different environments, and should be kept separate for security reasons. To do this, we run an LXC for each project or group of projects. As an example, we run one LXC for all of our websites, as they generally need the same permissions to access. In contrast (by a quirk of fate) we run both our own forms bot and a direct competitor on this host, we obviously manage our own forms bot but don't want our competitor to be able to manage our forms bot. We therefore run these on separate containers.
+
+Inside each container, we manually install all the things we need to run our bot, this can cause problems if developers have a different environment, or if the environment gets updated. With node.js this is less of a problem, because while the node version can vary if installed differently packages have versions specified. In python, installing a package does not store which version has been installed meaning that it's not possible to recover that later, this can very easily cause the wrong version of something to be installed in production.
+
+We then use a program called PM2 to start, collect logs for & manage processes. If a process needs to be restarted, we can run =pm2 restart id= to restart it, we can use =pm2 logs id= to view the logs, and =pm2 ls= to see what processes are running on a given machine.
+
+If the process is a discord bot with a web server for checking latency, then we'll have a port out: we don't run a strong firewall on each of the internal containers (the services exposed are normally SSH & any services which are running as part of the bots), so we run a firewall blocking outbound traffic from the router to our services. We run a locked-down container that hosts and controls this firewall, known as a 'DMZ', for demilitarized-zone. In practice, this machine holds a firewall using UFW[fn:1] and a reverse proxy[fn:2] using NGINX for punching holes through that firewall. If we have a website, we tell that machine that 'port x of machine y should end up at z.clicksminuteper.net', and any traffic for z.clicksminuteper.net will end up at machine y port x.
+
+It's worth noting that SSL[fn:3] certificates are managed on the DMZ. This means that the following is true:
+=Host container <---- Insecure ----> DMZ <---- Secure ----> Your machine=
+The path from the DMZ to your machine is secured, but the path from the DMZ to our host container is not. In reality, that's fairly low-risk, but problems could be caused by a developer going rogue.
+
+** Scenarios
+*** When trying to update a project running on the host
+One needs to...
+1. Login to the main web dashboard for our server (we do not expose SSH to the outside world)
+2. Open a terminal for the server, we will use either noVNC[fn:4] or xterm.js[fn:6] for this, both of which have substantial problems
+3. =cd=[fn:7] into the bot's directory
+4. Run =git pull=[fn:8], putting a personal access token in for authentication
+5. Run any commands needed to update dependencies
+6. Run =pm2 ls= to get the id of the process that you need to restart
+7. Run =pm2 restart id= to restart the process
+
+*** When trying to check the status of a bot running on the host
+One needs to...
+1. Login to the main web dashboard for our server (we do not expose SSH to the outside world)
+2. Open a terminal for the server, we will use either noVNC[fn:4] or xterm.js[fn:6] for this, both of which have substantial problems
+3. Run =pm2 ls= to view processes and see if they're stopped or started
+4. Run =pm2 logs id= to view the logs for the process
+
+** Problems
+*** It's too slow
+Even though it's considerably easier to do this than to do everything manually, it still requires substantial manual effort to check if a bot is erroring, let alone to deploy a new version.
+*** xterm and noVNC /suck/
+**** xterm sucks
+xterm is my preferred option for connecting to a container, but it still sucks. The xterm window is buggy & on VMs takes a fair amount of setup. Copy and paste also only /sometimes/ works, and on certain browsers doesn't work at all. On certain browsers, typing certain characters does not work. 
+**** noVNC sucks
+noVNC is, if possible, worse than xterm.js. It doesn't have copy/paste functionality at all, and that means that you must type everything out by hand (or, as is slightly more common, us a command to type everything out for you). This makes it dreadful for typing personal access tokens. In addition, as a remote desktop application it's not very lightweight & you can't change the aspect ratio of the terminal.
+*** Remembering passwords is annoying
+You must type multiple passwords to change anything. Suppose I want to change something on a VM, I'll need to remember not only my own password but also the password to the VM. You may foolishly assume this increases security, but due to their lighter nature we generally run everything in containers which have a slightly more convoluted way to access them that requires different passwords. For accessing a given container without remembering the container password, I need to enter my password, the same password, 3 times.
+*** Dependency issues are easy to cause
+Let's assume you need python3.10. You'll have to install that manually. If you want to update python, you'll need to do that manually too. If you've got multiple bots running on the same host they'll all need to use versions that can be installed alongside each other. If you want to use the same version of python but different version of libraries then you're out of luck. If you want to install a library and that later gets an update that breaks your code, you're absolutely screwed: =pip install -Ur requirements.txt= will update everything indiscriminately. If you forget to add something to that requirements file, by the way, you won't install it and stuff will break.
+*** It's fairly insecure
+If you're inside the walled-garden that is our host, you have far too much power. Let's assume you are a malicious staff member who wants to take us down, here are your options:
+- Fake your server's IP address, moving to the IP of one of our website's VMs, if you manage to get that IP when the system restarts you'll now control (with https) one of our websites
+- Use far too many system resources, meaning they can't be used for everything else and grinding everything to a halt
+- Find a VM where someone hasn't logged out properly, login & cause havoc (note: this one can't actually happen normally, because people are only given permissions to view VMs they need to access, however it does rather negate the usefulness of a password option so I've left it in)
+- Find a VM where a vulnerable service is exposed to the inside (but not the outside world). Exploit it and cause havoc. (Note: email was like this for a while due to a misconfiguration where it trusted its network, databases will trust the network more than outside access etc.)
+*** Personal access tokens make me sad
+- They require you to create a token, can be dangerous if you type them out in the open as they give access to every repo you own, including personal ones. They are long, and hard to type, and copy and paste is buggy at best, and they're just like a longer, more annoying, more insecure password.
+  And they make me sad.
+  Very sad.
+* Other people's opinions
+To make sure that I wasn't getting the wrong end of the stick or removing features people really liked, I asked my teammates. The answers here have been transcribed, reformatted and reworded for your convenience, but the original meaning has been kept.
+** What are the best things?
+*** PineappleFan
+- It's easy to see the stats of the VMs
+- It's good to see what's taking up the memory and CPU
+- It's nice to see historical data to spot issues
+** What are the worst things?
+*** PineappleFan
+- It can be unintuitive to do actions unless you know how
+- The UI doesn't look particularly nice
+** Is there anything that you can't do that you would like to be able to do?
+*** PineappleFan
+- It'd be nice to be able to more easily create VMs for basic services, such as python bots
+** If you had to set up a website, how would you do it? What bits would you need to ask for help on?
+- This question was asked to see how well developers understand the system, as if they can't set up a website by themselves it shows that there's some complexity there. If developers get it wrong that's even more of a problem.
+*** PineappleFan
+1. Create a new container (would probably have to check how)
+2. Install the NPM packages
+3. Git clone the website
+4. Set up PM2 (our current process manager)
+5. Build and run the website
+6. Get the container's IP and ask for a redirect rule to be made
+
+----
+   
+- This isn't completely correct; 2 and 3 would need to be swapped, 5 and 4 are basically the same thing
+- It's very telling to me that for the first step this developer would need to check how to create a container; this shows that it's much more complex than it should be to create containers
+- This is a lot of steps, and 3-5 (sometimes including 2) would need to be done every time the website had an update. The build step is particularly easy to forget which leads to the website not being updated at all.
+- Step 6 must be done by someone who isn't PineappleFan, as they don't know how to do that /at all/. This is a point that must be fixed in a future version
+* Footnotes
+
+[fn:9] version control is a way of storing code and allowing us to view & move to past code (hence 'version' control) 
+
+[fn:8] =git pull= downloads the new code from our version control system[fn:9] 
+
+[fn:7] =cd= is a unix command, it stands for 'change directory'
+
+[fn:6]xterm.js is a way of getting a terminal in javascript; it requires more per-machine setup than VNC but is lighter and easier to use. It cannot be used to display a graphical desktop 
+
+[fn:5]VNC is a remote desktop software, we normally use it to expose a terminal to clients, but we can also use a normal, graphical desktop if we so desire
+
+[fn:4]NoVNC is a program to run a VNC[fn:5] client in a web-browser
+
+[fn:3]SSL is encryption for websites; when you go to a website with 'https', it's secure and uses SSL, when you go to a website with 'http', someone may be able to read the traffic. 
+
+[fn:2]A reverse proxy looks for incoming traffic and sends it on to the right destination
+
+[fn:1]A small easy-to-use firewall program 
