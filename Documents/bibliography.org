@@ -134,7 +134,7 @@
 :urldate: <2021-12-13 Mon>
 :CUSTOM_ID: oci_main
 :END:
- 
+
 * Local variables :noexport:
 Local variables:
 eval: (add-hook 'after-save-hook (lambda () (interactive) (while (search-forward-regexp "<\\([0-9]+-[0-9]+-[0-9]+\\) [A-z]+>" nil t) (replace-match (match-string 1) t nil)) (org-bibtex "./bibliography.bib")) nil t)
