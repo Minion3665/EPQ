@@ -27,25 +27,25 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#orgb54ef68">Diary entry</a>
+<li><a href="#org179c1f4">Diary entry</a>
 <ul>
-<li><a href="#org6f4c951">What have I done since the last entry?</a></li>
-<li><a href="#org6466dd8">What have I learned &amp; how?</a></li>
-<li><a href="#org2ec8cb6">What worked well?</a></li>
-<li><a href="#org0c0519a">What would I do differently next time?</a></li>
-<li><a href="#org6d1a039">What are my plans next?</a></li>
+<li><a href="#org9db5626">What have I done since the last entry?</a></li>
+<li><a href="#org73414df">What have I learned &amp; how?</a></li>
+<li><a href="#org604498d">What worked well?</a></li>
+<li><a href="#org06508ad">What would I do differently next time?</a></li>
+<li><a href="#org730fada">What are my plans next?</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgb54ef68" class="outline-2">
-<h2 id="orgb54ef68">Diary entry</h2>
-<div class="outline-text-2" id="text-orgb54ef68">
+<div id="outline-container-org179c1f4" class="outline-2">
+<h2 id="org179c1f4">Diary entry</h2>
+<div class="outline-text-2" id="text-org179c1f4">
 </div>
-<div id="outline-container-org6f4c951" class="outline-3">
-<h3 id="org6f4c951">What have I done since the last entry?</h3>
-<div class="outline-text-3" id="text-org6f4c951">
+<div id="outline-container-org9db5626" class="outline-3">
+<h3 id="org9db5626">What have I done since the last entry?</h3>
+<div class="outline-text-3" id="text-org9db5626">
 <ul class="org-ul">
 <li>I had my holidays 🎉</li>
 <li>I continued working on getting a raspberry pi to boot with NixOS, unfortunately it seems to be a massive pain on aarch64; <i>this could be something to consider when deciding if we want to use it, perhaps something like debian with nixpkgs could be eaiser to install?</i></li>
@@ -53,9 +53,9 @@
 </ul>
 </div>
 </div>
-<div id="outline-container-org6466dd8" class="outline-3">
-<h3 id="org6466dd8">What have I learned &amp; how?</h3>
-<div class="outline-text-3" id="text-org6466dd8">
+<div id="outline-container-org73414df" class="outline-3">
+<h3 id="org73414df">What have I learned &amp; how?</h3>
+<div class="outline-text-3" id="text-org73414df">
 <ul class="org-ul">
 <li>I've learned more about NixOS</li>
 <li>I've researched more about containerd, it turns out <a href="https://mobyproject.org/">it isn't a project in isolation</a></li>
@@ -64,25 +64,25 @@
 </ul>
 </div>
 </div>
-<div id="outline-container-org2ec8cb6" class="outline-3">
-<h3 id="org2ec8cb6">What worked well?</h3>
-<div class="outline-text-3" id="text-org2ec8cb6">
+<div id="outline-container-org604498d" class="outline-3">
+<h3 id="org604498d">What worked well?</h3>
+<div class="outline-text-3" id="text-org604498d">
 <ul class="org-ul">
 <li>Building the container went very smoothly, which was something I was quite worried about</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org0c0519a" class="outline-3">
-<h3 id="org0c0519a">What would I do differently next time?</h3>
-<div class="outline-text-3" id="text-org0c0519a">
+<div id="outline-container-org06508ad" class="outline-3">
+<h3 id="org06508ad">What would I do differently next time?</h3>
+<div class="outline-text-3" id="text-org06508ad">
 <ul class="org-ul">
 <li>Next time I would rely a little bit more on tools such as <a href="https://cs.github.com">https://cs.github.com</a> earlier on</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org6d1a039" class="outline-3">
-<h3 id="org6d1a039">What are my plans next?</h3>
-<div class="outline-text-3" id="text-org6d1a039">
+<div id="outline-container-org730fada" class="outline-3">
+<h3 id="org730fada">What are my plans next?</h3>
+<div class="outline-text-3" id="text-org730fada">
 <ul class="org-ul">
 <li>I need to get networking working on containers: at the moment they're not very useful as they can't, for example, install modules from NPM which is very important for javascript projects (see <a href="https://github.com/ClicksMinutePer/process-manager/blob/5d071af3aea89548f22ff8ddaee9a9901e3155eb/containerManager/config/mini-test/6.nix">here for my .nix file for this container</a> and <a href="https://github.com/Minion3665/container/blob/69dddbe54e0d563440146eabe4a11664921081a2/package.json#L8">here for the script it tries to run</a>). Note particularly that 'npm install' requires internet. A lack of internet is also problematic for running discord bots, as they need to contact discord in order to run. It is unclear if servers that did not contact the outside internet would be affected, as there <i>is</i> an option to forward ports but I have not yet tested it</li>
 </ul>
