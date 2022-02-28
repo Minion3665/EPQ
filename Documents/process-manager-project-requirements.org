@@ -63,8 +63,6 @@ My emails are: =st137303@hrsfc.ac.uk= or =skyler@clicksminuteper.net=
 
 My discord is: =Minion3665#6456=
 
-The fastest response will likely be over discord. You may also leave comments here although you will need a notion account to do so.
-
 * Footnotes
 
 [fn:4] If you use do use PM2 in javascript it is permissible to follow the PM2 defaults for counting a program as crashed rather than the specification set out here 
