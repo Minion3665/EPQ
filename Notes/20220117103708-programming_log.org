@@ -50,3 +50,10 @@ This worked, and I got hello world in my console!
 I used [[https://nixos.org/guides/building-and-running-docker-images.html][this nixos guide]] and [[https://stackoverflow.com/a/31737077][this stackoverflow answer]] to help me understand the Nix and go sides of running commands.
 ** How did this help me learn?
 This taught me how to use Nix to build docker containers.
+
+* Sleep command was overwritten by CNI
+- Difficulty 3
+** What was the problem?
+This /wasn't/ a problem with my EPQ, but rather was a problem with the impact it had on the rest of my system.
+
+Linux has a command called =sleep=; it takes a number afterwards for how many seconds you need to sleep (for example =sleep 5= should sleep 5 seconds).
