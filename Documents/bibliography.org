@@ -141,7 +141,7 @@
 :BTYPE: online
 :url: https://man7.org/linux/man-pages/man3/sleep.3.html
 :author: Thomas Koenig
-:urldate: <2022-03-07 Mon>
+:urldate: 2022-03-07
 :year: 1993
 :CUSTOM_ID: sleep_3
 
