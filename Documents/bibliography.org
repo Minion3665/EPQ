@@ -135,6 +135,17 @@
 :CUSTOM_ID: oci_main
 :END:
 
+* Linux manual on 'sleep' command
+:PROPERTIES:
+:TITLE: The linux manual page on sleep
+:BTYPE: online
+:url: https://man7.org/linux/man-pages/man3/sleep.3.html
+:author: Thomas Koenig
+:urldate: 2022-03-07
+:year: 1993
+:CUSTOM_ID: sleep_3
+:END:
+
 * Local variables :noexport:
 Local variables:
 eval: (add-hook 'after-save-hook (lambda () (interactive) (goto-char 1) (while (search-forward-regexp "<\\([0-9]+-[0-9]+-[0-9]+\\) [A-z]+>" nil t) (replace-match (match-string 1) t nil)) (org-bibtex "./bibliography.bib")) nil t)

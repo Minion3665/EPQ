@@ -27,20 +27,28 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#orgd806b88">Layout</a></li>
-<li><a href="#org9192df7">Building containers programatically</a>
+<li><a href="#orgcdb5bf7">Layout</a></li>
+<li><a href="#org00f0125">Building containers programatically</a>
 <ul>
-<li><a href="#org14d6525">How did I solve it?</a></li>
-<li><a href="#org8df41ad">What resources did I use?</a></li>
-<li><a href="#orgd9d9a6f">How did this help me learn?</a></li>
+<li><a href="#orgffae3e5">How did I solve it?</a></li>
+<li><a href="#org6c302ca">What resources did I use?</a></li>
+<li><a href="#orga9caffc">How did this help me learn?</a></li>
+</ul>
+</li>
+<li><a href="#orge3e2fcb">Sleep command was overwritten by CNI</a>
+<ul>
+<li><a href="#orgb3953bb">What was the problem?</a></li>
+<li><a href="#orgeda0fbf">How did I solve it?</a></li>
+<li><a href="#org0b59197">What resources did I use?</a></li>
+<li><a href="#orgc53c211">How did this help me learn?</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgd806b88" class="outline-2">
-<h2 id="orgd806b88">Layout</h2>
-<div class="outline-text-2" id="text-orgd806b88">
+<div id="outline-container-orgcdb5bf7" class="outline-2">
+<h2 id="orgcdb5bf7">Layout</h2>
+<div class="outline-text-2" id="text-orgcdb5bf7">
 <ul class="org-ul">
 <li>Each new problem will be under a heading, roughly in chronological order that I came across them (although problems that I anticipated and solved beforehand may be placed later, as it will be more logical and easier to read)</li>
 <li>If there's a problem I believed I had solved but had not, I may list it multiple times, once when I initally solved it and subsequent times when I was forced to change and improve my solution. I will mention if this is the case</li>
@@ -51,16 +59,16 @@
 </div>
 </div>
 
-<div id="outline-container-org9192df7" class="outline-2">
-<h2 id="org9192df7">Building containers programatically</h2>
-<div class="outline-text-2" id="text-org9192df7">
+<div id="outline-container-org00f0125" class="outline-2">
+<h2 id="org00f0125">Building containers programatically</h2>
+<div class="outline-text-2" id="text-org00f0125">
 <ul class="org-ul">
 <li>Difficulty: 2</li>
 </ul>
 </div>
-<div id="outline-container-org14d6525" class="outline-3">
-<h3 id="org14d6525">How did I solve it?</h3>
-<div class="outline-text-3" id="text-org14d6525">
+<div id="outline-container-orgffae3e5" class="outline-3">
+<h3 id="orgffae3e5">How did I solve it?</h3>
+<div class="outline-text-3" id="text-orgffae3e5">
 <p>
 <a href="https://github.com/ClicksMinutePer/process-manager/blob/097983953dc613702b9ea1a350496a0f90c4113e/containerManager/main.go#L80">This line</a> sets up the command that needs to be run in order to build the container
 </p>
@@ -114,20 +122,155 @@ This worked, and I got hello world in my console!
 </p>
 </div>
 </div>
-<div id="outline-container-org8df41ad" class="outline-3">
-<h3 id="org8df41ad">What resources did I use?</h3>
-<div class="outline-text-3" id="text-org8df41ad">
+<div id="outline-container-org6c302ca" class="outline-3">
+<h3 id="org6c302ca">What resources did I use?</h3>
+<div class="outline-text-3" id="text-org6c302ca">
 <p>
 I used <a href="https://nixos.org/guides/building-and-running-docker-images.html">this nixos guide</a> and <a href="https://stackoverflow.com/a/31737077">this stackoverflow answer</a> to help me understand the Nix and go sides of running commands.
 </p>
 </div>
 </div>
-<div id="outline-container-orgd9d9a6f" class="outline-3">
-<h3 id="orgd9d9a6f">How did this help me learn?</h3>
-<div class="outline-text-3" id="text-orgd9d9a6f">
+<div id="outline-container-orga9caffc" class="outline-3">
+<h3 id="orga9caffc">How did this help me learn?</h3>
+<div class="outline-text-3" id="text-orga9caffc">
 <p>
 This taught me how to use Nix to build docker containers.
 </p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orge3e2fcb" class="outline-2">
+<h2 id="orge3e2fcb">Sleep command was overwritten by CNI</h2>
+<div class="outline-text-2" id="text-orge3e2fcb">
+<ul class="org-ul">
+<li>Difficulty 3</li>
+</ul>
+</div>
+<div id="outline-container-orgb3953bb" class="outline-3">
+<h3 id="orgb3953bb">What was the problem?</h3>
+<div class="outline-text-3" id="text-orgb3953bb">
+<p>
+This <i>wasn't</i> a problem with my EPQ, but rather was a problem with the impact it had on the rest of my system.
+</p>
+
+<p>
+Linux has a command called <code>sleep</code>; it takes a number afterwards for how many seconds you need to sleep (for example <code>sleep 5</code> should sleep 5 seconds).(NO_ITEM_DATA:sleep_3)
+</p>
+
+<p>
+Unfortunately, CNI also <a href="https://github.com/containernetworking/cni/blob/master/plugins/test/sleep/main.go">provides a sleep command</a>. The important thing to notice in that code is here: <code>time.Sleep(60 * time.Second)</code>. This means that the CNI sleep command will always sleep for 60 seconds, no matter what.
+</p>
+
+<p>
+The CNI sleep command was running instead of the default sleep command when I ran sleep on my system, which meant that everything that needed to sleep for just a little bit was running really, really slowly.
+</p>
+</div>
+</div>
+<div id="outline-container-orgeda0fbf" class="outline-3">
+<h3 id="orgeda0fbf">How did I solve it?</h3>
+<div class="outline-text-3" id="text-orgeda0fbf">
+<p>
+As it's quite often that I need to find out what package a command comes from I decided to write a shell script to find out:
+</p>
+<div class="org-src-container">
+<pre class="src src-bash"><span style="font-weight: bold; font-style: italic;">#</span><span style="font-weight: bold; font-style: italic;">!/usr/bin/</span><span style="font-weight: bold;">env</span><span style="font-weight: bold; font-style: italic;"> bash</span>
+<span style="font-weight: bold;">if</span> [ <span style="font-style: italic;">"$1"</span> = <span style="font-style: italic;">""</span> ]
+<span style="font-weight: bold;">then</span>
+  <span style="font-weight: bold;">read</span> -ep <span style="font-style: italic;">"What command are you looking for?: "</span> CMD
+<span style="font-weight: bold;">else</span>
+  <span style="font-weight: bold; font-style: italic;">CMD</span>=$<span style="font-weight: bold; font-style: italic;">1</span>
+<span style="font-weight: bold;">fi</span>
+
+<span style="font-weight: bold; font-style: italic;">LOCATION</span>=$(command -V <span style="font-style: italic;">"$CMD"</span> 2&gt;&amp;1 | sed -rn <span style="font-style: italic;">"s/.* (.*)$/\1/p"</span>)
+
+<span style="font-weight: bold;">if</span> [ <span style="font-style: italic;">"$LOCATION"</span> = <span style="font-style: italic;">"found"</span> ] <span style="font-weight: bold; font-style: italic;"># </span><span style="font-weight: bold; font-style: italic;">Not found</span>
+<span style="font-weight: bold;">then</span>
+  <span style="font-weight: bold;">echo</span> <span style="font-style: italic;">"The command $CMD wasn't found"</span>
+  <span style="font-weight: bold;">exit</span> 1
+<span style="font-weight: bold;">fi</span>
+
+<span style="font-weight: bold;">if</span> [ <span style="font-style: italic;">"$LOCATION"</span> = <span style="font-style: italic;">"builtin"</span> ] <span style="font-weight: bold; font-style: italic;"># </span><span style="font-weight: bold; font-style: italic;">Shell builtin</span>
+<span style="font-weight: bold;">then</span>
+  <span style="font-weight: bold;">echo</span> <span style="font-style: italic;">"The command $CMD is a shell builtin"</span>
+  <span style="font-weight: bold;">exit</span> 0
+<span style="font-weight: bold;">fi</span>
+
+<span style="font-weight: bold; font-style: italic;">RESOLVED_LOCATION</span>=$(readlink -f <span style="font-style: italic;">"$LOCATION"</span>)
+
+<span style="font-weight: bold;">if</span> [[ ! <span style="font-style: italic;">"$RESOLVED_LOCATION"</span> =~ ^<span style="font-style: italic;">\/</span>nix<span style="font-style: italic;">\/</span>store<span style="font-style: italic;">\/</span>.*-.*-.*$ ]];
+<span style="font-weight: bold;">then</span>
+  <span style="font-weight: bold;">echo</span> <span style="font-style: italic;">"The command $CMD is at $RESOLVED_LOCATION"</span>
+  <span style="font-weight: bold;">exit</span> 0
+<span style="font-weight: bold;">fi</span>
+
+<span style="font-weight: bold; font-style: italic;">PACKAGE</span>=$(<span style="font-weight: bold;">echo</span> <span style="font-style: italic;">"$RESOLVED_LOCATION"</span> | sed -rn <span style="font-style: italic;">"s/\/nix\/store\/.*-(.*)-.*/\1/p"</span>)
+
+<span style="font-weight: bold; font-style: italic;">SEARCHED</span>=$(nix search <span style="font-style: italic;">"nixpkgs#$PACKAGE"</span> 2&gt;&amp;1)
+
+<span style="font-weight: bold;">if</span> [ <span style="font-style: italic;">"$SEARCHED"</span> = <span style="font-style: italic;">"error: no results for the given search term(s)!"</span> ]
+<span style="font-weight: bold;">then</span>
+  <span style="font-weight: bold;">echo</span> <span style="font-style: italic;">"The command $CMD is at $RESOLVED_LOCATION"</span>
+  <span style="font-weight: bold;">exit</span> 0
+<span style="font-weight: bold;">fi</span>
+
+<span style="font-weight: bold;">echo</span> <span style="font-style: italic;">"The command $CMD is from:"</span>
+<span style="font-weight: bold;">echo</span> <span style="font-style: italic;">"$SEARCHED"</span>
+<span style="font-weight: bold;">echo</span> <span style="font-style: italic;">"Which is available at $RESOLVED_LOCATION"</span>
+</pre>
+</div>
+<p>
+This script takes a package name as input and tries to resolve it to a nix package; when I ran it for sleep it showed me that sleep was from the CNI package
+</p>
+<div class="org-src-container">
+<pre class="src src-bash">{11:22}~ &#10157; bin/provider sleep
+The command sleep is from:
+<span style="font-style: italic;">\*</span> legacyPackages.x86_64-linux.cni (0.8.1)
+  Container Network Interface - networking for Linux containers
+Which is available at /nix/store/ps4v6qqayxhndmfj6pq6l4gqdglyz5pc-cni-0.8.1/bin/sleep
+</pre>
+</div>
+<p>
+I <a href="https://search.nixos.org/packages?channel=21.11&amp;from=0&amp;size=50&amp;sort=relevance&amp;type=packages&amp;query=cni">searched for CNI on the nix package repo</a> and found that it was installed from <a href="https://github.com/containernetworking/cni">this github repo</a>. I searched the repo and found <a href="https://github.com/containernetworking/cni/blob/c5ab1c3fc6e164e7b777c3002e75fdf46865e1b3/plugins/test/sleep/main.go">this file</a>, which contains the broken code, confirming that it was definitely a broken sleep command from CNI.
+</p>
+
+<p>
+To fix it I looked at what the CNI package did; was 'sleep' needed? I found that actually the main <code>containerd</code> package and the <code>cni-plugins</code> package actually have enough stuff to run the network for my EPQ as I was doing before. In the end the solution turned out to be as simple as just uninstalling the CNI package like so:
+</p>
+<div class="org-src-container">
+<pre class="src src-diff"><span style="font-weight: bold;">diff --git a/system/containerd/systemPackages.nix b/system/containerd/systemPackages.nix</span>
+<span style="font-weight: bold;">index 6a80afc..f7cd953 100644</span>
+<span style="font-weight: bold;">--- </span><span style="font-weight: bold;">a/system/containerd/systemPackages.nix</span>
+<span style="font-weight: bold;">+++ </span><span style="font-weight: bold;">b/system/containerd/systemPackages.nix</span>
+<span style="font-weight: bold;">@@ -1,6 +1,5 @@</span>
+ { pkgs, ... }: {
+   systemPackages = with pkgs; [
+-    cni
+     cni-plugins
+   ];
+ }
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org0b59197" class="outline-3">
+<h3 id="org0b59197">What resources did I use?</h3>
+<div class="outline-text-3" id="text-org0b59197">
+<ul class="org-ul">
+<li>The sleep manual page</li>
+<li>The source of the CNI package</li>
+<li>The nix manual to figure out the <code>nix search</code> command</li>
+<li>Various stackoverflow threads to help with writing a bash script</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgc53c211" class="outline-3">
+<h3 id="orgc53c211">How did this help me learn?</h3>
+<div class="outline-text-3" id="text-orgc53c211">
+<ul class="org-ul">
+<li>This helped me gain better familiarity with nix</li>
+<li>This taught me to look at what packages I need better rather than installing anything vaguely related to CNI, say, and to install in a local scope unless I need a package globally</li>
+</ul>
 </div>
 </div>
 </div>
