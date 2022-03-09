@@ -16,31 +16,89 @@ Given this:
 
 Throughout this project, you will find it much easier to use modules from =pip= than the builtin python modules, although I have made sure that everything here is possible with only builtin python modules. If I have particular suggestions for modules that you may wish to use, then I will give you them in =codeblocks=, you are, of course, entirely permitted to ignore my advice on non-builtin modules and I will not hold it against you if you do so. For easier reading I will also put a builtin module that you are allowed to use in a =codeblock= where it is not instantly obvious/we have not learned about it in class.
 
+#+begin_verse
+Although this is possible to do without reusing other people's code, you'll have a far better time if you do reuse other people's code. You can reuse other people's code although they won't have written exactly what you want so you'll have to add your own to stitch it together. You can decide not to reuse other people's code, I won't hold it against you.
+#+end_verse
+
 You may decide to follow a style guide such as pep8 (tip: use =pycodestyle= as a linter and turn off the line-length-limit warnings or change them to 120 characters as the default of 80 is extremely restrictive), if you do not choose to do so that is your decision entirely, however it may make your code easier to read. You may also use a reformatter such as =black= if you would like your code to conform but do not know how or consider conforming to be too complex.
+
+#+begin_verse
+You may want to write code that looks good; I suggest =pycodestyle='s guidelines as a set of guidelines. You might also want to use a program that automatically makes your code look good; I suggest =black=.
+#+end_verse
 
 Some parts of this project rely on web servers to work properly. Javascript has better web server support in its =express= package, which I would suggest checking out if you know javascript and feel more comfortable writing in it than in python for this project. I will be highlighting applicable javascript modules using =codeblocks=.
 
+#+begin_verse
+You don't need to use the programming language python, and I'll give advice on how to use the programming language javascript as well.
+#+end_verse
+
 The project will be running on a debian-based server when it goes into production, however you are permitted to use any operating system to develop it. You may also want to consider use of an IDE, I suggest =pycharm community=, or if you want to put an extra few seconds into signing up to the [[https://education.github.com/][github student developer pack]], pycharm professional, although we will not be doing anything that requires it or will significantly benefit from the pro version as opposed to the community version in this project.
 
+#+begin_verse
+We have a server which we'll use. You don't need access to our server or even something with similar software on to develop it.
+
+You may want to use a text editor with tools specifically for writing code; I recommend =pycharm community=.
+#+end_verse
+
 I strongly recommend the use of a version control system such as =git=, which your chosen IDE will likely already have an integration for. This will allow you to rollback to previous versions when you make a mistake. I would also suggest using [[https://gitlab.com][gitlab]] or [[https://github.com][github]] as a remote, although that is again not required.
+
+#+begin_verse
+Please keep backups.
+#+end_verse
 
 * About the project
 
 There is no chosen project title. If you would like to choose a title you may do so, although it is possible that I will rename it later if I do not like the title you have chosen. If you do not want to name it you may call it =Clicks Minute Ping Backend=. Personally I think that whatever you come up with will probably be snazzier than that though.
 
+#+begin_verse
+I haven't decided on a name yet. You can name it.
+#+end_verse
+
 The project is a program which will monitor a single[fn:1] process. The command can either be a hardcoded variable at the top of your program or accessible through a file, most likely using the =json= module. You may wish to use the =subprocess= module or the older =os.system= or =os.spawn= commands. [[https://docs.python.org/3/library/subprocess.html][You can find the documentation for the subprocess builtin module here]].
+
+#+begin_verse
+This program runs a program and will do stuff with it as specified below
+#+end_verse
 
 Upon the process' exit, the program will attempt to restart it. If the process exited with an error (this is commonly denoted by a non-zero exit code) the module will only attempt to restart it 3 consecutive times before giving up[fn:2]. When a program has exited with these errors and will no longer be restarted it will, from now on in this document, be referred to as =crashed=. In the actual code you may choose any word to describe this so long as you remain consistent throughout. In javascript there is a module named =pm2= which you may use instead of implementing this functionality yourself. [[https://github.com/Unitech/pm2][You can find PM2 here]], however please note that this may be significantly more complex than you want and you may find it easier simply to implement the basic functionality yourself.[fn:4]
 
+#+begin_verse
+If the program you're running stops running, the program you're writing will restart it.
+
+If the program you're running stops running because of a problem, the program you're writing will only restart it 3 times.
+
+You can use a bit of code where someone's already done this if you want, I suggest a program called =pm2= in javascript.
+#+end_verse
+
 The project will have a webserver. You may choose to use the builtin module =http.server= or a module of your choosing. I would recommend =flask=, =aiohttp=, =quart=, or =django= depending largely on what you have used before. I would request that you **do not use** any modules that rely on =uvicorn=.
+
+#+begin_verse
+The project needs a website. I suggest a few programs which can make websites
+#+end_verse
 
 When a =get= request is made to the webserver root (=/=)[fn:3], the webserver will respond with if the program is currently online or crashed, the program's =uptime=, the program's =restart count=, and how many of those restarts were =errors= (all time), and how many consecutive restarts there have been. This API should be fairly efficient as it will be receiving a fairly high volume of requests and you may wish to make it cache responses for a short amount of time (around 15 seconds).
 
+#+begin_verse
+When you go to the project's website, it will tell you if the program you're running is running, how long it's been running for, how many times it's restarted and how many times that was because of a problem. Please write fast code for this bit, as it will be run a lot. You might want to store what it responded last time to avoid you looking it up again each time which will probably improve speeds.
+#+end_verse
+
 You should have another endpoint (get or post) that restarts the application, clearing its restart count and error count. The endpoint should only be accessible if the user provides a valid secret, and all other requests should be met with a =403 Forbidden= http response.
+
+#+begin_verse
+You need another bit of the website to restart the program you're running. This should be password protected.
+#+end_verse
 
 You should have another endpoint that updates the running process' working directory from a github remote. This endpoint should not restart the application. You may require any required credentials, including but not limited to a PAT (personal access token) or bot secret to be passed along with the request, or you may instead wish to have them stored in a file on the server. The endpoint should only be accessible if the user provides a valid secret, and all other requests should be met with a 403 Forbidden http response. Neither the web server nor the program should go down while the request is being processed. (NB: if you do not wish to install git and set up repositories to test this you may choose a similarly long subprocess command, for example =sleep 15= to test this. Please make sure not to confuse this with the python builtin =time.sleep= or =asyncio.sleep= functions).
 
+#+begin_verse
+You need another bit of the website that updates the program you're running.  When you update the program you're running you shouldn't automatically restart it.
+#+end_verse
+
 You should have another endpoint that updates the program itself's working directory from github. This has identical requirements and concessions to the previous requirement.
+
+#+begin_verse
+You need another bit of the website that updates the program you're writing. When you update the program you're writing you shouldn't automatically restart it.
+#+end_verse
 
 # Tests
 
