@@ -7,7 +7,9 @@
 Let's be honest, containerd will probably be the system that I use for containerization. While I could write a wrapper around docker or LXC, it's probably better to use containerd. This research will either confirm my first thoughts or show me a new perspective and change my mind. Either way it's important to evaluate the programs I'm using so I know I'm using the best stuff.
 
 * Why not use docker?
+#+begin_comment
 /Note to future Skyler: This could probably be expanded into its own document/
+#+end_comment
 Docker is very good, but it's also more complex than we need and I'd still need to write wrappers around it as it doesn't have everything that we want. Docker is built on containerd anyway, and infact 'containerd was designed to be used by docker'[cite:@docker_on_what_is_containerd], so all of the features that docker has will be available in containerd without using the middleman docker. This will allow me to use containerd on a lower level than I would otherwise be able to, accessing features that docker may not expose, but also reducing the overhead of running the process manager.
 
 #+begin_verse
@@ -34,7 +36,15 @@ Containerd lets you run programs without letting them interfere with other progr
 ** What /doesn't/ it do?
 'Things like networking are out of scope for containerd'[cite:@docker_on_what_is_containerd], which is something that [[https://docs.docker.com/network/][docker implements fairly well]]. This could be a major limitation for using it in the EP, as I'll need good networking support. With containerd I will have to write my own networking support, which could be complicated.
 
+#+begin_verse
+By default, containerd can't let you use the internet. This is a bad thing and may cause more work later.
+#+end_verse
+
 In general, it's important to remember that containerd is only a platform for creating containers, which means it doesn't handle many of the other complexities of docker or other container platforms. These will need to be handled by my wrapper script.
+
+#+begin_verse
+Because containerd doesn't have the complexity of LXC and Docker, it might be more difficult to write my code.
+#+end_verse
 
 #+print_bibliography:
 
