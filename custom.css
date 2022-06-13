@@ -100,13 +100,31 @@ div.footpara {
     padding-bottom: 0.8rem;
     margin: 2rem;
 }
-
 .verse::before {
     content: "# In simple terms:";
     display: block;
     color: #50c4fa;
     font-size: calc(var(--base-fontsize) * var(--header-scale) * var(--header-scale) * var(--header-scale));
     background: -webkit-linear-gradient(90deg, #50c4fa, #9effff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 0;
+    margin-left: -1rem;
+}
+.notes {
+    border: 2px solid white;
+    border-image: -webkit-linear-gradient(280deg, #D46899, #F27878) 2;
+    padding: 0.4rem 0.8rem;
+    padding-left: 1.8rem;
+    padding-bottom: 0.8rem;
+    margin: 2rem;
+}
+.notes::before {
+    content: "# A look back:";
+    display: block;
+    color: #50c4fa;
+    font-size: calc(var(--base-fontsize) * var(--header-scale) * var(--header-scale) * var(--header-scale));
+    background: -webkit-linear-gradient(90deg, #D46899, #F27878);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     margin: 0;
