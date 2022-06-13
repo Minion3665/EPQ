@@ -1,7 +1,7 @@
-#+TITLE: How did I do my project?
+#+TITLE: EPQ Commentary: How did I do my project?
 #+DATE: 13th June, 2021
 
-*The project commentary is a document giving an overview of my project. This is not complete.*
+/The project commentary is a document giving an overview of my project. This is not complete./
 
 * Why did I choose the topic?
 
@@ -12,7 +12,7 @@
 * What research did I do & how did I conduct it?
 
 * What skills have I learned over the course of my project?
-*Note: this section needs particularly clear details and examples*
+/Note: this section needs particularly clear details and examples/
 
 * What are some problems I faced, how did I solve them?
 
