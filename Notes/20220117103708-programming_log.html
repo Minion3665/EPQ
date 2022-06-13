@@ -27,28 +27,28 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org34bc0b1">Layout</a></li>
-<li><a href="#org95a5caf">Building containers programatically</a>
+<li><a href="#org62a924e">Layout</a></li>
+<li><a href="#orga0eaf1f">Building containers programatically</a>
 <ul>
-<li><a href="#org3b1c3e7">How did I solve it?</a></li>
-<li><a href="#org61aba70">What resources did I use?</a></li>
-<li><a href="#org1796afe">How did this help me learn?</a></li>
+<li><a href="#orgec35d78">How did I solve it?</a></li>
+<li><a href="#org1a0d405">What resources did I use?</a></li>
+<li><a href="#org7897c76">How did this help me learn?</a></li>
 </ul>
 </li>
-<li><a href="#org2eb632a">Sleep command was overwritten by CNI</a>
+<li><a href="#org788ed9f">Sleep command was overwritten by CNI</a>
 <ul>
-<li><a href="#org93c26f3">What was the problem?</a></li>
-<li><a href="#orgf8005b7">How did I solve it?</a></li>
-<li><a href="#orge1a2eb3">What resources did I use?</a></li>
-<li><a href="#org32be599">How did this help me learn?</a></li>
+<li><a href="#org7ef1625">What was the problem?</a></li>
+<li><a href="#orga5cc92e">How did I solve it?</a></li>
+<li><a href="#org3ca21cd">What resources did I use?</a></li>
+<li><a href="#org1271c20">How did this help me learn?</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org34bc0b1" class="outline-2">
-<h2 id="org34bc0b1">Layout</h2>
-<div class="outline-text-2" id="text-org34bc0b1">
+<div id="outline-container-org62a924e" class="outline-2">
+<h2 id="org62a924e">Layout</h2>
+<div class="outline-text-2" id="text-org62a924e">
 <ul class="org-ul">
 <li>Each new problem will be under a heading, roughly in chronological order that I came across them (although problems that I anticipated and solved beforehand may be placed later, as it will be more logical and easier to read)</li>
 <li>If there's a problem I believed I had solved but had not, I may list it multiple times, once when I initally solved it and subsequent times when I was forced to change and improve my solution. I will mention if this is the case</li>
@@ -59,16 +59,16 @@
 </div>
 </div>
 
-<div id="outline-container-org95a5caf" class="outline-2">
-<h2 id="org95a5caf">Building containers programatically</h2>
-<div class="outline-text-2" id="text-org95a5caf">
+<div id="outline-container-orga0eaf1f" class="outline-2">
+<h2 id="orga0eaf1f">Building containers programatically</h2>
+<div class="outline-text-2" id="text-orga0eaf1f">
 <ul class="org-ul">
 <li>Difficulty: 2</li>
 </ul>
 </div>
-<div id="outline-container-org3b1c3e7" class="outline-3">
-<h3 id="org3b1c3e7">How did I solve it?</h3>
-<div class="outline-text-3" id="text-org3b1c3e7">
+<div id="outline-container-orgec35d78" class="outline-3">
+<h3 id="orgec35d78">How did I solve it?</h3>
+<div class="outline-text-3" id="text-orgec35d78">
 <p>
 <a href="https://github.com/ClicksMinutePer/process-manager/blob/097983953dc613702b9ea1a350496a0f90c4113e/containerManager/main.go#L80">This line</a> sets up the command that needs to be run in order to build the container
 </p>
@@ -122,17 +122,17 @@ This worked, and I got hello world in my console!
 </p>
 </div>
 </div>
-<div id="outline-container-org61aba70" class="outline-3">
-<h3 id="org61aba70">What resources did I use?</h3>
-<div class="outline-text-3" id="text-org61aba70">
+<div id="outline-container-org1a0d405" class="outline-3">
+<h3 id="org1a0d405">What resources did I use?</h3>
+<div class="outline-text-3" id="text-org1a0d405">
 <p>
 I used <a href="https://nixos.org/guides/building-and-running-docker-images.html">this nixos guide</a> and <a href="https://stackoverflow.com/a/31737077">this stackoverflow answer</a> to help me understand the Nix and go sides of running commands.
 </p>
 </div>
 </div>
-<div id="outline-container-org1796afe" class="outline-3">
-<h3 id="org1796afe">How did this help me learn?</h3>
-<div class="outline-text-3" id="text-org1796afe">
+<div id="outline-container-org7897c76" class="outline-3">
+<h3 id="org7897c76">How did this help me learn?</h3>
+<div class="outline-text-3" id="text-org7897c76">
 <p>
 This taught me how to use Nix to build docker containers.
 </p>
@@ -140,16 +140,16 @@ This taught me how to use Nix to build docker containers.
 </div>
 </div>
 
-<div id="outline-container-org2eb632a" class="outline-2">
-<h2 id="org2eb632a">Sleep command was overwritten by CNI</h2>
-<div class="outline-text-2" id="text-org2eb632a">
+<div id="outline-container-org788ed9f" class="outline-2">
+<h2 id="org788ed9f">Sleep command was overwritten by CNI</h2>
+<div class="outline-text-2" id="text-org788ed9f">
 <ul class="org-ul">
 <li>Difficulty 3</li>
 </ul>
 </div>
-<div id="outline-container-org93c26f3" class="outline-3">
-<h3 id="org93c26f3">What was the problem?</h3>
-<div class="outline-text-3" id="text-org93c26f3">
+<div id="outline-container-org7ef1625" class="outline-3">
+<h3 id="org7ef1625">What was the problem?</h3>
+<div class="outline-text-3" id="text-org7ef1625">
 <p>
 This <i>wasn't</i> a problem with my EPQ, but rather was a problem with the impact it had on the rest of my system.
 </p>
@@ -167,9 +167,9 @@ The CNI sleep command was running instead of the default sleep command when I ra
 </p>
 </div>
 </div>
-<div id="outline-container-orgf8005b7" class="outline-3">
-<h3 id="orgf8005b7">How did I solve it?</h3>
-<div class="outline-text-3" id="text-orgf8005b7">
+<div id="outline-container-orga5cc92e" class="outline-3">
+<h3 id="orga5cc92e">How did I solve it?</h3>
+<div class="outline-text-3" id="text-orga5cc92e">
 <p>
 As it's quite often that I need to find out what package a command comes from I decided to write a shell script to find out:
 </p>
@@ -253,9 +253,9 @@ To fix it I looked at what the CNI package did; was 'sleep' needed? I found that
 </div>
 </div>
 </div>
-<div id="outline-container-orge1a2eb3" class="outline-3">
-<h3 id="orge1a2eb3">What resources did I use?</h3>
-<div class="outline-text-3" id="text-orge1a2eb3">
+<div id="outline-container-org3ca21cd" class="outline-3">
+<h3 id="org3ca21cd">What resources did I use?</h3>
+<div class="outline-text-3" id="text-org3ca21cd">
 <ul class="org-ul">
 <li>The sleep manual page</li>
 <li>The source of the CNI package</li>
@@ -264,9 +264,9 @@ To fix it I looked at what the CNI package did; was 'sleep' needed? I found that
 </ul>
 </div>
 </div>
-<div id="outline-container-org32be599" class="outline-3">
-<h3 id="org32be599">How did this help me learn?</h3>
-<div class="outline-text-3" id="text-org32be599">
+<div id="outline-container-org1271c20" class="outline-3">
+<h3 id="org1271c20">How did this help me learn?</h3>
+<div class="outline-text-3" id="text-org1271c20">
 <ul class="org-ul">
 <li>This helped me gain better familiarity with nix</li>
 <li>This taught me to look at what packages I need better rather than installing anything vaguely related to CNI, say, and to install in a local scope unless I need a package globally</li>
