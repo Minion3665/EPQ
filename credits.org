@@ -10,3 +10,5 @@ Thank you to [[https://clicksminuteper.net][Clicks Minute Per]] for use of the C
 The image on file:Documents/poem-based-on-an-image.org is licensed under the [[https://www.123rf.com/license.php#standard][123rf standard license]].
 
 The image on [[file:../Documents/containerd-architecture.png]] is unmodified from [[https://containerd.io/][the main page of the containerd website, under the section starting 'containerd is available as a daemon for Linux and Windows']], © containerd Authors 2021. Containerd documentation is distributed under the [[https://creativecommons.org/licenses/by/4.0/][CC BY 4.0 creativecommons license]], which states that you must provide attribution and not add any legal terms or technological measures restricting others from doing anything the license permits.
+
+Further sources are available [[file:../Documents/bibliography.org][in my project's bibliography]]

@@ -13,7 +13,7 @@ I'm taking the EPQ because my 6th form requires me to take it, however it also o
 For my EPQ, I'm making a process management daemon. I [[file:Documents/process-manager-project-requirements.org][wrote a specification in year 11 for what this could look like]], which is what I'll be following as a rough guide. When the project is finished, I'll be taking it on to our production server and using it to run all of our bots, websites & other projects.
 
 * All pages
-- [[file:credits.org][Credits, Licenses & Sources]] (Created on 2021-11-18 at 11:37:27)
+- [[file:credits.org][Credits, Licenses & Sources]] (Created on 2022-06-13 at 10:08:03)
 - *Documents/*
   - [[file:Documents/commentary.org][EPQ Commentary: How did I do my project?]] (Created on 2022-06-13 at 09:52:10)
   - [[file:Documents/process-manager-project-requirements.org][Project specification]] (Created on 2022-03-09 at 09:24:51)
